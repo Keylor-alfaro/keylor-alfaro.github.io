@@ -14,7 +14,7 @@ html {
 
 body {
     font-family:
-        Inter,
+        "Inter",
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -22,7 +22,7 @@ body {
 
     background: #f5f7fa;
     color: #101827;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 a {
@@ -547,12 +547,9 @@ header {
 
 .section-heading h2 {
     color: #101827;
-
-    font-size: clamp(38px, 5vw, 56px);
+    font-size: clamp(42px, 5vw, 62px);
     line-height: 1;
-
     font-weight: 700;
-
     letter-spacing: -0.045em;
 }
 
@@ -580,19 +577,21 @@ header {
 }
 
 .about-text p {
-    margin-bottom: 24px;
+    margin-bottom: 26px;
 
-    color: #667386;
+    color: #5d6b7e;
 
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.85;
 }
 
 .about-text .large-text {
-    color: #273449;
+    color: #263449;
 
-    font-size: 20px;
-    line-height: 1.7;
+    font-size: 21px;
+    line-height: 1.75;
+
+    font-weight: 450;
 }
 
 
@@ -641,18 +640,19 @@ header {
 }
 
 .highlight-card h3 {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 
     color: #172033;
 
-    font-size: 17px;
+    font-size: 18px;
+    font-weight: 650;
 }
 
 .highlight-card p {
-    color: #7b8798;
+    color: #68768a;
 
-    font-size: 13px;
-    line-height: 1.65;
+    font-size: 14px;
+    line-height: 1.75;
 }
 
 
@@ -672,9 +672,9 @@ header {
 }
 
 .experience-intro p {
-    color: #6e7a8d;
+    color: #68768a;
 
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.8;
 }
 
@@ -905,9 +905,10 @@ header {
 
     color: #152033;
 
-    font-size: 30px;
+    font-size: 34px;
     line-height: 1.25;
 
+    font-weight: 700;
     letter-spacing: -0.03em;
 }
 
@@ -916,10 +917,10 @@ header {
 
     margin-top: 22px;
 
-    color: #687587;
+    color: #647287;
 
-    font-size: 14px;
-    line-height: 1.85;
+    font-size: 15px;
+    line-height: 1.9;
 }
 
 
@@ -1008,18 +1009,19 @@ header {
 }
 
 .responsibility-card h5 {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
 
     color: #1b2739;
 
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 650;
 }
 
 .responsibility-card p {
-    color: #758194;
+    color: #6f7d90;
 
-    font-size: 12px;
-    line-height: 1.7;
+    font-size: 13px;
+    line-height: 1.75;
 }
 
 
@@ -1184,27 +1186,21 @@ header {
 .skill-category-header h3 {
     color: #172238;
 
-    font-size: 17px;
+    font-size: 19px;
+    font-weight: 650;
 
     letter-spacing: -0.02em;
 }
 
-.skill-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
 .skill-list span {
-    padding: 8px 10px;
+    padding: 9px 12px;
 
     border: 1px solid #e2e7ee;
-
     background: #f8fafc;
 
-    color: #637086;
+    color: #5f6d81;
 
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
 }
 
@@ -1269,27 +1265,28 @@ header {
 .education-main h3 {
     color: #172238;
 
-    font-size: 32px;
+    font-size: 35px;
     line-height: 1.2;
 
+    font-weight: 700;
     letter-spacing: -0.035em;
 }
 
 .education-institution {
-    margin-top: 13px;
+    margin-top: 14px;
 
     color: #526075;
 
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
 }
 
 .education-period {
-    margin-top: 5px;
+    margin-top: 6px;
 
-    color: #8b96a6;
+    color: #818da0;
 
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .education-coursework {
@@ -1339,21 +1336,22 @@ header {
 .contact-intro h3 {
     color: #172238;
 
-    font-size: 42px;
+    font-size: 46px;
     line-height: 1.1;
 
+    font-weight: 700;
     letter-spacing: -0.04em;
 }
 
 .contact-intro p {
     max-width: 440px;
 
-    margin-top: 18px;
+    margin-top: 20px;
 
-    color: #738094;
+    color: #6e7c90;
 
-    font-size: 14px;
-    line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.85;
 }
 
 .contact-details {
@@ -1366,7 +1364,7 @@ header {
     grid-template-columns: 100px 1fr 25px;
     align-items: center;
 
-    min-height: 74px;
+    min-height: 78px;
 
     border-bottom: 1px solid #e2e7ed;
 
@@ -1382,9 +1380,9 @@ a.contact-item:hover {
 }
 
 .contact-label {
-    color: #8b96a7;
+    color: #7c889a;
 
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 800;
 
     letter-spacing: 0.14em;
@@ -1393,14 +1391,14 @@ a.contact-item:hover {
 .contact-value {
     color: #29364a;
 
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
 }
 
 .contact-arrow {
     color: #2563eb;
 
-    font-size: 16px;
+    font-size: 17px;
 
     text-align: right;
 }
