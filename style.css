@@ -3004,74 +3004,353 @@ header {
 ========================================================= */
 
 .contact-section {
+    position: relative;
     background: #ffffff;
+    overflow: hidden;
 }
 
-.contact-content {
+
+/* =========================================================
+   CONTACT LAYOUT
+========================================================= */
+
+.contact-layout {
     display: grid;
-
     grid-template-columns:
-        minmax(0, 0.85fr)
-        minmax(0, 1.15fr);
-
+        minmax(0, 0.9fr)
+        minmax(420px, 1.1fr);
     gap: 100px;
+    align-items: start;
+    margin-top: 75px;
+}
+
+
+/* =========================================================
+   CONTACT INTRO
+========================================================= */
+
+.contact-intro {
+    max-width: 500px;
+}
+
+.contact-kicker {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: #2563eb;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
 }
 
 .contact-intro h3 {
+    max-width: 470px;
     color: #172238;
-
-    font-size: 40px;
-    line-height: 1.1;
-
+    font-size: clamp(38px, 4vw, 54px);
+    line-height: 1.05;
     font-weight: 700;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.05em;
 }
 
 .contact-intro p {
-    max-width: 440px;
-
-    margin-top: 18px;
-
+    max-width: 450px;
+    margin-top: 24px;
     color: #738094;
-
     font-size: 13px;
-    line-height: 1.8;
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   AVAILABILITY STATUS
+========================================================= */
+
+.contact-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 32px;
+    padding: 10px 14px;
+    border: 1px solid #e0e6ee;
+    background: #f8fafc;
+    color: #657286;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.contact-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================================
+   CONTACT LINKS
+========================================================= */
+
+.contact-links {
+    border-top: 1px solid #e2e7ed;
 }
 
 .contact-item {
+    position: relative;
     display: grid;
-
-    grid-template-columns: 100px 1fr 25px;
+    grid-template-columns: 48px 1fr 30px;
     align-items: center;
-
-    min-height: 74px;
-
+    gap: 18px;
+    min-height: 88px;
+    padding: 0 12px;
     border-bottom: 1px solid #e2e7ed;
-
+    text-decoration: none;
     transition:
+        background 0.25s ease,
         padding-left 0.25s ease,
-        background 0.25s ease;
+        border-color 0.25s ease;
+}
+
+.contact-item:hover {
+    padding-left: 20px;
+    background: #f8fafc;
+    border-color: #d5dce6;
+}
+
+
+/* =========================================================
+   CONTACT ICON
+========================================================= */
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #dce3eb;
+    background: #ffffff;
+    color: #647286;
+    font-size: 11px;
+    font-weight: 700;
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.contact-item:hover .contact-icon {
+    color: #2563eb;
+    border-color: #b9cdf1;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CONTACT CONTENT
+========================================================= */
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
 }
 
 .contact-label {
     color: #8b96a7;
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 800;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.15em;
 }
 
 .contact-value {
+    overflow: hidden;
     color: #29364a;
     font-size: 13px;
     font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: color 0.25s ease;
 }
+
+.contact-item:hover .contact-value {
+    color: #2563eb;
+}
+
+
+/* =========================================================
+   CONTACT ARROW
+========================================================= */
 
 .contact-arrow {
-    color: #2563eb;
-    font-size: 16px;
+    color: #a1aab8;
+    font-size: 17px;
     text-align: right;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
+.contact-item:hover .contact-arrow {
+    color: #2563eb;
+    transform: translate(3px, -3px);
+}
+
+.contact-item-static:hover .contact-arrow {
+    color: #a1aab8;
+    transform: none;
+}
+
+
+/* =========================================================
+   CONTACT CTA
+========================================================= */
+
+.contact-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    margin-top: 85px;
+    padding: 32px 35px;
+    border: 1px solid #dfe5ec;
+    background: #f7f9fc;
+}
+
+.contact-cta-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #8a95a6;
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+}
+
+.contact-cta h4 {
+    color: #253247;
+    font-size: 15px;
+    font-weight: 650;
+    letter-spacing: -0.015em;
+}
+
+.contact-cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    padding: 13px 17px;
+    background: #172238;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.contact-cta-button:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+.contact-cta-button span {
+    font-size: 14px;
+    transition: transform 0.25s ease;
+}
+
+.contact-cta-button:hover span {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   CONTACT RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .contact-intro {
+        max-width: 650px;
+    }
+
+    .contact-intro h3 {
+        max-width: 600px;
+    }
+
+    .contact-intro p {
+        max-width: 600px;
+    }
+
+    .contact-cta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .contact-layout {
+        margin-top: 55px;
+    }
+
+    .contact-intro h3 {
+        font-size: 40px;
+    }
+
+    .contact-item {
+        grid-template-columns: 42px 1fr 25px;
+        gap: 14px;
+        min-height: 82px;
+    }
+
+    .contact-cta {
+        margin-top: 60px;
+        padding: 26px 22px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .contact-intro h3 {
+        font-size: 34px;
+    }
+
+    .contact-intro p {
+        font-size: 12px;
+    }
+
+    .contact-item {
+        grid-template-columns: 38px 1fr 20px;
+        gap: 12px;
+        padding: 0 5px;
+    }
+
+    .contact-item:hover {
+        padding-left: 10px;
+    }
+
+    .contact-value {
+        font-size: 12px;
+    }
+
+    .contact-cta-button {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+}
 
 /* =========================================================
    FOOTER
