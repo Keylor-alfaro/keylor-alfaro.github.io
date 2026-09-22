@@ -1,3 +1,8 @@
+```javascript
+/* =========================================================
+   EXPERIENCE DATA
+   ========================================================= */
+
 const experiences = {
 
     concentrix: {
@@ -11,47 +16,66 @@ const experiences = {
         description:
             "Provided 1st and 2nd-level IT support, independently managing incidents and service requests across hardware, software, Microsoft 365, business applications, authentication, and network issues.",
 
-        responsibilities: [
+        scope: [
+            "IT Support",
+            "Incident Management",
+            "Troubleshooting"
+        ],
 
-            "Investigated technical issues by analyzing symptoms, identifying root causes, and applying structured troubleshooting and corrective actions to restore services.",
-
-            "Achieved 95% SLA and KPI compliance through effective incident triage, prioritization, timely resolution, and consistent case follow-up.",
-
-            "Managed multiple technical issues and user requests simultaneously, adapting priorities to changing needs and maintaining effective case follow-up.",
-
-            "Documented incidents, troubleshooting steps, resolutions, and escalations in ServiceNow while coordinating with specialized teams."
+        environment: [
+            "Microsoft 365",
+            "ServiceNow",
+            "Business Applications",
+            "Networking"
         ],
 
         metrics: [
-
             {
                 value: "95%",
                 label: "SLA / KPI"
             },
-
             {
                 value: "90%+",
                 label: "Customer Satisfaction"
             }
-
         ],
 
-        tags: [
+        responsibilities: [
 
-            "Microsoft 365",
-            "ServiceNow",
-            "Troubleshooting",
-            "Incident Management",
-            "Business Applications"
+            {
+                title: "Incident Management",
 
-        ],
+                description:
+                    "Investigated technical issues, analyzed symptoms, identified root causes, and applied structured troubleshooting to restore services."
+            },
 
-        focus: "Enterprise IT Support"
+            {
+                title: "Service Restoration",
+
+                description:
+                    "Prioritized incidents and applied corrective actions while working within established service levels."
+            },
+
+            {
+                title: "Case Management",
+
+                description:
+                    "Documented incidents, troubleshooting steps, resolutions, and escalations through ServiceNow."
+            },
+
+            {
+                title: "Collaboration",
+
+                description:
+                    "Coordinated with specialized teams to support timely resolution of technical issues and maintain effective case follow-up."
+            }
+
+        ]
 
     },
 
 
-    "global-packing": {
+    global: {
 
         company: "GLOBAL PACKING GROUP",
 
@@ -62,22 +86,13 @@ const experiences = {
         description:
             "Provided on-site and remote IT support across hardware, software, Microsoft 365, Active Directory, Windows Server, printers, networks, and business applications, assisting end users and maintaining operational continuity.",
 
-        responsibilities: [
-
-            "Diagnosed and resolved hardware, software, network, ERP, and system issues by analyzing symptoms, identifying root causes, and applying structured technical solutions to restore services.",
-
-            "Performed workstation and equipment configuration, preventive and corrective maintenance, network troubleshooting, and technical support for business applications and IT infrastructure.",
-
-            "Performed backup and recovery procedures, managed IT asset inventory, and supported equipment and technology deployments according to established processes.",
-
-            "Assisted users with Microsoft 365, Active Directory, Windows Server, printers, networks, and business systems, providing practical solutions and documenting technical activities."
-
+        scope: [
+            "Technical Support",
+            "Systems Administration",
+            "Infrastructure"
         ],
 
-        metrics: [],
-
-        tags: [
-
+        environment: [
             "Microsoft 365",
             "Active Directory",
             "Windows Server",
@@ -85,10 +100,51 @@ const experiences = {
             "Hardware",
             "Softland ERP",
             "Backup & Recovery"
-
         ],
 
-        focus: "Systems & IT Infrastructure"
+        metrics: [
+            {
+                value: "3+",
+                label: "Years of Experience"
+            },
+
+            {
+                value: "IT",
+                label: "Systems & Infrastructure"
+            }
+        ],
+
+        responsibilities: [
+
+            {
+                title: "Technical Troubleshooting",
+
+                description:
+                    "Diagnosed and resolved hardware, software, network, ERP, and system issues by analyzing symptoms and applying structured technical solutions."
+            },
+
+            {
+                title: "Systems & Infrastructure",
+
+                description:
+                    "Configured workstations and equipment, performed maintenance, and provided technical support for business applications and IT infrastructure."
+            },
+
+            {
+                title: "Backup & Asset Management",
+
+                description:
+                    "Performed backup and recovery procedures, managed IT asset inventory, and supported equipment and technology deployments."
+            },
+
+            {
+                title: "User Support",
+
+                description:
+                    "Assisted users with Microsoft 365, Active Directory, Windows Server, printers, networks, and business systems."
+            }
+
+        ]
 
     },
 
@@ -104,46 +160,75 @@ const experiences = {
         description:
             "Managed 1st and 2nd-level IT incidents and service requests, performing initial triage, prioritization, troubleshooting, documentation, escalation, and timely resolution within defined SLAs.",
 
-        responsibilities: [
+        scope: [
+            "Helpdesk",
+            "Incident Management",
+            "Service Desk"
+        ],
 
-            "Performed initial incident triage, prioritized support requests, and applied troubleshooting procedures to restore services within established SLAs.",
-
-            "Investigated and documented technical issues, maintained accurate ticket records, and coordinated escalations with corporate IT teams to support effective problem resolution.",
-
-            "Achieved 95% customer satisfaction through effective problem solving, clear communication, timely decision-making, and consistent follow-up on user support requests and incidents."
-
+        environment: [
+            "Incident Triage",
+            "Troubleshooting",
+            "Ticket Management",
+            "Escalation",
+            "SLA Management"
         ],
 
         metrics: [
-
             {
                 value: "95%",
                 label: "Customer Satisfaction"
+            },
+
+            {
+                value: "1st / 2nd",
+                label: "Level Support"
+            }
+        ],
+
+        responsibilities: [
+
+            {
+                title: "Incident Triage",
+
+                description:
+                    "Performed initial incident triage, prioritized support requests, and applied troubleshooting procedures to restore services within established SLAs."
+            },
+
+            {
+                title: "Issue Documentation",
+
+                description:
+                    "Investigated and documented technical issues while maintaining accurate ticket records and support information."
+            },
+
+            {
+                title: "Escalation",
+
+                description:
+                    "Coordinated escalations with corporate IT teams to support effective problem resolution."
+            },
+
+            {
+                title: "Customer Support",
+
+                description:
+                    "Achieved 95% customer satisfaction through effective problem solving, clear communication, timely decision-making, and consistent follow-up."
             }
 
-        ],
-
-        tags: [
-
-            "Helpdesk",
-            "Incident Management",
-            "Triage",
-            "Troubleshooting",
-            "Escalation",
-            "SLA"
-
-        ],
-
-        focus: "Service Desk & Incident Management"
+        ]
 
     }
 
 };
 
 
-const timelineItems =
-    document.querySelectorAll(".timeline-item");
+/* =========================================================
+   DOM ELEMENTS
+   ========================================================= */
 
+const navigationItems =
+    document.querySelectorAll(".experience-nav-item");
 
 const companyElement =
     document.getElementById("experience-company");
@@ -157,35 +242,47 @@ const dateElement =
 const descriptionElement =
     document.getElementById("experience-description");
 
-const detailsElement =
-    document.getElementById("experience-details");
+const scopeElement =
+    document.getElementById("scope-tags");
+
+const environmentElement =
+    document.getElementById("environment-tags");
 
 const metricsElement =
-    document.getElementById("experience-metrics");
+    document.getElementById("showcase-metrics");
 
-const tagsElement =
-    document.getElementById("experience-tags");
+const responsibilityElement =
+    document.getElementById("responsibility-grid");
 
-const focusElement =
-    document.getElementById("experience-focus-text");
+const showcaseElement =
+    document.getElementById("experience-showcase");
 
+const detailsPanel =
+    document.getElementById("experience-details-panel");
+
+const exploreButton =
+    document.getElementById("explore-button");
+
+
+/* =========================================================
+   UPDATE EXPERIENCE
+   ========================================================= */
 
 function updateExperience(experienceId) {
 
     const experience =
         experiences[experienceId];
 
-
     if (!experience) {
         return;
     }
 
 
-    /*
-     * Update active timeline item
-     */
+    /* -----------------------------------------
+       Active navigation
+       ----------------------------------------- */
 
-    timelineItems.forEach(item => {
+    navigationItems.forEach(item => {
 
         item.classList.toggle(
             "active",
@@ -195,9 +292,9 @@ function updateExperience(experienceId) {
     });
 
 
-    /*
-     * Update main information
-     */
+    /* -----------------------------------------
+       Main information
+       ----------------------------------------- */
 
     companyElement.textContent =
         experience.company;
@@ -212,124 +309,150 @@ function updateExperience(experienceId) {
         experience.description;
 
 
-    /*
-     * Update responsibilities
-     */
+    /* -----------------------------------------
+       Scope
+       ----------------------------------------- */
 
-    detailsElement.innerHTML = "";
+    scopeElement.innerHTML = "";
 
-    experience.responsibilities.forEach(
-        responsibility => {
+    experience.scope.forEach(scope => {
 
-            const li =
-                document.createElement("li");
-
-            li.textContent =
-                responsibility;
-
-            detailsElement.appendChild(li);
-
-        }
-    );
-
-
-    /*
-     * Update metrics
-     */
-
-    metricsElement.innerHTML = "";
-
-    if (experience.metrics.length > 0) {
-
-        experience.metrics.forEach(metric => {
-
-            const metricElement =
-                document.createElement("div");
-
-            metricElement.className =
-                "metric";
-
-
-            metricElement.innerHTML = `
-                <strong>${metric.value}</strong>
-                <span>${metric.label}</span>
-            `;
-
-
-            metricsElement.appendChild(
-                metricElement
-            );
-
-        });
-
-    } else {
-
-        metricsElement.innerHTML = `
-            <div class="metric">
-                <strong>3+</strong>
-                <span>Years of Experience</span>
-            </div>
-
-            <div class="metric">
-                <strong>IT</strong>
-                <span>Technical Support</span>
-            </div>
-        `;
-
-    }
-
-
-    /*
-     * Update technical tags
-     */
-
-    tagsElement.innerHTML = "";
-
-    experience.tags.forEach(tag => {
-
-        const tagElement =
+        const element =
             document.createElement("span");
 
-        tagElement.textContent =
-            tag;
+        element.textContent =
+            scope;
 
-        tagsElement.appendChild(
-            tagElement
+        scopeElement.appendChild(
+            element
         );
 
     });
 
 
-    /*
-     * Update focus
-     */
+    /* -----------------------------------------
+       Technical environment
+       ----------------------------------------- */
 
-    focusElement.textContent =
-        experience.focus;
+    environmentElement.innerHTML = "";
+
+    experience.environment.forEach(item => {
+
+        const element =
+            document.createElement("span");
+
+        element.textContent =
+            item;
+
+        environmentElement.appendChild(
+            element
+        );
+
+    });
 
 
-    /*
-     * Replay panel animation
-     */
+    /* -----------------------------------------
+       Metrics
+       ----------------------------------------- */
 
-    const panel =
-        document.querySelector(".experience-panel");
+    metricsElement.innerHTML = "";
 
-    panel.style.animation = "none";
+    experience.metrics.forEach(metric => {
 
-    panel.offsetHeight;
+        const metricElement =
+            document.createElement("div");
 
-    panel.style.animation =
-        "experienceFadeIn 0.4s ease";
+        metricElement.className =
+            "showcase-metric";
+
+
+        metricElement.innerHTML = `
+            <strong>${metric.value}</strong>
+            <span>${metric.label}</span>
+        `;
+
+
+        metricsElement.appendChild(
+            metricElement
+        );
+
+    });
+
+
+    /* -----------------------------------------
+       Responsibilities
+       ----------------------------------------- */
+
+    responsibilityElement.innerHTML = "";
+
+    experience.responsibilities.forEach(
+        (responsibility, index) => {
+
+            const card =
+                document.createElement("article");
+
+            card.className =
+                "responsibility-card";
+
+
+            const number =
+                String(index + 1)
+                    .padStart(2, "0");
+
+
+            card.innerHTML = `
+
+                <span class="responsibility-number">
+                    ${number}
+                </span>
+
+                <h5>
+                    ${responsibility.title}
+                </h5>
+
+                <p>
+                    ${responsibility.description}
+                </p>
+
+            `;
+
+
+            responsibilityElement.appendChild(
+                card
+            );
+
+        }
+    );
+
+
+    /* -----------------------------------------
+       Reset details when switching experience
+       ----------------------------------------- */
+
+    detailsPanel.classList.remove("open");
+
+    exploreButton.classList.remove("open");
+
+
+    /* -----------------------------------------
+       Replay showcase animation
+       ----------------------------------------- */
+
+    showcaseElement.style.animation = "none";
+
+    showcaseElement.offsetHeight;
+
+    showcaseElement.style.animation =
+        "showcaseEnter 0.4s ease";
 
 }
 
 
-/*
- * Timeline interaction
- */
+/* =========================================================
+   EXPERIENCE NAVIGATION
+   ========================================================= */
 
-timelineItems.forEach(item => {
+navigationItems.forEach(item => {
 
     item.addEventListener(
         "click",
@@ -346,3 +469,49 @@ timelineItems.forEach(item => {
     );
 
 });
+
+
+/* =========================================================
+   EXPLORE EXPERIENCE
+   ========================================================= */
+
+exploreButton.addEventListener(
+    "click",
+    () => {
+
+        const isOpen =
+            detailsPanel.classList.contains("open");
+
+
+        if (isOpen) {
+
+            detailsPanel.classList.remove(
+                "open"
+            );
+
+            exploreButton.classList.remove(
+                "open"
+            );
+
+        } else {
+
+            detailsPanel.classList.add(
+                "open"
+            );
+
+            exploreButton.classList.add(
+                "open"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   INITIALIZE
+   ========================================================= */
+
+updateExperience("concentrix");
+```
