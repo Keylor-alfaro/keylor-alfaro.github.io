@@ -26,7 +26,7 @@ body {
 header {
     background-color: #0f172a;
     color: white;
-    padding: 30px 20px 80px;
+    padding: 25px 20px 90px;
     text-align: center;
 }
 
@@ -38,14 +38,15 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
-    margin-bottom: 55px;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto 75px;
 }
 
 nav a {
     color: #cbd5e1;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     transition: color 0.2s ease;
 }
@@ -58,49 +59,92 @@ nav a:hover {
    Hero
    ========================= */
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
 }
 
-header h2 {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 8px;
+.hero-label {
+    color: #60a5fa;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
 }
 
-header p {
-    max-width: 800px;
-    margin: 15px auto;
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 15px;
+}
+
+.hero-content h2 {
+    font-size: 23px;
+    font-weight: 400;
     color: #cbd5e1;
+    margin-bottom: 25px;
 }
 
-header a {
+.hero-description {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #cbd5e1;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* =========================
+   Hero Buttons
+   ========================= */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.hero-buttons a {
     display: inline-block;
-    margin: 15px 8px 0;
-    padding: 12px 22px;
-    text-decoration: none;
+    padding: 13px 25px;
     border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.primary-button {
     background-color: #2563eb;
     color: white;
 }
 
-header a:hover {
+.primary-button:hover {
     background-color: #1d4ed8;
 }
 
+.secondary-button {
+    border: 1px solid #64748b;
+    color: white;
+    background-color: transparent;
+}
+
+.secondary-button:hover {
+    background-color: #1e293b;
+}
+
 /* =========================
-   Main content
+   Main Content
    ========================= */
 
 main {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 75px 20px;
 }
 
 section {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     scroll-margin-top: 30px;
 }
 
@@ -117,6 +161,7 @@ section h2 {
 #about p {
     margin-bottom: 15px;
     color: #475569;
+    font-size: 16px;
 }
 
 /* =========================
@@ -125,10 +170,11 @@ section h2 {
 
 article {
     background-color: white;
-    padding: 25px;
-    margin-bottom: 20px;
+    padding: 28px;
+    margin-bottom: 22px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.08);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.06);
 }
 
 article h3 {
@@ -204,38 +250,59 @@ footer {
 }
 
 /* =========================
-   Responsive design
+   Responsive Design
    ========================= */
 
 @media (max-width: 768px) {
 
     header {
-        padding: 25px 20px 60px;
+        padding: 20px 20px 65px;
     }
 
     nav {
         gap: 15px;
         flex-wrap: wrap;
-        margin-bottom: 45px;
+        margin-bottom: 55px;
     }
 
     nav a {
-        font-size: 14px;
+        font-size: 13px;
     }
 
-    header h1 {
-        font-size: 32px;
+    .hero-content h1 {
+        font-size: 36px;
     }
 
-    header h2 {
-        font-size: 21px;
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons a {
+        width: 200px;
     }
 
     main {
-        padding: 40px 15px;
+        padding: 55px 15px;
+    }
+
+    section {
+        margin-bottom: 65px;
     }
 
     section h2 {
-        font-size: 26px;
+        font-size: 27px;
+    }
+
+    article {
+        padding: 22px;
     }
 }
