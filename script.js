@@ -1,9 +1,3 @@
-
-/* =========================================================
-   PORTFOLIO INTERACTIONS
-========================================================= */
-
-
 /* =========================================================
    MOBILE NAVIGATION
 ========================================================= */
@@ -14,10 +8,6 @@ const mobileMenuButton =
 const navLinks =
     document.querySelector(".nav-links");
 
-const navLinkItems =
-    document.querySelectorAll(".nav-links .nav-link");
-
-
 if (mobileMenuButton && navLinks) {
 
     mobileMenuButton.addEventListener("click", () => {
@@ -26,7 +16,6 @@ if (mobileMenuButton && navLinks) {
             navLinks.classList.contains("active");
 
         navLinks.classList.toggle("active");
-
         mobileMenuButton.classList.toggle("active");
 
         mobileMenuButton.setAttribute(
@@ -37,12 +26,11 @@ if (mobileMenuButton && navLinks) {
     });
 
 
-    navLinkItems.forEach(link => {
+    navLinks.querySelectorAll("a").forEach(link => {
 
         link.addEventListener("click", () => {
 
             navLinks.classList.remove("active");
-
             mobileMenuButton.classList.remove("active");
 
             mobileMenuButton.setAttribute(
@@ -65,30 +53,17 @@ const experienceData = {
 
     concentrix: {
 
-        company:
-            "CONCENTRIX COSTA RICA",
+        company: "Concentrix Costa Rica",
 
-        date:
-            "04/2025 – 12/2025",
+        date: "04/2025 – 12/2025",
 
         role:
             "IT Support Specialist / Avalon Advisor I",
 
         howWorked:
-            `
-            My work typically started with understanding the user's
-            issue and determining its impact and urgency. I then
-            investigated the symptoms, performed the appropriate
-            troubleshooting steps, and either restored the service
-            or escalated the case with the relevant technical
-            information.
+            "My work typically started with understanding the user's issue and determining its impact and urgency. I then investigated the symptoms, performed the appropriate troubleshooting steps, and either restored the service or escalated the case with the relevant technical information. Throughout the process, I maintained accurate documentation and followed up until the issue reached the appropriate resolution.",
 
-            Throughout the process, I maintained accurate
-            documentation and followed up until the issue reached
-            the appropriate resolution.
-            `,
-
-        focusAreas: [
+        focus: [
             "IT Support",
             "Incident Management",
             "Troubleshooting",
@@ -135,30 +110,10 @@ const experienceData = {
         ],
 
         problemApproach:
-            `
-            I approached technical issues by breaking them down
-            into observable symptoms, identifying possible causes,
-            evaluating the available solutions, and applying
-            structured troubleshooting steps.
-
-            When a direct resolution was not possible, I focused
-            on providing the next technical team with accurate
-            information, documented troubleshooting, and clear
-            context to support the escalation.
-            `,
+            "I approached technical issues by breaking them down into observable symptoms, identifying possible causes, evaluating the available solutions, and applying structured troubleshooting steps. When a direct resolution was not possible, I focused on providing the next technical team with accurate information, documented troubleshooting, and clear context to support the escalation.",
 
         usersTeams:
-            `
-            Supporting users was not limited to resolving the
-            technical issue. I also focused on communicating what
-            was happening, explaining the next steps clearly,
-            managing expectations, and keeping the case moving
-            until resolution.
-
-            For issues requiring escalation, I coordinated with
-            specialized teams and maintained the necessary
-            follow-up.
-            `,
+            "Supporting users was not limited to resolving the technical issue. I also focused on communicating what was happening, explaining the next steps clearly, managing expectations, and keeping the case moving until resolution. For issues requiring escalation, I coordinated with specialized teams and maintained the necessary follow-up.",
 
         environment: [
             "Microsoft 365",
@@ -168,17 +123,14 @@ const experienceData = {
         ],
 
         performance: [
-
             {
                 value: "95%",
                 label: "SLA / KPI Compliance"
             },
-
             {
                 value: "90%+",
                 label: "Customer Satisfaction"
             }
-
         ],
 
         roleFocus: [
@@ -190,39 +142,22 @@ const experienceData = {
     },
 
 
-    /* =====================================================
-       GLOBAL PACKING GROUP
-    ===================================================== */
-
     global: {
 
-        company:
-            "GLOBAL PACKING GROUP",
+        company: "Global Packing Group",
 
-        date:
-            "06/2021 – 08/2024",
+        date: "06/2021 – 08/2024",
 
         role:
             "Technical Support Specialist",
 
         howWorked:
-            `
-            My work involved supporting users across on-site and
-            remote environments, beginning with understanding the
-            reported issue and determining whether it involved
-            hardware, software, systems, connectivity, or user
-            access.
+            "My work combined on-site and remote technical support across hardware, software, business applications, systems, and infrastructure. I focused on identifying the source of technical problems, applying the appropriate troubleshooting or configuration steps, validating the result, and maintaining the necessary follow-up.",
 
-            I then investigated the issue, performed the appropriate
-            technical checks, applied corrective actions, and
-            validated that the affected equipment, application, or
-            service was working as expected.
-            `,
-
-        focusAreas: [
-            "Technical Support",
+        focus: [
+            "IT Support",
+            "Infrastructure Support",
             "Hardware & Software",
-            "Infrastructure",
             "Systems Support"
         ],
 
@@ -232,62 +167,44 @@ const experienceData = {
                 number: "01",
                 title: "Issue Identification",
                 description:
-                    "Gathered information from the user and identified whether the issue involved hardware, software, systems, or connectivity."
+                    "Reviewed the reported problem and gathered the information needed to understand the affected equipment, application, system, or service."
             },
 
             {
                 number: "02",
-                title: "Technical Diagnosis",
+                title: "Diagnosis",
                 description:
-                    "Investigated symptoms, checked the affected environment, and narrowed down the likely source of the problem."
+                    "Analyzed symptoms and investigated the technical environment to determine the likely source of the issue."
             },
 
             {
                 number: "03",
                 title: "Troubleshooting",
                 description:
-                    "Applied the appropriate technical procedures, configurations, repairs, or corrective actions."
+                    "Applied appropriate troubleshooting procedures across hardware, software, applications, systems, or network connectivity."
             },
 
             {
                 number: "04",
-                title: "Validation",
+                title: "Repair / Configuration",
                 description:
-                    "Verified that the affected equipment, application, connection, or service was operating correctly."
+                    "Performed the required repair, configuration, replacement, or system adjustment based on the identified issue."
             },
 
             {
                 number: "05",
-                title: "Follow-up",
+                title: "Validation & Follow-up",
                 description:
-                    "Maintained communication with users and followed up on technical issues requiring additional attention."
+                    "Validated that the service or equipment was operating correctly and maintained the required documentation or follow-up."
             }
 
         ],
 
         problemApproach:
-            `
-            I approached problems by first determining the affected
-            component or service and then narrowing down the possible
-            causes through technical checks and troubleshooting.
-
-            This included working across hardware, software,
-            Microsoft environments, business applications,
-            connectivity, and infrastructure-related issues.
-            `,
+            "I approached technical problems by first identifying whether the issue was related to hardware, software, applications, infrastructure, or connectivity. I then isolated the affected component, tested possible causes, applied the appropriate corrective action, and validated the result before considering the issue resolved.",
 
         usersTeams:
-            `
-            My support involved direct interaction with users in
-            both on-site and remote environments. I focused on
-            understanding the issue clearly, communicating the
-            troubleshooting process, and confirming that the
-            requested support had been properly addressed.
-
-            When an issue involved another technical area, I
-            coordinated with the appropriate resources to continue
-            the resolution process.
-            `,
+            "I provided both on-site and remote support, working directly with users to understand their technical needs and explain the actions required. When an issue involved systems or infrastructure beyond the immediate support level, I coordinated with the relevant technical resources to continue the investigation.",
 
         environment: [
             "Microsoft 365",
@@ -300,151 +217,99 @@ const experienceData = {
             "Networking"
         ],
 
-        performance: [
-            {
-                value: "On-site",
-                label: "Technical Support"
-            },
-
-            {
-                value: "Remote",
-                label: "User Support"
-            }
-
-        ],
+        performance: [],
 
         roleFocus: [
-            "Technical Support",
+            "IT Support",
             "Infrastructure Support",
-            "Systems & Hardware"
+            "Technical Troubleshooting"
         ]
 
     },
 
 
-    /* =====================================================
-       SONDA
-    ===================================================== */
-
     sonda: {
 
-        company:
-            "SONDA COSTA RICA",
+        company: "SONDA Costa Rica",
 
-        date:
-            "02/2021 – 06/2021",
+        date: "02/2021 – 06/2021",
 
         role:
             "Helpdesk Agent / Incident Manager",
 
         howWorked:
-            `
-            My work began with receiving and understanding the
-            user's reported incident or service request. I assessed
-            the issue, determined its priority, and gathered the
-            information required to investigate or route the case.
+            "My work focused on receiving, analyzing, classifying, and following up on incidents and service requests. I evaluated the reported issue, determined its impact and priority, performed the appropriate troubleshooting, and either restored the service or escalated the case with the relevant information.",
 
-            I then performed the appropriate troubleshooting,
-            documented the case, and either restored the service
-            or escalated the incident to the corresponding
-            technical team.
-            `,
-
-        focusAreas: [
-            "Helpdesk Support",
+        focus: [
+            "Helpdesk",
             "Incident Management",
-            "Service Requests",
-            "Escalation"
+            "Troubleshooting",
+            "Service Restoration"
         ],
 
         workflow: [
 
             {
                 number: "01",
-                title: "Incoming Incident",
+                title: "Incoming Request",
                 description:
-                    "Received the user's incident or service request and gathered the relevant information."
+                    "Received the incident or service request and gathered the relevant information from the user."
             },
 
             {
                 number: "02",
                 title: "Classification",
                 description:
-                    "Analyzed the reported issue and determined its type, impact, and appropriate priority."
+                    "Analyzed the reported issue and classified the case according to its nature, impact, and priority."
             },
 
             {
                 number: "03",
                 title: "Troubleshooting",
                 description:
-                    "Performed the applicable first and second-level troubleshooting steps to restore the service."
+                    "Performed the appropriate first and second-level troubleshooting based on the reported symptoms."
             },
 
             {
                 number: "04",
-                title: "Escalation",
+                title: "Resolution / Escalation",
                 description:
-                    "Escalated incidents requiring specialized support with the relevant technical and case information."
+                    "Resolved the issue when possible or escalated it to the appropriate corporate technical team."
             },
 
             {
                 number: "05",
-                title: "Follow-up",
+                title: "Documentation & Closure",
                 description:
-                    "Maintained ticket information and followed the incident through the appropriate resolution process."
+                    "Maintained accurate ticket information, followed up on the case, and supported the appropriate closure."
             }
 
         ],
 
         problemApproach:
-            `
-            I approached incidents by first understanding what
-            service was affected and determining the impact on
-            the user or business operation.
-
-            From there, I used the available information to
-            determine the appropriate troubleshooting path and
-            whether the incident could be resolved directly or
-            required escalation.
-            `,
+            "I approached incidents by analyzing the reported symptoms, determining the impact and priority, and deciding which troubleshooting path was appropriate. When the issue required another technical level, I escalated it with the relevant information so the next team could continue the investigation efficiently.",
 
         usersTeams:
-            `
-            User communication was an important part of the
-            support process. I focused on gathering accurate
-            information, communicating the status of the incident,
-            and maintaining follow-up while the case progressed.
-
-            For incidents requiring escalation, I provided the
-            relevant information to the appropriate technical team
-            to support continuity of the resolution process.
-            `,
+            "User communication was an important part of the helpdesk workflow. I gathered information from users, explained the troubleshooting process, communicated the next steps, and maintained follow-up while coordinating escalations with corporate technical teams.",
 
         environment: [
             "Helpdesk",
-            "Incident Management",
+            "Ticket Management",
             "Corporate IT",
-            "Technical Escalation"
+            "Incident Management"
         ],
 
         performance: [
-
             {
                 value: "95%",
                 label: "Customer Satisfaction"
-            },
-
-            {
-                value: "1st / 2nd",
-                label: "Level Support"
             }
-
         ],
 
         roleFocus: [
             "Helpdesk Support",
             "Incident Management",
-            "Service Restoration"
+            "Technical Troubleshooting"
         ]
 
     }
@@ -456,314 +321,379 @@ const experienceData = {
    EXPERIENCE ELEMENTS
 ========================================================= */
 
-const experienceNavigation =
-    document.querySelectorAll(
-        ".experience-nav-item"
+const experienceShowcase =
+    document.querySelector(".experience-showcase");
+
+const experienceButtons =
+    document.querySelectorAll(".experience-nav-item");
+
+const companyElement =
+    document.querySelector(".experience-company");
+
+const dateElement =
+    document.querySelector(".showcase-date");
+
+const roleElement =
+    document.querySelector(".showcase-company h3");
+
+const howWorkedElement =
+    document.querySelector('[data-field="howWorked"]');
+
+const focusElement =
+    document.querySelector('[data-field="focus"]');
+
+const workflowContainer =
+    document.querySelector(".support-workflow");
+
+const problemApproachElement =
+    document.querySelector(
+        '[data-field="problemApproach"]'
     );
 
-const experienceShowcase =
+const usersTeamsElement =
     document.querySelector(
-        ".experience-showcase"
+        '[data-field="usersTeams"]'
     );
+
+const environmentElement =
+    document.querySelector(
+        '[data-field="environment"]'
+    );
+
+const performanceContainer =
+    document.querySelector(".showcase-metrics");
+
+const roleFocusContainer =
+    document.querySelector(".role-focus");
 
 
 /* =========================================================
-   EXPERIENCE RENDER FUNCTION
+   WORKFLOW CONTROLS
 ========================================================= */
 
-function renderExperience(experienceKey) {
+const workflowPrevious =
+    document.querySelector(".workflow-prev");
 
-    const data =
-        experienceData[experienceKey];
+const workflowNext =
+    document.querySelector(".workflow-next");
 
-    if (!data || !experienceShowcase) {
+
+function getWorkflowStepSize() {
+
+    const step =
+        workflowContainer?.querySelector(
+            ".workflow-step"
+        );
+
+    if (!step) {
+        return 300;
+    }
+
+    const styles =
+        window.getComputedStyle(
+            workflowContainer
+        );
+
+    const gap =
+        parseFloat(styles.gap) || 0;
+
+    return step.getBoundingClientRect().width + gap;
+}
+
+
+function updateWorkflowControls() {
+
+    if (
+        !workflowContainer ||
+        !workflowPrevious ||
+        !workflowNext
+    ) {
         return;
     }
 
+    const maxScroll =
+        workflowContainer.scrollWidth -
+        workflowContainer.clientWidth;
 
-    /* ---------------------------------------------------------
-       Main references
-    --------------------------------------------------------- */
+    workflowPrevious.disabled =
+        workflowContainer.scrollLeft <= 5;
 
-    const companyElement =
-        experienceShowcase.querySelector(
-            ".experience-company"
-        );
+    workflowNext.disabled =
+        workflowContainer.scrollLeft >=
+        maxScroll - 5;
 
-    const dateElement =
-        experienceShowcase.querySelector(
-            ".showcase-date"
-        );
-
-    const roleElement =
-        experienceShowcase.querySelector(
-            ".showcase-company h3"
-        );
-
-    const descriptionElement =
-        experienceShowcase.querySelector(
-            ".showcase-description"
-        );
-
-    const focusContainer =
-        experienceShowcase.querySelector(
-            ".experience-scope"
-        );
-
-    const workflowContainer =
-        experienceShowcase.querySelector(
-            ".support-workflow"
-        );
-
-    const problemApproachElement =
-        experienceShowcase.querySelector(
-            ".experience-detail-section:nth-of-type(1) p"
-        );
-
-    const usersTeamsElement =
-        experienceShowcase.querySelector(
-            ".experience-detail-section:nth-of-type(2) p"
-        );
-
-    const environmentContainer =
-        experienceShowcase.querySelector(
-            ".environment-tags"
-        );
-
-    const metricsContainer =
-        experienceShowcase.querySelector(
-            ".showcase-metrics"
-        );
-
-    const roleFocusContainer =
-        experienceShowcase.querySelector(
-            ".role-focus"
-        );
+}
 
 
-    /* ---------------------------------------------------------
-       Update basic information
-    --------------------------------------------------------- */
+function resetWorkflowCarousel() {
 
-    if (companyElement) {
-
-        companyElement.textContent =
-            data.company;
-
+    if (!workflowContainer) {
+        return;
     }
 
+    workflowContainer.scrollLeft = 0;
 
-    if (dateElement) {
+    updateWorkflowControls();
 
-        dateElement.textContent =
-            data.date;
-
-    }
+}
 
 
-    if (roleElement) {
+if (
+    workflowPrevious &&
+    workflowNext &&
+    workflowContainer
+) {
 
-        roleElement.textContent =
-            data.role;
+    workflowPrevious.addEventListener(
+        "click",
+        () => {
 
-    }
+            workflowContainer.scrollBy({
+                left: -getWorkflowStepSize(),
+                behavior: "smooth"
+            });
 
-
-    /* ---------------------------------------------------------
-       HOW I WORKED
-    --------------------------------------------------------- */
-
-    if (descriptionElement) {
-
-        descriptionElement.innerHTML =
-            formatParagraphs(
-                data.howWorked
-            );
-
-    }
+        }
+    );
 
 
-    /* ---------------------------------------------------------
-       FOCUS AREAS
-    --------------------------------------------------------- */
+    workflowNext.addEventListener(
+        "click",
+        () => {
 
-    if (focusContainer) {
+            workflowContainer.scrollBy({
+                left: getWorkflowStepSize(),
+                behavior: "smooth"
+            });
 
-        focusContainer.innerHTML =
-            data.focusAreas
-                .map(item => `
-                    <span>
-                        ${item}
-                    </span>
-                `)
-                .join("");
-
-    }
+        }
+    );
 
 
-    /* ---------------------------------------------------------
-       WORKFLOW
-    --------------------------------------------------------- */
-
-    if (workflowContainer) {
-
-        workflowContainer.innerHTML =
-            data.workflow
-                .map((step, index) => {
-
-                    const connector =
-                        index < data.workflow.length - 1
-                            ? `
-                                <div class="workflow-connector">
-                                    →
-                                </div>
-                              `
-                            : "";
-
-                    return `
-                        <div class="workflow-step">
-
-                            <span class="workflow-number">
-                                ${step.number}
-                            </span>
-
-                            <div>
-
-                                <strong>
-                                    ${step.title}
-                                </strong>
-
-                                <p>
-                                    ${step.description}
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                        ${connector}
-                    `;
-
-                })
-                .join("");
-
-    }
+    workflowContainer.addEventListener(
+        "scroll",
+        updateWorkflowControls
+    );
 
 
-    /* ---------------------------------------------------------
-       HOW I APPROACHED PROBLEMS
-    --------------------------------------------------------- */
-
-    if (problemApproachElement) {
-
-        problemApproachElement.innerHTML =
-            formatParagraphs(
-                data.problemApproach
-            );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       WORKING WITH USERS & TEAMS
-    --------------------------------------------------------- */
-
-    if (usersTeamsElement) {
-
-        usersTeamsElement.innerHTML =
-            formatParagraphs(
-                data.usersTeams
-            );
-
-    }
-
-
-    /* ---------------------------------------------------------
-       TECHNICAL ENVIRONMENT
-    --------------------------------------------------------- */
-
-    if (environmentContainer) {
-
-        environmentContainer.innerHTML =
-            data.environment
-                .map(item => `
-                    <span>
-                        ${item}
-                    </span>
-                `)
-                .join("");
-
-    }
-
-
-    /* ---------------------------------------------------------
-       PERFORMANCE
-    --------------------------------------------------------- */
-
-    if (metricsContainer) {
-
-        metricsContainer.innerHTML =
-            data.performance
-                .map(metric => `
-                    <div class="metric">
-
-                        <strong>
-                            ${metric.value}
-                        </strong>
-
-                        <span>
-                            ${metric.label}
-                        </span>
-
-                    </div>
-                `)
-                .join("");
-
-    }
-
-
-    /* ---------------------------------------------------------
-       ROLE FOCUS
-    --------------------------------------------------------- */
-
-    if (roleFocusContainer) {
-
-        roleFocusContainer.innerHTML =
-            data.roleFocus
-                .map(item => `
-                    <span>
-                        ${item}
-                    </span>
-                `)
-                .join("");
-
-    }
+    window.addEventListener(
+        "resize",
+        updateWorkflowControls
+    );
 
 }
 
 
 /* =========================================================
-   FORMAT PARAGRAPHS
+   EXPERIENCE RENDERING
 ========================================================= */
 
-function formatParagraphs(text) {
+function renderExperience(key) {
 
-    return text
-        .trim()
-        .split(/\n\s*\n/)
-        .map(paragraph => {
+    const data =
+        experienceData[key];
 
-            return paragraph
-                .trim()
-                .replace(/\n/g, " ");
+    if (!data) {
+        return;
+    }
 
-        })
-        .map(paragraph => {
 
-            return `<span>${paragraph}</span>`;
+    if (experienceShowcase) {
 
-        })
-        .join("");
+        experienceShowcase.classList.add(
+            "is-changing"
+        );
+
+    }
+
+
+    setTimeout(() => {
+
+        if (companyElement) {
+            companyElement.textContent =
+                data.company;
+        }
+
+        if (dateElement) {
+            dateElement.textContent =
+                data.date;
+        }
+
+        if (roleElement) {
+            roleElement.textContent =
+                data.role;
+        }
+
+        if (howWorkedElement) {
+            howWorkedElement.textContent =
+                data.howWorked;
+        }
+
+
+        /* FOCUS */
+
+        if (focusElement) {
+
+            focusElement.innerHTML =
+                data.focus
+                    .map(
+                        item =>
+                            `<span>${item}</span>`
+                    )
+                    .join("");
+
+        }
+
+
+        /* WORKFLOW */
+
+        if (workflowContainer) {
+
+            workflowContainer.innerHTML =
+                data.workflow
+                    .map(step => {
+
+                        return `
+                            <div class="workflow-step">
+
+                                <span class="workflow-number">
+                                    ${step.number}
+                                </span>
+
+                                <div>
+
+                                    <strong>
+                                        ${step.title}
+                                    </strong>
+
+                                    <p>
+                                        ${step.description}
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        `;
+
+                    })
+                    .join("");
+
+        }
+
+
+        /* PROBLEM APPROACH */
+
+        if (problemApproachElement) {
+
+            problemApproachElement.textContent =
+                data.problemApproach;
+
+        }
+
+
+        /* USERS & TEAMS */
+
+        if (usersTeamsElement) {
+
+            usersTeamsElement.textContent =
+                data.usersTeams;
+
+        }
+
+
+        /* ENVIRONMENT */
+
+        if (environmentElement) {
+
+            environmentElement.innerHTML =
+                data.environment
+                    .map(
+                        item =>
+                            `<span>${item}</span>`
+                    )
+                    .join("");
+
+        }
+
+
+        /* PERFORMANCE */
+
+        if (performanceContainer) {
+
+            performanceContainer.innerHTML =
+                data.performance.length
+
+                    ? data.performance
+                        .map(metric => {
+
+                            return `
+                                <div class="metric">
+
+                                    <strong>
+                                        ${metric.value}
+                                    </strong>
+
+                                    <span>
+                                        ${metric.label}
+                                    </span>
+
+                                </div>
+                            `;
+
+                        })
+                        .join("")
+
+                    : `
+                        <div class="metric">
+
+                            <strong>
+                                —
+                            </strong>
+
+                            <span>
+                                Performance metrics
+                            </span>
+
+                        </div>
+                    `;
+
+        }
+
+
+        /* ROLE FOCUS */
+
+        if (roleFocusContainer) {
+
+            roleFocusContainer.innerHTML = `
+
+                <span class="mini-label">
+                    ROLE FOCUS
+                </span>
+
+                ${data.roleFocus
+                    .map(
+                        item =>
+                            `<strong>${item}</strong>`
+                    )
+                    .join("")}
+
+            `;
+
+        }
+
+
+        resetWorkflowCarousel();
+
+
+        if (experienceShowcase) {
+
+            experienceShowcase.classList.remove(
+                "is-changing"
+            );
+
+        }
+
+    }, 180);
 
 }
 
@@ -772,91 +702,35 @@ function formatParagraphs(text) {
    EXPERIENCE NAVIGATION
 ========================================================= */
 
-experienceNavigation.forEach(button => {
+experienceButtons.forEach(button => {
 
-    button.addEventListener("click", () => {
+    button.addEventListener(
+        "click",
+        () => {
 
-        const experienceKey =
-            button.dataset.experience;
+            const experience =
+                button.dataset.experience;
 
+            experienceButtons.forEach(
+                item => {
 
-        /* -----------------------------------------------------
-           Ignore if already active
-        ----------------------------------------------------- */
+                    item.classList.remove(
+                        "active"
+                    );
 
-        const alreadyActive =
-            button.classList.contains("active");
+                }
+            );
 
-
-        if (alreadyActive) {
-            return;
-        }
-
-
-        /* -----------------------------------------------------
-           Remove active state
-        ----------------------------------------------------- */
-
-        experienceNavigation.forEach(item => {
-
-            item.classList.remove(
+            button.classList.add(
                 "active"
             );
 
-            item.setAttribute(
-                "aria-selected",
-                "false"
-            );
-
-        });
-
-
-        /* -----------------------------------------------------
-           Activate selected item
-        ----------------------------------------------------- */
-
-        button.classList.add(
-            "active"
-        );
-
-        button.setAttribute(
-            "aria-selected",
-            "true"
-        );
-
-
-        /* -----------------------------------------------------
-           Animate showcase
-        ----------------------------------------------------- */
-
-        if (experienceShowcase) {
-
-            experienceShowcase.classList.add(
-                "is-changing"
-            );
-
-
-            setTimeout(() => {
-
-                renderExperience(
-                    experienceKey
-                );
-
-                experienceShowcase.classList.remove(
-                    "is-changing"
-                );
-
-            }, 180);
-
-        } else {
-
             renderExperience(
-                experienceKey
+                experience
             );
 
         }
-
-    });
+    );
 
 });
 
@@ -865,9 +739,7 @@ experienceNavigation.forEach(button => {
    INITIAL EXPERIENCE
 ========================================================= */
 
-renderExperience(
-    "concentrix"
-);
+renderExperience("concentrix");
 
 
 /* =========================================================
@@ -887,59 +759,61 @@ skillCategories.forEach(category => {
             ".skill-card-trigger"
         );
 
-
     if (!trigger) {
         return;
     }
 
 
-    trigger.addEventListener("click", () => {
+    trigger.addEventListener(
+        "click",
+        () => {
 
-        const isActive =
-            category.classList.contains(
-                "active"
-            );
-
-
-        skillCategories.forEach(item => {
-
-            item.classList.remove(
-                "active"
-            );
-
-
-            const itemTrigger =
-                item.querySelector(
-                    ".skill-card-trigger"
+            const isActive =
+                category.classList.contains(
+                    "active"
                 );
 
 
-            if (itemTrigger) {
+            skillCategories.forEach(
+                item => {
 
-                itemTrigger.setAttribute(
+                    item.classList.remove(
+                        "active"
+                    );
+
+                    const itemTrigger =
+                        item.querySelector(
+                            ".skill-card-trigger"
+                        );
+
+                    if (itemTrigger) {
+
+                        itemTrigger.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
+
+                }
+            );
+
+
+            if (!isActive) {
+
+                category.classList.add(
+                    "active"
+                );
+
+                trigger.setAttribute(
                     "aria-expanded",
-                    "false"
+                    "true"
                 );
 
             }
 
-        });
-
-
-        if (!isActive) {
-
-            category.classList.add(
-                "active"
-            );
-
-            trigger.setAttribute(
-                "aria-expanded",
-                "true"
-            );
-
         }
-
-    });
+    );
 
 });
 
@@ -961,59 +835,61 @@ educationItems.forEach(item => {
             ".education-card-trigger"
         );
 
-
     if (!trigger) {
         return;
     }
 
 
-    trigger.addEventListener("click", () => {
+    trigger.addEventListener(
+        "click",
+        () => {
 
-        const isActive =
-            item.classList.contains(
-                "active"
-            );
-
-
-        educationItems.forEach(otherItem => {
-
-            otherItem.classList.remove(
-                "active"
-            );
-
-
-            const otherTrigger =
-                otherItem.querySelector(
-                    ".education-card-trigger"
+            const isActive =
+                item.classList.contains(
+                    "active"
                 );
 
 
-            if (otherTrigger) {
+            educationItems.forEach(
+                otherItem => {
 
-                otherTrigger.setAttribute(
+                    otherItem.classList.remove(
+                        "active"
+                    );
+
+                    const otherTrigger =
+                        otherItem.querySelector(
+                            ".education-card-trigger"
+                        );
+
+                    if (otherTrigger) {
+
+                        otherTrigger.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
+
+                }
+            );
+
+
+            if (!isActive) {
+
+                item.classList.add(
+                    "active"
+                );
+
+                trigger.setAttribute(
                     "aria-expanded",
-                    "false"
+                    "true"
                 );
 
             }
 
-        });
-
-
-        if (!isActive) {
-
-            item.classList.add(
-                "active"
-            );
-
-            trigger.setAttribute(
-                "aria-expanded",
-                "true"
-            );
-
         }
-
-    });
+    );
 
 });
 
@@ -1022,13 +898,9 @@ educationItems.forEach(item => {
    SMOOTH ANCHOR SCROLLING
 ========================================================= */
 
-const anchorLinks =
-    document.querySelectorAll(
-        'a[href^="#"]'
-    );
-
-
-anchorLinks.forEach(link => {
+document.querySelectorAll(
+    'a[href^="#"]'
+).forEach(link => {
 
     link.addEventListener(
         "click",
@@ -1037,7 +909,6 @@ anchorLinks.forEach(link => {
             const targetId =
                 link.getAttribute("href");
 
-
             if (
                 !targetId ||
                 targetId === "#"
@@ -1045,20 +916,16 @@ anchorLinks.forEach(link => {
                 return;
             }
 
-
             const target =
                 document.querySelector(
                     targetId
                 );
 
-
             if (!target) {
                 return;
             }
 
-
             event.preventDefault();
-
 
             target.scrollIntoView({
                 behavior: "smooth",
@@ -1069,3 +936,63 @@ anchorLinks.forEach(link => {
     );
 
 });
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+const backToTop =
+    document.querySelector(
+        ".back-to-top"
+    );
+
+
+function updateBackToTop() {
+
+    if (!backToTop) {
+        return;
+    }
+
+    if (window.scrollY > 500) {
+
+        backToTop.classList.add(
+            "visible"
+        );
+
+    } else {
+
+        backToTop.classList.remove(
+            "visible"
+        );
+
+    }
+
+}
+
+
+window.addEventListener(
+    "scroll",
+    updateBackToTop,
+    { passive: true }
+);
+
+
+if (backToTop) {
+
+    backToTop.addEventListener(
+        "click",
+        () => {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+    );
+
+}
+
+
+updateBackToTop();
