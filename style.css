@@ -659,21 +659,28 @@ header {
     background: #f4f6f9;
 }
 
-.experience-intro {
-    max-width: 650px;
 
-    margin-top: -25px;
-    margin-bottom: 50px;
+/* Intro */
+
+.experience-intro {
+    max-width: 1080px;
+
+    margin: -25px auto 48px;
 }
 
 .experience-intro p {
+    max-width: 620px;
+
     color: #6e7a8d;
-    font-size: 14px;
+
+    font-size: 13px;
     line-height: 1.8;
 }
 
 
-/* Navigation */
+/* =========================================================
+   EXPERIENCE NAVIGATION / TIMELINE
+========================================================= */
 
 .experience-navigation {
     position: relative;
@@ -682,7 +689,9 @@ header {
 
     grid-template-columns: repeat(3, 1fr);
 
-    margin-bottom: 35px;
+    max-width: 1080px;
+
+    margin: 0 auto 32px;
 }
 
 .experience-navigation::before {
@@ -702,9 +711,9 @@ header {
 .experience-nav-item {
     position: relative;
 
-    min-height: 110px;
+    min-height: 105px;
 
-    padding: 30px 25px 0 0;
+    padding: 28px 25px 0 0;
 
     border: 0;
 
@@ -715,11 +724,22 @@ header {
     cursor: pointer;
 
     color: inherit;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
 }
 
 .experience-nav-item:last-child {
     padding-right: 0;
 }
+
+.experience-nav-item:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Timeline dots */
 
 .nav-dot {
     position: absolute;
@@ -737,13 +757,15 @@ header {
     background: #f4f6f9;
 
     transition:
-        border-color 0.25s ease,
-        background 0.25s ease,
-        transform 0.25s ease;
+        border-color 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .experience-nav-item.active .nav-dot {
     border-color: #2563eb;
+
     background: #2563eb;
 
     transform: scale(1.15);
@@ -752,6 +774,9 @@ header {
         0 0 0 5px rgba(37, 99, 235, 0.1);
 }
 
+
+/* Navigation text */
+
 .nav-year {
     display: block;
 
@@ -759,10 +784,13 @@ header {
 
     color: #8a96a7;
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
 
     letter-spacing: 0.08em;
+
+    transition:
+        color 0.25s ease;
 }
 
 .nav-company {
@@ -770,8 +798,11 @@ header {
 
     color: #1b2638;
 
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
+
+    transition:
+        color 0.25s ease;
 }
 
 .nav-role {
@@ -781,7 +812,7 @@ header {
 
     color: #8792a2;
 
-    font-size: 12px;
+    font-size: 11px;
 
     white-space: nowrap;
     overflow: hidden;
@@ -792,11 +823,21 @@ header {
     color: #2563eb;
 }
 
+.experience-nav-item.active .nav-company {
+    color: #2563eb;
+}
 
-/* Showcase */
+
+/* =========================================================
+   EXPERIENCE SHOWCASE
+========================================================= */
 
 .experience-showcase {
     position: relative;
+
+    max-width: 1080px;
+
+    margin: 0 auto;
 
     border: 1px solid #dde4ed;
 
@@ -805,34 +846,50 @@ header {
     box-shadow:
         0 20px 60px rgba(20, 35, 55, 0.05);
 
+    overflow: hidden;
+
     transition:
-        opacity 0.18s ease,
-        transform 0.18s ease;
+        opacity 0.22s ease,
+        transform 0.22s ease,
+        box-shadow 0.25s ease;
 }
+
+.experience-showcase:hover {
+    box-shadow:
+        0 24px 70px rgba(20, 35, 55, 0.07);
+}
+
+
+/* Animation while changing experience */
 
 .experience-showcase.is-changing {
-    opacity: 0.25;
-    transform: translateY(4px);
+    opacity: 0;
+
+    transform: translateY(8px);
 }
 
 
-/* Top */
+/* =========================================================
+   SHOWCASE TOP
+========================================================= */
 
 .showcase-top {
     display: flex;
     align-items: center;
 
-    min-height: 72px;
+    min-height: 68px;
 
-    padding: 0 32px;
+    padding: 0 30px;
 
     border-bottom: 1px solid #e7ebf0;
+
+    background: #ffffff;
 }
 
 .experience-company {
     color: #2563eb;
 
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
 
     letter-spacing: 0.14em;
@@ -843,35 +900,47 @@ header {
 
     color: #7e8a9c;
 
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 600;
 }
 
 .showcase-arrow {
-    margin-left: 25px;
+    margin-left: 22px;
 
     color: #a0aab8;
 
-    font-size: 18px;
+    font-size: 17px;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.experience-showcase:hover .showcase-arrow {
+    color: #2563eb;
+
+    transform: translateX(3px);
 }
 
 
-/* Body */
+/* =========================================================
+   SHOWCASE BODY
+========================================================= */
 
 .showcase-body {
     display: grid;
 
     grid-template-columns:
         minmax(0, 1fr)
-        300px;
+        280px;
 }
 
 .showcase-main {
-    padding: 38px 38px 45px;
+    padding: 36px 36px 42px;
 }
 
 .showcase-sidebar {
-    padding: 38px 30px;
+    padding: 36px 28px;
 
     border-left: 1px solid #e7ebf0;
 
@@ -879,58 +948,70 @@ header {
 }
 
 
-/* Role */
+/* =========================================================
+   ROLE
+========================================================= */
 
 .mini-label {
     display: block;
 
-    margin-bottom: 12px;
+    margin-bottom: 11px;
 
     color: #8995a6;
 
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 800;
 
     letter-spacing: 0.16em;
 }
 
 .showcase-company h3 {
-    max-width: 650px;
+    max-width: 620px;
+
     color: #152033;
-    font-size: 28px;
+
+    font-size: 26px;
     line-height: 1.25;
+
     font-weight: 700;
+
     letter-spacing: -0.03em;
 }
 
 .showcase-description {
-    max-width: 760px;
-    margin-top: 22px;
+    max-width: 690px;
+
+    margin-top: 20px;
+
     color: #687587;
-    font-size: 13px;
+
+    font-size: 12px;
     line-height: 1.8;
 }
 
 
-/* Scope */
+/* =========================================================
+   SCOPE
+========================================================= */
 
 .scope-section {
-    margin-top: 32px;
+    margin-top: 30px;
 }
 
 .scope-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+
+    gap: 7px;
 }
 
 .scope-tags span {
     display: inline-flex;
     align-items: center;
 
-    min-height: 30px;
+    min-height: 29px;
 
-    padding: 0 11px;
+    padding: 0 10px;
 
     border: 1px solid #dbe3ed;
 
@@ -938,37 +1019,53 @@ header {
 
     color: #526176;
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
 
     letter-spacing: 0.02em;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.scope-tags span:hover {
+    border-color: #c8d5e6;
+
+    background: #ffffff;
+
+    transform: translateY(-1px);
 }
 
 
-/* Details */
+/* =========================================================
+   DETAILS
+========================================================= */
 
 .details-section {
-    margin-top: 42px;
+    margin-top: 38px;
 }
 
 .details-header {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .responsibility-grid {
     display: grid;
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
-    gap: 12px;
+    gap: 11px;
 }
 
 .responsibility-card {
     position: relative;
 
-    min-height: 155px;
+    min-height: 145px;
 
-    padding: 22px;
+    padding: 20px;
 
     border: 1px solid #e4e9ef;
 
@@ -976,49 +1073,62 @@ header {
 
     transition:
         transform 0.25s ease,
-        border-color 0.25s ease;
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .responsibility-card:hover {
     transform: translateY(-3px);
 
     border-color: #cbd8e8;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(25, 45, 70, 0.04);
 }
 
 .responsibility-number {
     display: block;
 
-    margin-bottom: 18px;
+    margin-bottom: 15px;
 
     color: #2563eb;
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 800;
 }
 
 .responsibility-card h5 {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
+
     color: #1b2739;
-    font-size: 14px;
+
+    font-size: 13px;
 }
 
 .responsibility-card p {
     color: #758194;
-    font-size: 12px;
+
+    font-size: 11px;
     line-height: 1.7;
 }
 
 
-/* Sidebar */
+/* =========================================================
+   SIDEBAR
+========================================================= */
 
 .sidebar-block {
-    margin-bottom: 26px;
+    margin-bottom: 24px;
 }
 
 .environment-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
+
+    gap: 6px;
 }
 
 .environment-tags span {
@@ -1032,32 +1142,44 @@ header {
 
     color: #647287;
 
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 600;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.environment-tags span:hover {
+    border-color: #c7d5e6;
+
+    color: #2563eb;
 }
 
 .sidebar-divider {
     width: 100%;
     height: 1px;
 
-    margin: 26px 0;
+    margin: 24px 0;
 
     background: #e2e7ee;
 }
 
 
-/* Metrics */
+/* =========================================================
+   METRICS
+========================================================= */
 
 .showcase-metrics {
     display: grid;
 
     grid-template-columns: 1fr 1fr;
 
-    gap: 15px;
+    gap: 14px;
 }
 
 .showcase-metric {
-    padding-right: 10px;
+    padding-right: 8px;
 }
 
 .showcase-metric strong {
@@ -1065,7 +1187,7 @@ header {
 
     color: #172238;
 
-    font-size: 25px;
+    font-size: 23px;
     line-height: 1;
 
     letter-spacing: -0.04em;
@@ -1074,21 +1196,31 @@ header {
 .showcase-metric span {
     display: block;
 
-    margin-top: 7px;
+    margin-top: 6px;
 
     color: #8a95a5;
 
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 700;
 
     line-height: 1.4;
 
     text-transform: uppercase;
+
     letter-spacing: 0.07em;
 }
 
 
-/* Role focus */
+/* =========================================================
+   ROLE FOCUS
+========================================================= */
+
+.role-focus {
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
+}
 
 .role-focus span {
     display: inline-flex;
@@ -1101,10 +1233,213 @@ header {
 
     color: #56647a;
 
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
 }
 
+.role-focus span:hover {
+    transform: translateX(3px);
+
+    background: #f7f9fc;
+}
+
+
+/* =========================================================
+   EXPERIENCE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .experience-intro {
+        max-width: 100%;
+    }
+
+    .experience-navigation {
+        max-width: 100%;
+    }
+
+    .experience-showcase {
+        max-width: 100%;
+    }
+
+    .showcase-body {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-sidebar {
+        border-left: 0;
+
+        border-top: 1px solid #e7ebf0;
+    }
+
+}
+
+
+/* =========================================================
+   EXPERIENCE — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .experience-intro {
+        margin-top: -15px;
+
+        margin-bottom: 38px;
+    }
+
+    .experience-intro p {
+        font-size: 13px;
+    }
+
+
+    /* Vertical timeline */
+
+    .experience-navigation {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        margin-left: 6px;
+
+        margin-bottom: 28px;
+    }
+
+    .experience-navigation::before {
+        top: 0;
+        bottom: 0;
+        left: 4px;
+
+        width: 1px;
+        height: auto;
+
+        right: auto;
+    }
+
+    .experience-nav-item,
+    .experience-nav-item:last-child {
+        min-height: 95px;
+
+        padding:
+            20px
+            10px
+            18px
+            35px;
+    }
+
+    .experience-nav-item:hover {
+        transform: none;
+    }
+
+    .nav-dot {
+        top: 27px;
+        left: -1px;
+    }
+
+    .nav-company {
+        font-size: 14px;
+    }
+
+    .nav-role {
+        font-size: 11px;
+    }
+
+
+    /* Showcase */
+
+    .showcase-top {
+        min-height: 64px;
+
+        padding: 0 20px;
+    }
+
+    .experience-company {
+        font-size: 9px;
+    }
+
+    .showcase-date {
+        font-size: 9px;
+    }
+
+    .showcase-arrow {
+        margin-left: 12px;
+    }
+
+
+    .showcase-main {
+        padding: 28px 20px 30px;
+    }
+
+    .showcase-sidebar {
+        padding: 28px 20px;
+    }
+
+    .showcase-company h3 {
+        font-size: 24px;
+    }
+
+    .showcase-description {
+        font-size: 12px;
+    }
+
+
+    .responsibility-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   EXPERIENCE — SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .experience-intro p {
+        font-size: 12px;
+    }
+
+    .experience-nav-item,
+    .experience-nav-item:last-child {
+        padding-left: 32px;
+    }
+
+    .showcase-top {
+        flex-wrap: wrap;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .showcase-date {
+        margin-left: auto;
+    }
+
+    .showcase-arrow {
+        display: none;
+    }
+
+    .showcase-company h3 {
+        font-size: 22px;
+    }
+
+    .showcase-description {
+        font-size: 12px;
+    }
+
+    .showcase-metrics {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+}
 
 /* =========================================================
    SKILLS
