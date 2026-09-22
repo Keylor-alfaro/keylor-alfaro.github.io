@@ -607,6 +607,84 @@ skillCategories.forEach(category => {
     });
 
 });
+
+/* =========================================================
+   EDUCATION INTERACTION
+========================================================= */
+
+const educationItems =
+    document.querySelectorAll(".education-item");
+
+
+educationItems.forEach(item => {
+
+    const trigger =
+        item.querySelector(
+            ".education-card-trigger"
+        );
+
+
+    if (!trigger) {
+        return;
+    }
+
+
+    trigger.addEventListener("click", () => {
+
+        const isActive =
+            item.classList.contains("active");
+
+
+        /*
+           Close all education cards
+        */
+
+        educationItems.forEach(otherItem => {
+
+            otherItem.classList.remove(
+                "active"
+            );
+
+
+            const otherTrigger =
+                otherItem.querySelector(
+                    ".education-card-trigger"
+                );
+
+
+            if (otherTrigger) {
+
+                otherTrigger.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        });
+
+
+        /*
+           Open selected card
+        */
+
+        if (!isActive) {
+
+            item.classList.add(
+                "active"
+            );
+
+
+            trigger.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+        }
+
+    });
+
+});
 /* =========================================================
    INITIAL TECHNICAL SKILLS
 ========================================================= */
