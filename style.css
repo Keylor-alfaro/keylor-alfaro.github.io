@@ -565,27 +565,30 @@ header {
     display: grid;
 
     grid-template-columns:
-        minmax(0, 1.2fr)
-        minmax(340px, 0.8fr);
+        minmax(0, 1.1fr)
+        minmax(300px, 0.9fr);
 
-    gap: 90px;
+    gap: 70px;
+
+    max-width: 1080px;
+    margin: 0 auto;
 }
 
 .about-text {
-    max-width: 690px;
+    max-width: 620px;
 }
 
 .about-text p {
-    margin-bottom: 24px;
+    margin-bottom: 22px;
     color: #657286;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.8;
 }
 
 .about-text .large-text {
     color: #273449;
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 1.75;
     font-weight: 450;
 }
 
@@ -1565,9 +1568,14 @@ footer {
         width: min(100% - 32px, 1180px);
     }
 
-    .section-heading {
-        margin-bottom: 45px;
-    }
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+
+    max-width: 1080px;
+    margin: 0 auto 55px;
+}
 
     .section-heading h2 {
         font-size: 42px;
