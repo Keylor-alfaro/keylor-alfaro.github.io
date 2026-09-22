@@ -46,9 +46,8 @@ button {
 
 header {
     position: relative;
-    min-height: 760px;
+    min-height: 680px;
     overflow: hidden;
-
     background: #0b1220;
     color: #ffffff;
 }
@@ -220,12 +219,9 @@ header {
 
 .hero {
     position: relative;
-
-    min-height: 678px;
-
+    min-height: 598px;
     display: flex;
     align-items: center;
-
     overflow: hidden;
 }
 
