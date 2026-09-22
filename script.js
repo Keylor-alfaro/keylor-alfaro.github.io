@@ -221,7 +221,226 @@ const experiences = {
     }
 
 };
+/* =========================================================
+   EXPERIENCE INTERACTIVE SYSTEM
+   ========================================================= */
 
+const experienceButtons = document.querySelectorAll(
+    ".experience-nav-item"
+);
+
+const experiencePanel = document.querySelector(
+    ".experience-showcase"
+);
+
+
+/* ---------------------------------------------------------
+   HTML ELEMENTS
+   --------------------------------------------------------- */
+
+const companyElement = document.querySelector(
+    ".experience-company"
+);
+
+const roleElement = document.querySelector(
+    ".showcase-company h3"
+);
+
+const dateElement = document.querySelector(
+    ".showcase-date"
+);
+
+const descriptionElement = document.querySelector(
+    ".showcase-description"
+);
+
+const scopeElement = document.querySelector(
+    ".scope-tags"
+);
+
+const environmentElement = document.querySelector(
+    ".environment-tags"
+);
+
+const metricsElement = document.querySelector(
+    ".showcase-metrics"
+);
+
+const responsibilitiesElement = document.querySelector(
+    ".responsibility-grid"
+);
+
+
+/* ---------------------------------------------------------
+   LOAD EXPERIENCE
+   --------------------------------------------------------- */
+
+function loadExperience(experienceKey) {
+
+    const experience = experiences[experienceKey];
+
+    if (!experience) return;
+
+
+    /* ---------------------------------------------
+       PANEL TRANSITION
+       --------------------------------------------- */
+
+    experiencePanel.classList.add("is-changing");
+
+
+    setTimeout(() => {
+
+
+        /* -----------------------------------------
+           BASIC INFORMATION
+           ----------------------------------------- */
+
+        companyElement.textContent =
+            experience.company;
+
+        roleElement.textContent =
+            experience.role;
+
+        dateElement.textContent =
+            experience.date;
+
+        descriptionElement.textContent =
+            experience.description;
+
+
+        /* -----------------------------------------
+           SCOPE
+           ----------------------------------------- */
+
+        scopeElement.innerHTML =
+            experience.scope
+                .map(item => `
+                    <span>${item}</span>
+                `)
+                .join("");
+
+
+        /* -----------------------------------------
+           TECHNICAL ENVIRONMENT
+           ----------------------------------------- */
+
+        environmentElement.innerHTML =
+            experience.environment
+                .map(item => `
+                    <span>${item}</span>
+                `)
+                .join("");
+
+
+        /* -----------------------------------------
+           METRICS
+           ----------------------------------------- */
+
+        metricsElement.innerHTML =
+            experience.metrics
+                .map(metric => `
+                    <div class="showcase-metric">
+
+                        <strong>
+                            ${metric.value}
+                        </strong>
+
+                        <span>
+                            ${metric.label}
+                        </span>
+
+                    </div>
+                `)
+                .join("");
+
+
+        /* -----------------------------------------
+           RESPONSIBILITIES
+           ----------------------------------------- */
+
+        responsibilitiesElement.innerHTML =
+            experience.responsibilities
+                .map((item, index) => `
+                    
+                    <div class="responsibility-card">
+
+                        <span class="responsibility-number">
+                            ${String(index + 1).padStart(2, "0")}
+                        </span>
+
+                        <h5>
+                            ${item.title}
+                        </h5>
+
+                        <p>
+                            ${item.description}
+                        </p>
+
+                    </div>
+
+                `)
+                .join("");
+
+
+        /* -----------------------------------------
+           REMOVE TRANSITION
+           ----------------------------------------- */
+
+        experiencePanel.classList.remove(
+            "is-changing"
+        );
+
+    }, 180);
+
+
+    /* -----------------------------------------------------
+       UPDATE ACTIVE TIMELINE ITEM
+       ----------------------------------------------------- */
+
+    experienceButtons.forEach(button => {
+
+        const isActive =
+            button.dataset.experience === experienceKey;
+
+        button.classList.toggle(
+            "active",
+            isActive
+        );
+
+        button.setAttribute(
+            "aria-selected",
+            isActive
+        );
+
+    });
+
+}
+
+
+/* ---------------------------------------------------------
+   CLICK EVENTS
+   --------------------------------------------------------- */
+
+experienceButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const experienceKey =
+            button.dataset.experience;
+
+        loadExperience(experienceKey);
+
+    });
+
+});
+
+
+/* ---------------------------------------------------------
+   INITIAL EXPERIENCE
+   --------------------------------------------------------- */
+
+loadExperience("concentrix");
 
 /* =========================================================
    DOM ELEMENTS
