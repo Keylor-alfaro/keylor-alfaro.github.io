@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,14 +15,14 @@
         Keylor Enrique Alfaro Mena | IT Support Specialist
     </title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
     <meta
         name="description"
         content="Professional portfolio of Keylor Enrique Alfaro Mena, IT Support Specialist and Computer Systems Engineering student."
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
     >
 
 </head>
@@ -38,29 +39,12 @@
 
         <nav>
 
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#experience">
-                Experience
-            </a>
-
-            <a href="#skills">
-                Skills
-            </a>
-
-            <a href="#education">
-                Education
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
 
         </nav>
 
@@ -141,7 +125,6 @@
 
             <div class="about-content">
 
-
                 <div class="about-text">
 
                     <p>
@@ -170,7 +153,6 @@
 
 
                 <div class="about-highlights">
-
 
                     <div class="about-card">
 
@@ -214,304 +196,434 @@
 
                     </div>
 
-
                 </div>
 
             </div>
 
         </section>
 
+
+
         <!-- =========================
-     Professional Experience
-     ========================= -->
+             Professional Experience
+             ========================= -->
 
-<section id="experience">
-
-    <div class="experience-intro">
-
-        <p class="section-label">
-            PROFESSIONAL EXPERIENCE
-        </p>
-
-        <h2>
-            Experience across IT support, systems, and infrastructure
-        </h2>
-
-        <p class="experience-intro-text">
-            A timeline of my professional experience in technical support,
-            incident management, systems, and IT infrastructure.
-        </p>
-
-    </div>
+        <section id="experience">
 
 
-    <!-- Experience Timeline -->
+            <div class="experience-heading">
 
-    <div class="experience-timeline">
-
-
-        <button
-            class="timeline-item active"
-            data-experience="concentrix"
-            type="button"
-        >
-
-            <span class="timeline-year">
-                2025
-            </span>
-
-            <span class="timeline-company">
-                Concentrix
-            </span>
-
-            <span class="timeline-role">
-                IT Support Specialist
-            </span>
-
-        </button>
-
-
-        <button
-            class="timeline-item"
-            data-experience="global-packing"
-            type="button"
-        >
-
-            <span class="timeline-year">
-                2021–2024
-            </span>
-
-            <span class="timeline-company">
-                Global Packing
-            </span>
-
-            <span class="timeline-role">
-                Technical Support Specialist
-            </span>
-
-        </button>
-
-
-        <button
-            class="timeline-item"
-            data-experience="sonda"
-            type="button"
-        >
-
-            <span class="timeline-year">
-                2021
-            </span>
-
-            <span class="timeline-company">
-                SONDA
-            </span>
-
-            <span class="timeline-role">
-                Helpdesk / Incident Manager
-            </span>
-
-        </button>
-
-
-    </div>
-
-
-    <!-- Experience Display -->
-
-    <div class="experience-panel">
-
-
-        <!-- Company Header -->
-
-        <div class="experience-panel-header">
-
-            <div>
-
-                <p
-                    class="experience-company"
-                    id="experience-company"
-                >
-                    CONCENTRIX COSTA RICA
+                <p class="section-label">
+                    PROFESSIONAL EXPERIENCE
                 </p>
 
-                <h3 id="experience-role">
-                    IT Support Specialist / Avalon Advisor I
-                </h3>
+                <h2>
+                    Solving technical problems across
+                    support, systems &amp; infrastructure
+                </h2>
+
+                <p class="experience-subtitle">
+                    From service desk operations to enterprise IT support,
+                    my experience has focused on troubleshooting,
+                    incident management, systems, and reliable IT operations.
+                </p>
 
             </div>
 
 
-            <span
-                class="experience-date"
-                id="experience-date"
+
+            <!-- =========================
+                 Experience Timeline
+                 ========================= -->
+
+            <div class="experience-navigation">
+
+
+                <button
+                    type="button"
+                    class="experience-nav-item"
+                    data-experience="sonda"
+                >
+
+                    <span class="nav-year">
+                        2021
+                    </span>
+
+                    <span class="nav-dot"></span>
+
+                    <span class="nav-company">
+                        SONDA
+                    </span>
+
+                    <span class="nav-role">
+                        Helpdesk / Incident Manager
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="experience-nav-item"
+                    data-experience="global"
+                >
+
+                    <span class="nav-year">
+                        2021–2024
+                    </span>
+
+                    <span class="nav-dot"></span>
+
+                    <span class="nav-company">
+                        Global Packing
+                    </span>
+
+                    <span class="nav-role">
+                        Technical Support Specialist
+                    </span>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="experience-nav-item active"
+                    data-experience="concentrix"
+                >
+
+                    <span class="nav-year">
+                        2025
+                    </span>
+
+                    <span class="nav-dot"></span>
+
+                    <span class="nav-company">
+                        Concentrix
+                    </span>
+
+                    <span class="nav-role">
+                        IT Support Specialist
+                    </span>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =========================
+                 Selected Experience
+                 ========================= -->
+
+            <div
+                class="experience-showcase"
+                id="experience-showcase"
             >
-                04/2025 – 12/2025
-            </span>
-
-        </div>
 
 
-        <!-- Experience Description -->
-
-        <div class="experience-panel-content">
+                <div class="showcase-top">
 
 
-            <div class="experience-main">
+                    <div class="showcase-company">
 
-                <p
-                    class="experience-description"
-                    id="experience-description"
-                >
-                    Provided 1st and 2nd-level IT support, independently
-                    managing incidents and service requests across hardware,
-                    software, Microsoft 365, business applications,
-                    authentication, and network issues.
-                </p>
+                        <p
+                            class="experience-company"
+                            id="experience-company"
+                        >
+                            CONCENTRIX COSTA RICA
+                        </p>
 
+                        <h3 id="experience-role">
+                            IT Support Specialist / Avalon Advisor I
+                        </h3>
 
-                <!-- Responsibilities -->
-
-                <div class="experience-block">
-
-                    <p class="experience-block-label">
-                        KEY RESPONSIBILITIES
-                    </p>
-
-                    <ul
-                        class="experience-details"
-                        id="experience-details"
-                    >
-
-                        <li>
-                            Investigated technical issues by analyzing
-                            symptoms, identifying root causes, and applying
-                            structured troubleshooting and corrective actions
-                            to restore services.
-                        </li>
-
-                        <li>
-                            Achieved 95% SLA and KPI compliance through
-                            effective incident triage, prioritization,
-                            timely resolution, and consistent case follow-up.
-                        </li>
-
-                        <li>
-                            Managed multiple technical issues and user requests
-                            simultaneously, adapting priorities to changing
-                            needs and maintaining effective case follow-up.
-                        </li>
-
-                        <li>
-                            Documented incidents, troubleshooting steps,
-                            resolutions, and escalations in ServiceNow while
-                            coordinating with specialized teams.
-                        </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-
-            <!-- Right Side -->
-
-            <aside class="experience-sidebar">
-
-
-                <!-- Metrics -->
-
-                <div
-                    class="experience-metrics"
-                    id="experience-metrics"
-                >
-
-                    <div class="metric">
-
-                        <strong>
-                            95%
-                        </strong>
-
-                        <span>
-                            SLA / KPI
-                        </span>
+                        <p
+                            class="showcase-date"
+                            id="experience-date"
+                        >
+                            04/2025 – 12/2025
+                        </p>
 
                     </div>
 
 
-                    <div class="metric">
-
-                        <strong>
-                            90%+
-                        </strong>
-
-                        <span>
-                            Customer Satisfaction
-                        </span>
-
+                    <div class="showcase-arrow">
+                        →
                     </div>
+
 
                 </div>
 
 
-                <!-- Technical Environment -->
 
-                <div class="experience-block">
+                <div class="showcase-body">
 
-                    <p class="experience-block-label">
-                        TECHNICAL ENVIRONMENT
-                    </p>
+
+                    <div class="showcase-main">
+
+
+                        <p
+                            class="showcase-description"
+                            id="experience-description"
+                        >
+                            Provided 1st and 2nd-level IT support,
+                            independently managing incidents and service
+                            requests across hardware, software, Microsoft 365,
+                            business applications, authentication, and
+                            network issues.
+                        </p>
+
+
+
+                        <!-- Scope -->
+
+                        <div class="scope-section">
+
+                            <p class="mini-label">
+                                SCOPE
+                            </p>
+
+                            <div
+                                class="scope-tags"
+                                id="scope-tags"
+                            >
+
+                                <span>
+                                    IT Support
+                                </span>
+
+                                <span>
+                                    Incident Management
+                                </span>
+
+                                <span>
+                                    Troubleshooting
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- Technical Environment -->
+
+                        <div class="environment-section">
+
+                            <p class="mini-label">
+                                TECHNICAL ENVIRONMENT
+                            </p>
+
+                            <div
+                                class="environment-tags"
+                                id="environment-tags"
+                            >
+
+                                <span>
+                                    Microsoft 365
+                                </span>
+
+                                <span>
+                                    ServiceNow
+                                </span>
+
+                                <span>
+                                    Business Applications
+                                </span>
+
+                                <span>
+                                    Networking
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- Metrics -->
 
                     <div
-                        class="experience-tags"
-                        id="experience-tags"
+                        class="showcase-metrics"
+                        id="showcase-metrics"
                     >
 
-                        <span>
-                            Microsoft 365
-                        </span>
+                        <div class="showcase-metric">
 
-                        <span>
-                            ServiceNow
-                        </span>
+                            <strong>
+                                95%
+                            </strong>
 
-                        <span>
-                            Troubleshooting
-                        </span>
+                            <span>
+                                SLA / KPI
+                            </span>
 
-                        <span>
-                            Incident Management
-                        </span>
+                        </div>
+
+
+                        <div class="showcase-metric">
+
+                            <strong>
+                                90%+
+                            </strong>
+
+                            <span>
+                                Customer Satisfaction
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Explore Button -->
+
+                <button
+                    type="button"
+                    class="explore-button"
+                    id="explore-button"
+                >
+
+                    <span>
+                        Explore Experience
+                    </span>
+
+                    <span class="explore-icon">
+                        ↓
+                    </span>
+
+                </button>
+
+
+
+                <!-- =========================
+                     Expanded Details
+                     ========================= -->
+
+                <div
+                    class="experience-details-panel"
+                    id="experience-details-panel"
+                >
+
+                    <div class="details-header">
+
+                        <div>
+
+                            <p class="mini-label">
+                                WHAT I DID
+                            </p>
+
+                            <h4>
+                                Key responsibilities and contributions
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="responsibility-grid"
+                        id="responsibility-grid"
+                    >
+
+
+                        <article class="responsibility-card">
+
+                            <span class="responsibility-number">
+                                01
+                            </span>
+
+                            <h5>
+                                Incident Management
+                            </h5>
+
+                            <p>
+                                Investigated technical issues, analyzed
+                                symptoms, identified root causes, and applied
+                                structured troubleshooting to restore services.
+                            </p>
+
+                        </article>
+
+
+                        <article class="responsibility-card">
+
+                            <span class="responsibility-number">
+                                02
+                            </span>
+
+                            <h5>
+                                Service Restoration
+                            </h5>
+
+                            <p>
+                                Prioritized incidents and applied corrective
+                                actions while working within established
+                                service levels.
+                            </p>
+
+                        </article>
+
+
+                        <article class="responsibility-card">
+
+                            <span class="responsibility-number">
+                                03
+                            </span>
+
+                            <h5>
+                                Case Management
+                            </h5>
+
+                            <p>
+                                Documented incidents, troubleshooting steps,
+                                resolutions, and escalations through
+                                ServiceNow.
+                            </p>
+
+                        </article>
+
+
+                        <article class="responsibility-card">
+
+                            <span class="responsibility-number">
+                                04
+                            </span>
+
+                            <h5>
+                                Collaboration
+                            </h5>
+
+                            <p>
+                                Coordinated with specialized teams to support
+                                timely resolution of technical issues and
+                                maintain effective case follow-up.
+                            </p>
+
+                        </article>
+
 
                     </div>
 
                 </div>
 
 
-                <!-- Focus -->
+            </div>
 
-                <div class="experience-focus">
-
-                    <p class="experience-block-label">
-                        FOCUS
-                    </p>
-
-                    <p id="experience-focus-text">
-                        Enterprise IT Support
-                    </p>
-
-                </div>
+        </section>
 
 
-            </aside>
-
-
-        </div>
-
-
-    </div>
-
-</section>
 
         <!-- =========================
              Technical Skills
@@ -675,7 +787,10 @@
 
     </footer>
 
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
+
 </body>
 
 </html>
+```
