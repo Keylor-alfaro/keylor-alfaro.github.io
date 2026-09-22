@@ -26,9 +26,37 @@ body {
 header {
     background-color: #0f172a;
     color: white;
-    padding: 80px 20px;
+    padding: 30px 20px 80px;
     text-align: center;
 }
+
+/* =========================
+   Navigation
+   ========================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 55px;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* =========================
+   Hero
+   ========================= */
 
 header h1 {
     font-size: 42px;
@@ -73,6 +101,7 @@ main {
 
 section {
     margin-bottom: 60px;
+    scroll-margin-top: 30px;
 }
 
 section h2 {
@@ -179,8 +208,19 @@ footer {
    ========================= */
 
 @media (max-width: 768px) {
+
     header {
-        padding: 60px 20px;
+        padding: 25px 20px 60px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 45px;
+    }
+
+    nav a {
+        font-size: 14px;
     }
 
     header h1 {
