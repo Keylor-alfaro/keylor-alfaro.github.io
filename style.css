@@ -46,9 +46,13 @@ button {
 
 header {
     position: relative;
+
     min-height: 680px;
+
     overflow: hidden;
+
     background: #0b1220;
+
     color: #ffffff;
 }
 
@@ -79,9 +83,11 @@ header {
 .nav-logo {
     display: flex;
     align-items: center;
+
     gap: 12px;
 
     font-weight: 700;
+
     letter-spacing: -0.02em;
 }
 
@@ -106,11 +112,12 @@ header {
 }
 
 
-/* Links */
+/* Navigation links */
 
 .nav-links {
     display: flex;
     align-items: center;
+
     gap: 34px;
 }
 
@@ -130,6 +137,7 @@ header {
     content: "";
 
     position: absolute;
+
     left: 0;
     bottom: -8px;
 
@@ -151,11 +159,12 @@ header {
 }
 
 
-/* LinkedIn button */
+/* LinkedIn */
 
 .nav-linkedin {
     display: inline-flex;
     align-items: center;
+
     gap: 8px;
 
     padding: 9px 15px;
@@ -175,12 +184,14 @@ header {
 
 .nav-linkedin:hover {
     background: rgba(255, 255, 255, 0.06);
+
     border-color: rgba(96, 165, 250, 0.45);
+
     color: #ffffff;
 }
 
 
-/* Mobile button */
+/* Mobile menu */
 
 .mobile-menu-button {
     display: none;
@@ -189,6 +200,7 @@ header {
     height: 40px;
 
     border: 1px solid rgba(255, 255, 255, 0.12);
+
     background: transparent;
 
     cursor: pointer;
@@ -196,6 +208,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     gap: 5px;
 }
 
@@ -219,9 +232,12 @@ header {
 
 .hero {
     position: relative;
+
     min-height: 598px;
+
     display: flex;
     align-items: center;
+
     overflow: hidden;
 }
 
@@ -230,6 +246,7 @@ header {
 
 .hero-background-grid {
     position: absolute;
+
     inset: 0;
 
     opacity: 0.5;
@@ -310,8 +327,6 @@ header {
 
     margin: 0 auto;
 
-    padding-top: 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -327,6 +342,7 @@ header {
 .hero-label {
     display: inline-flex;
     align-items: center;
+
     gap: 9px;
 
     margin-bottom: 26px;
@@ -357,14 +373,15 @@ header {
 .hero-content h1 {
     max-width: 900px;
 
+    color: #ffffff;
+
     font-size: clamp(52px, 7vw, 88px);
+
     line-height: 0.98;
 
     font-weight: 700;
 
     letter-spacing: -0.055em;
-
-    color: #ffffff;
 }
 
 .hero-content h1 span {
@@ -382,6 +399,7 @@ header {
     color: #d7deea;
 
     font-size: clamp(20px, 2vw, 25px);
+
     font-weight: 400;
 
     letter-spacing: -0.02em;
@@ -398,6 +416,7 @@ header {
     color: #8e9bad;
 
     font-size: 16px;
+
     line-height: 1.8;
 
     text-align: center;
@@ -410,6 +429,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+
     gap: 14px;
 
     margin-top: 34px;
@@ -420,6 +440,7 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     gap: 12px;
 
     min-height: 48px;
@@ -437,11 +458,13 @@ header {
 
 .primary-button {
     background: #2563eb;
+
     color: #ffffff;
 }
 
 .primary-button:hover {
     transform: translateY(-2px);
+
     background: #3474ee;
 }
 
@@ -464,7 +487,7 @@ header {
 }
 
 
-/* Scroll */
+/* Scroll indicator */
 
 .hero-scroll {
     position: absolute;
@@ -473,10 +496,12 @@ header {
     bottom: 75px;
 
     left: 50%;
+
     transform: translateX(-50%);
 
     display: flex;
     align-items: center;
+
     gap: 12px;
 
     color: #68758a;
@@ -485,6 +510,7 @@ header {
     font-weight: 600;
 
     text-transform: uppercase;
+
     letter-spacing: 0.15em;
 }
 
@@ -506,18 +532,22 @@ header {
 
 .section-container {
     width: min(1180px, calc(100% - 48px));
+
     margin: 0 auto;
 }
 
 
-/* Heading */
+/* Section heading */
 
 .section-heading {
     display: flex;
     align-items: flex-start;
+
     gap: 22px;
 
-    margin-bottom: 62px;
+    max-width: 1080px;
+
+    margin: 0 auto 62px;
 }
 
 .section-number {
@@ -546,9 +576,13 @@ header {
 
 .section-heading h2 {
     color: #101827;
+
     font-size: clamp(36px, 4.5vw, 52px);
+
     line-height: 1;
+
     font-weight: 700;
+
     letter-spacing: -0.045em;
 }
 
@@ -571,6 +605,7 @@ header {
     gap: 70px;
 
     max-width: 1080px;
+
     margin: 0 auto;
 }
 
@@ -580,15 +615,21 @@ header {
 
 .about-text p {
     margin-bottom: 22px;
+
     color: #657286;
+
     font-size: 13px;
+
     line-height: 1.8;
 }
 
 .about-text .large-text {
     color: #273449;
+
     font-size: 16px;
+
     line-height: 1.75;
+
     font-weight: 450;
 }
 
@@ -598,6 +639,7 @@ header {
 .about-highlights {
     display: flex;
     flex-direction: column;
+
     gap: 12px;
 }
 
@@ -639,14 +681,19 @@ header {
 
 .highlight-card h3 {
     margin-bottom: 8px;
+
     color: #172033;
+
     font-size: 16px;
+
     font-weight: 650;
 }
 
 .highlight-card p {
     color: #718095;
+
     font-size: 12px;
+
     line-height: 1.65;
 }
 
@@ -674,12 +721,13 @@ header {
     color: #6e7a8d;
 
     font-size: 13px;
+
     line-height: 1.8;
 }
 
 
 /* =========================================================
-   EXPERIENCE NAVIGATION / TIMELINE
+   EXPERIENCE NAVIGATION
 ========================================================= */
 
 .experience-navigation {
@@ -700,6 +748,7 @@ header {
     position: absolute;
 
     top: 8px;
+
     left: 0;
     right: 0;
 
@@ -719,15 +768,14 @@ header {
 
     background: transparent;
 
+    color: inherit;
+
     text-align: left;
 
     cursor: pointer;
 
-    color: inherit;
-
     transition:
-        transform 0.25s ease,
-        opacity 0.25s ease;
+        transform 0.25s ease;
 }
 
 .experience-nav-item:last-child {
@@ -785,12 +833,10 @@ header {
     color: #8a96a7;
 
     font-size: 9px;
+
     font-weight: 700;
 
     letter-spacing: 0.08em;
-
-    transition:
-        color 0.25s ease;
 }
 
 .nav-company {
@@ -799,6 +845,7 @@ header {
     color: #1b2638;
 
     font-size: 14px;
+
     font-weight: 700;
 
     transition:
@@ -815,14 +862,13 @@ header {
     font-size: 11px;
 
     white-space: nowrap;
+
     overflow: hidden;
+
     text-overflow: ellipsis;
 }
 
-.experience-nav-item:hover .nav-company {
-    color: #2563eb;
-}
-
+.experience-nav-item:hover .nav-company,
 .experience-nav-item.active .nav-company {
     color: #2563eb;
 }
@@ -859,9 +905,6 @@ header {
         0 24px 70px rgba(20, 35, 55, 0.07);
 }
 
-
-/* Animation while changing experience */
-
 .experience-showcase.is-changing {
     opacity: 0;
 
@@ -869,9 +912,7 @@ header {
 }
 
 
-/* =========================================================
-   SHOWCASE TOP
-========================================================= */
+/* Showcase top */
 
 .showcase-top {
     display: flex;
@@ -890,6 +931,7 @@ header {
     color: #2563eb;
 
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 0.14em;
@@ -901,6 +943,7 @@ header {
     color: #7e8a9c;
 
     font-size: 10px;
+
     font-weight: 600;
 }
 
@@ -923,9 +966,7 @@ header {
 }
 
 
-/* =========================================================
-   SHOWCASE BODY
-========================================================= */
+/* Showcase body */
 
 .showcase-body {
     display: grid;
@@ -948,9 +989,7 @@ header {
 }
 
 
-/* =========================================================
-   ROLE
-========================================================= */
+/* Role */
 
 .mini-label {
     display: block;
@@ -960,6 +999,7 @@ header {
     color: #8995a6;
 
     font-size: 8px;
+
     font-weight: 800;
 
     letter-spacing: 0.16em;
@@ -971,6 +1011,7 @@ header {
     color: #152033;
 
     font-size: 26px;
+
     line-height: 1.25;
 
     font-weight: 700;
@@ -986,13 +1027,12 @@ header {
     color: #687587;
 
     font-size: 12px;
+
     line-height: 1.8;
 }
 
 
-/* =========================================================
-   SCOPE
-========================================================= */
+/* Scope */
 
 .scope-section {
     margin-top: 30px;
@@ -1020,6 +1060,7 @@ header {
     color: #526176;
 
     font-size: 9px;
+
     font-weight: 700;
 
     letter-spacing: 0.02em;
@@ -1039,9 +1080,7 @@ header {
 }
 
 
-/* =========================================================
-   DETAILS
-========================================================= */
+/* Details */
 
 .details-section {
     margin-top: 38px;
@@ -1097,6 +1136,7 @@ header {
     color: #2563eb;
 
     font-size: 9px;
+
     font-weight: 800;
 }
 
@@ -1112,13 +1152,12 @@ header {
     color: #758194;
 
     font-size: 11px;
+
     line-height: 1.7;
 }
 
 
-/* =========================================================
-   SIDEBAR
-========================================================= */
+/* Sidebar */
 
 .sidebar-block {
     margin-bottom: 24px;
@@ -1143,6 +1182,7 @@ header {
     color: #647287;
 
     font-size: 8px;
+
     font-weight: 600;
 
     transition:
@@ -1166,9 +1206,7 @@ header {
 }
 
 
-/* =========================================================
-   METRICS
-========================================================= */
+/* Metrics */
 
 .showcase-metrics {
     display: grid;
@@ -1188,6 +1226,7 @@ header {
     color: #172238;
 
     font-size: 23px;
+
     line-height: 1;
 
     letter-spacing: -0.04em;
@@ -1201,6 +1240,7 @@ header {
     color: #8a95a5;
 
     font-size: 8px;
+
     font-weight: 700;
 
     line-height: 1.4;
@@ -1211,9 +1251,7 @@ header {
 }
 
 
-/* =========================================================
-   ROLE FOCUS
-========================================================= */
+/* Role focus */
 
 .role-focus {
     display: flex;
@@ -1234,6 +1272,7 @@ header {
     color: #56647a;
 
     font-size: 9px;
+
     font-weight: 700;
 
     transition:
@@ -1249,199 +1288,6 @@ header {
 
 
 /* =========================================================
-   EXPERIENCE — TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .experience-intro {
-        max-width: 100%;
-    }
-
-    .experience-navigation {
-        max-width: 100%;
-    }
-
-    .experience-showcase {
-        max-width: 100%;
-    }
-
-    .showcase-body {
-        grid-template-columns: 1fr;
-    }
-
-    .showcase-sidebar {
-        border-left: 0;
-
-        border-top: 1px solid #e7ebf0;
-    }
-
-}
-
-
-/* =========================================================
-   EXPERIENCE — MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .experience-intro {
-        margin-top: -15px;
-
-        margin-bottom: 38px;
-    }
-
-    .experience-intro p {
-        font-size: 13px;
-    }
-
-
-    /* Vertical timeline */
-
-    .experience-navigation {
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 0;
-
-        margin-left: 6px;
-
-        margin-bottom: 28px;
-    }
-
-    .experience-navigation::before {
-        top: 0;
-        bottom: 0;
-        left: 4px;
-
-        width: 1px;
-        height: auto;
-
-        right: auto;
-    }
-
-    .experience-nav-item,
-    .experience-nav-item:last-child {
-        min-height: 95px;
-
-        padding:
-            20px
-            10px
-            18px
-            35px;
-    }
-
-    .experience-nav-item:hover {
-        transform: none;
-    }
-
-    .nav-dot {
-        top: 27px;
-        left: -1px;
-    }
-
-    .nav-company {
-        font-size: 14px;
-    }
-
-    .nav-role {
-        font-size: 11px;
-    }
-
-
-    /* Showcase */
-
-    .showcase-top {
-        min-height: 64px;
-
-        padding: 0 20px;
-    }
-
-    .experience-company {
-        font-size: 9px;
-    }
-
-    .showcase-date {
-        font-size: 9px;
-    }
-
-    .showcase-arrow {
-        margin-left: 12px;
-    }
-
-
-    .showcase-main {
-        padding: 28px 20px 30px;
-    }
-
-    .showcase-sidebar {
-        padding: 28px 20px;
-    }
-
-    .showcase-company h3 {
-        font-size: 24px;
-    }
-
-    .showcase-description {
-        font-size: 12px;
-    }
-
-
-    .responsibility-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/* =========================================================
-   EXPERIENCE — SMALL MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .experience-intro p {
-        font-size: 12px;
-    }
-
-    .experience-nav-item,
-    .experience-nav-item:last-child {
-        padding-left: 32px;
-    }
-
-    .showcase-top {
-        flex-wrap: wrap;
-
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-
-    .showcase-date {
-        margin-left: auto;
-    }
-
-    .showcase-arrow {
-        display: none;
-    }
-
-    .showcase-company h3 {
-        font-size: 22px;
-    }
-
-    .showcase-description {
-        font-size: 12px;
-    }
-
-    .showcase-metrics {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-    }
-
-}
-
-/* =========================================================
    TECHNICAL SKILLS
 ========================================================= */
 
@@ -1450,22 +1296,18 @@ header {
 }
 
 
-/* =========================================================
-   INTRO
-========================================================= */
+/* Intro */
 
 .skills-intro {
-    max-width: 1080px;
-
-    margin: -25px auto 45px;
-
     display: flex;
-
     align-items: flex-end;
-
     justify-content: space-between;
 
     gap: 40px;
+
+    max-width: 1080px;
+
+    margin: -25px auto 45px;
 }
 
 .skills-intro p {
@@ -1493,27 +1335,23 @@ header {
 }
 
 
-/* =========================================================
-   SKILLS GRID
-========================================================= */
+/* Grid */
 
 .skills-explorer {
-    max-width: 1080px;
-
-    margin: 0 auto;
-
     display: grid;
 
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
     gap: 14px;
+
+    max-width: 1080px;
+
+    margin: 0 auto;
 }
 
 
-/* =========================================================
-   SKILL CARD
-========================================================= */
+/* Skill card */
 
 .skill-category {
     position: relative;
@@ -1530,9 +1368,6 @@ header {
         transform 0.35s ease;
 }
 
-
-/* LEFT BLUE INDICATOR */
-
 .skill-category::before {
     content: "";
 
@@ -1542,7 +1377,6 @@ header {
     left: 0;
 
     width: 3px;
-
     height: 0;
 
     background: #2563eb;
@@ -1550,9 +1384,6 @@ header {
     transition:
         height 0.35s ease;
 }
-
-
-/* HOVER */
 
 .skill-category:hover {
     border-color: #cbd7e6;
@@ -1562,9 +1393,6 @@ header {
     box-shadow:
         0 18px 45px rgba(20, 35, 55, 0.06);
 }
-
-
-/* ACTIVE / EXPANDED */
 
 .skill-category.active {
     border-color: #c7d6e9;
@@ -1579,17 +1407,12 @@ header {
     height: 100%;
 }
 
-
-/* WIDE CARD */
-
 .skill-category-wide {
     grid-column: 1 / -1;
 }
 
 
-/* =========================================================
-   CARD TRIGGER
-========================================================= */
+/* Trigger */
 
 .skill-card-trigger {
     width: 100%;
@@ -1610,15 +1433,11 @@ header {
 }
 
 
-/* =========================================================
-   CARD TOP
-========================================================= */
+/* Card top */
 
 .skill-card-top {
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     margin-bottom: 38px;
@@ -1635,19 +1454,14 @@ header {
 }
 
 
-/* =========================================================
-   ARROW
-========================================================= */
+/* Arrow */
 
 .skill-card-arrow {
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     width: 30px;
-
     height: 30px;
 
     border: 1px solid #e0e6ee;
@@ -1682,9 +1496,7 @@ header {
 }
 
 
-/* =========================================================
-   TITLE + DESCRIPTION
-========================================================= */
+/* Title + description */
 
 .skill-category-header {
     margin-bottom: 24px;
@@ -1702,9 +1514,6 @@ header {
     letter-spacing: -0.03em;
 }
 
-
-/* DESCRIPTION DIRECTLY BELOW TITLE */
-
 .skill-category-header p {
     max-width: 480px;
 
@@ -1718,13 +1527,10 @@ header {
 }
 
 
-/* =========================================================
-   PREVIEW SKILLS
-========================================================= */
+/* Preview */
 
 .skill-preview {
     display: flex;
-
     flex-wrap: wrap;
 
     gap: 7px;
@@ -1757,9 +1563,7 @@ header {
 }
 
 
-/* =========================================================
-   EXPANDED CONTENT
-========================================================= */
+/* Expanded content */
 
 .skill-expanded-content {
     display: grid;
@@ -1776,19 +1580,11 @@ header {
         padding 0.45s ease;
 }
 
-
-/* IMPORTANT:
-   Allows smooth height animation
-*/
-
 .skill-expanded-content > * {
     min-height: 0;
 
     overflow: hidden;
 }
-
-
-/* OPEN */
 
 .skill-category.active .skill-expanded-content {
     grid-template-rows: 1fr;
@@ -1800,13 +1596,10 @@ header {
 }
 
 
-/* =========================================================
-   DIVIDER
-========================================================= */
+/* Divider */
 
 .expanded-divider {
     width: 100%;
-
     height: 1px;
 
     margin-bottom: 20px;
@@ -1815,9 +1608,7 @@ header {
 }
 
 
-/* =========================================================
-   EXPANDED LABEL
-========================================================= */
+/* Label */
 
 .expanded-label {
     display: block;
@@ -1836,13 +1627,10 @@ header {
 }
 
 
-/* =========================================================
-   ALL SKILLS
-========================================================= */
+/* All skills */
 
 .expanded-skills {
     display: flex;
-
     flex-wrap: wrap;
 
     gap: 7px;
@@ -1872,18 +1660,14 @@ header {
         color 0.2s ease;
 }
 
-
-/* Animate skills when card opens */
-
-.skill-category.active
-.expanded-skills span {
+.skill-category.active .expanded-skills span {
     transform: translateY(0);
 
     opacity: 1;
 }
 
 
-/* Small stagger effect */
+/* Stagger */
 
 .skill-category.active
 .expanded-skills span:nth-child(1) {
@@ -1931,7 +1715,7 @@ header {
 }
 
 
-/* Hover on individual skills */
+/* Individual skill hover */
 
 .expanded-skills span:hover {
     border-color: #bfcfe2;
@@ -1942,9 +1726,7 @@ header {
 }
 
 
-/* =========================================================
-   WIDE CARD
-========================================================= */
+/* Wide */
 
 .skill-category-wide .skill-card-trigger {
     min-height: 220px;
@@ -1957,147 +1739,6 @@ header {
 
 
 /* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .skills-intro {
-        max-width: 100%;
-    }
-
-    .skills-explorer {
-        max-width: 100%;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .skills-intro {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 12px;
-
-        margin-top: -15px;
-
-        margin-bottom: 35px;
-    }
-
-
-    .skills-intro p {
-        font-size: 12px;
-    }
-
-
-    .skills-explorer {
-        grid-template-columns: 1fr;
-
-        gap: 10px;
-    }
-
-
-    .skill-category,
-    .skill-category-wide {
-        grid-column: auto;
-    }
-
-
-    .skill-card-trigger,
-    .skill-category-wide
-    .skill-card-trigger {
-
-        min-height: 225px;
-
-        padding: 23px;
-    }
-
-
-    .skill-card-top {
-        margin-bottom: 32px;
-    }
-
-
-    .skill-category-header h3 {
-        font-size: 18px;
-    }
-
-
-    .skill-category-header p {
-        font-size: 10px;
-    }
-
-
-    .skill-expanded-content,
-    .skill-category.active
-    .skill-expanded-content {
-
-        padding-left: 23px;
-
-        padding-right: 23px;
-    }
-
-
-    .skill-category.active
-    .skill-expanded-content {
-
-        padding-bottom: 23px;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .skill-card-trigger,
-    .skill-category-wide
-    .skill-card-trigger {
-
-        min-height: 230px;
-
-        padding: 21px;
-    }
-
-
-    .skill-category-header h3 {
-        font-size: 17px;
-    }
-
-
-    .skill-category-header p {
-        font-size: 9px;
-
-        line-height: 1.65;
-    }
-
-
-    .skill-preview span {
-        font-size: 8px;
-
-        padding: 7px 8px;
-    }
-
-
-    .expanded-skills span {
-        font-size: 9px;
-
-        padding: 8px 9px;
-    }
-
-}
-
-/* =========================================================
    EDUCATION
 ========================================================= */
 
@@ -2106,22 +1747,18 @@ header {
 }
 
 
-/* =========================================================
-   INTRO
-========================================================= */
+/* Intro */
 
 .education-intro {
-    max-width: 1080px;
-
-    margin: -25px auto 55px;
-
     display: flex;
-
     align-items: flex-end;
-
     justify-content: space-between;
 
     gap: 40px;
+
+    max-width: 1080px;
+
+    margin: -25px auto 55px;
 }
 
 .education-intro p {
@@ -2149,9 +1786,7 @@ header {
 }
 
 
-/* =========================================================
-   TIMELINE
-========================================================= */
+/* Timeline */
 
 .education-timeline {
     position: relative;
@@ -2162,9 +1797,6 @@ header {
 
     padding-bottom: 20px;
 }
-
-
-/* vertical line */
 
 .education-timeline::before {
     content: "";
@@ -2182,9 +1814,7 @@ header {
 }
 
 
-/* =========================================================
-   EDUCATION ITEM
-========================================================= */
+/* Education item */
 
 .education-item {
     position: relative;
@@ -2196,27 +1826,19 @@ header {
         70px
         minmax(0, 1fr);
 
-    gap: 0;
-
     margin-bottom: 28px;
 }
 
 
-/* =========================================================
-   YEAR
-========================================================= */
+/* Year */
 
 .education-year {
     display: flex;
-
     flex-direction: column;
-
     align-items: flex-end;
-
     justify-content: flex-start;
 
     padding-top: 27px;
-
     padding-right: 25px;
 
     color: #8a96a7;
@@ -2231,35 +1853,30 @@ header {
 }
 
 .education-year-line {
+    margin: 1px 0;
+
     color: #c0c8d3;
 
     font-size: 9px;
-
-    margin: 1px 0;
 }
 
 
-/* =========================================================
-   TIMELINE MARKER
-========================================================= */
+/* Marker */
 
 .education-marker {
     position: relative;
 
+    z-index: 2;
+
     display: flex;
-
     align-items: flex-start;
-
     justify-content: center;
 
     padding-top: 29px;
-
-    z-index: 2;
 }
 
 .education-marker span {
     width: 11px;
-
     height: 11px;
 
     border: 2px solid #ffffff;
@@ -2275,12 +1892,7 @@ header {
         box-shadow 0.3s ease;
 }
 
-
-/* active marker */
-
-.education-item.active
-.education-marker span {
-
+.education-item.active .education-marker span {
     background: #2563eb;
 
     transform: scale(1.2);
@@ -2291,9 +1903,7 @@ header {
 }
 
 
-/* =========================================================
-   EDUCATION CARD
-========================================================= */
+/* Education card */
 
 .education-card {
     position: relative;
@@ -2310,9 +1920,6 @@ header {
         transform 0.35s ease;
 }
 
-
-/* blue indicator */
-
 .education-card::before {
     content: "";
 
@@ -2322,7 +1929,6 @@ header {
     left: 0;
 
     width: 3px;
-
     height: 0;
 
     background: #2563eb;
@@ -2331,11 +1937,7 @@ header {
         height 0.4s ease;
 }
 
-
-/* hover */
-
 .education-card:hover {
-
     border-color: #cbd7e6;
 
     transform: translateY(-2px);
@@ -2344,31 +1946,21 @@ header {
         0 18px 45px rgba(20, 35, 55, 0.06);
 }
 
-
-/* active */
-
-.education-item.active
-.education-card {
-
+.education-item.active .education-card {
     border-color: #c7d6e9;
 
     box-shadow:
         0 18px 45px rgba(20, 35, 55, 0.06);
 }
 
-.education-item.active
-.education-card::before {
-
+.education-item.active .education-card::before {
     height: 100%;
 }
 
 
-/* =========================================================
-   CARD TRIGGER
-========================================================= */
+/* Trigger */
 
 .education-card-trigger {
-
     display: block;
 
     width: 100%;
@@ -2387,28 +1979,20 @@ header {
 }
 
 
-/* =========================================================
-   CARD TOP
-========================================================= */
+/* Card top */
 
 .education-card-top {
-
     display: flex;
-
     align-items: flex-start;
-
     justify-content: space-between;
 
     margin-bottom: 25px;
 }
 
 
-/* =========================================================
-   STATUS
-========================================================= */
+/* Status */
 
 .education-status {
-
     display: inline-block;
 
     margin-right: 12px;
@@ -2426,24 +2010,16 @@ header {
     letter-spacing: 0.12em;
 }
 
-
-/* completed status */
-
-.education-item:not(.active)
-.education-status {
-
+.education-item:not(.active) .education-status {
     border-color: #e0e5eb;
 
     color: #8995a6;
 }
 
 
-/* =========================================================
-   TYPE
-========================================================= */
+/* Type */
 
 .education-type {
-
     color: #8a96a7;
 
     font-size: 8px;
@@ -2454,20 +2030,14 @@ header {
 }
 
 
-/* =========================================================
-   ARROW
-========================================================= */
+/* Arrow */
 
 .education-arrow {
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     width: 30px;
-
     height: 30px;
 
     border: 1px solid #e0e6ee;
@@ -2483,9 +2053,7 @@ header {
         background 0.25s ease;
 }
 
-.education-card:hover
-.education-arrow {
-
+.education-card:hover .education-arrow {
     transform: translate(2px, -2px);
 
     border-color: #cbd8e8;
@@ -2493,9 +2061,7 @@ header {
     color: #2563eb;
 }
 
-.education-item.active
-.education-arrow {
-
+.education-item.active .education-arrow {
     transform: rotate(90deg);
 
     border-color: #c5d5e8;
@@ -2506,12 +2072,9 @@ header {
 }
 
 
-/* =========================================================
-   TITLE
-========================================================= */
+/* Title */
 
 .education-card h3 {
-
     max-width: 700px;
 
     color: #172238;
@@ -2526,12 +2089,9 @@ header {
 }
 
 
-/* =========================================================
-   INSTITUTION
-========================================================= */
+/* Institution */
 
 .education-institution {
-
     margin-top: 12px;
 
     color: #526075;
@@ -2542,12 +2102,9 @@ header {
 }
 
 
-/* =========================================================
-   PERIOD
-========================================================= */
+/* Period */
 
 .education-period {
-
     margin-top: 5px;
 
     color: #8b96a6;
@@ -2556,12 +2113,9 @@ header {
 }
 
 
-/* =========================================================
-   SUMMARY
-========================================================= */
+/* Summary */
 
 .education-summary {
-
     max-width: 720px;
 
     margin-top: 20px;
@@ -2574,12 +2128,9 @@ header {
 }
 
 
-/* =========================================================
-   EXPANDED CONTENT
-========================================================= */
+/* Expanded */
 
 .education-expanded {
-
     display: grid;
 
     grid-template-rows: 0fr;
@@ -2595,18 +2146,16 @@ header {
 }
 
 .education-expanded-inner {
-
     min-height: 0;
 
     overflow: hidden;
+
+    border-top: 1px solid #e2e7ed;
+
+    padding-top: 24px;
 }
 
-
-/* OPEN */
-
-.education-item.active
-.education-expanded {
-
+.education-item.active .education-expanded {
     grid-template-rows: 1fr;
 
     opacity: 1;
@@ -2616,26 +2165,10 @@ header {
 }
 
 
-/* =========================================================
-   DIVIDER
-========================================================= */
-
-.education-expanded-inner {
-
-    border-top: 1px solid #e2e7ed;
-
-    padding-top: 24px;
-}
-
-
-/* =========================================================
-   DETAILS
-========================================================= */
+/* Details */
 
 .education-detail {
-
     display: flex;
-
     flex-direction: column;
 
     gap: 7px;
@@ -2644,7 +2177,6 @@ header {
 }
 
 .education-detail-label {
-
     color: #9aa4b3;
 
     font-size: 8px;
@@ -2657,7 +2189,6 @@ header {
 }
 
 .education-detail strong {
-
     color: #4d5b70;
 
     font-size: 11px;
@@ -2667,32 +2198,21 @@ header {
     line-height: 1.6;
 }
 
-
-/* =========================================================
-   WIDE DETAIL
-========================================================= */
-
 .education-detail-wide {
-
     margin-bottom: 0;
 }
 
 
-/* =========================================================
-   EDUCATION TAGS
-========================================================= */
+/* Tags */
 
 .education-tags {
-
     display: flex;
-
     flex-wrap: wrap;
 
     gap: 7px;
 }
 
 .education-tags span {
-
     padding: 8px 10px;
 
     border: 1px solid #dce3eb;
@@ -2716,19 +2236,14 @@ header {
         color 0.2s ease;
 }
 
-
-/* animate tags */
-
-.education-item.active
-.education-tags span {
-
+.education-item.active .education-tags span {
     transform: translateY(0);
 
     opacity: 1;
 }
 
 
-/* stagger */
+/* Stagger */
 
 .education-item.active
 .education-tags span:nth-child(1) {
@@ -2770,11 +2285,7 @@ header {
     transition-delay: 0.26s;
 }
 
-
-/* hover tags */
-
 .education-tags span:hover {
-
     border-color: #bfcfe2;
 
     color: #2563eb;
@@ -2784,268 +2295,43 @@ header {
 
 
 /* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .education-intro {
-
-        max-width: 100%;
-    }
-
-    .education-timeline {
-
-        max-width: 100%;
-    }
-
-    .education-item {
-
-        grid-template-columns:
-            90px
-            50px
-            minmax(0, 1fr);
-    }
-
-    .education-timeline::before {
-
-        left: 115px;
-    }
-
-    .education-year {
-
-        padding-right: 18px;
-    }
-
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .education-intro {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 12px;
-
-        margin-top: -15px;
-
-        margin-bottom: 35px;
-    }
-
-
-    .education-intro p {
-
-        font-size: 12px;
-    }
-
-
-    .education-timeline::before {
-
-        left: 9px;
-    }
-
-
-    .education-item {
-
-        display: grid;
-
-        grid-template-columns:
-            20px
-            minmax(0, 1fr);
-
-        gap: 12px;
-
-        margin-bottom: 18px;
-    }
-
-
-    .education-year {
-
-        display: none;
-    }
-
-
-    .education-marker {
-
-        grid-column: 1;
-
-        grid-row: 1;
-
-        padding-top: 27px;
-
-        justify-content: flex-start;
-    }
-
-
-    .education-card {
-
-        grid-column: 2;
-
-        grid-row: 1;
-    }
-
-
-    .education-card-trigger {
-
-        padding: 24px 22px;
-    }
-
-
-    .education-card-top {
-
-        margin-bottom: 22px;
-    }
-
-
-    .education-card h3 {
-
-        font-size: 21px;
-    }
-
-
-    .education-institution {
-
-        font-size: 12px;
-    }
-
-
-    .education-summary {
-
-        font-size: 11px;
-    }
-
-
-    .education-expanded {
-
-        padding-left: 22px;
-
-        padding-right: 22px;
-    }
-
-
-    .education-item.active
-    .education-expanded {
-
-        padding-bottom: 24px;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .education-card-trigger {
-
-        padding: 21px 19px;
-    }
-
-
-    .education-status {
-
-        display: block;
-
-        width: fit-content;
-
-        margin-right: 0;
-
-        margin-bottom: 8px;
-    }
-
-
-    .education-type {
-
-        display: block;
-    }
-
-
-    .education-card h3 {
-
-        font-size: 19px;
-    }
-
-
-    .education-summary {
-
-        font-size: 10px;
-
-        line-height: 1.7;
-    }
-
-
-    .education-expanded {
-
-        padding-left: 19px;
-
-        padding-right: 19px;
-    }
-
-
-    .education-item.active
-    .education-expanded {
-
-        padding-bottom: 21px;
-    }
-
-}
-
-/* =========================================================
-   CONTACT — TWO COLUMN LAYOUT
+   CONTACT
 ========================================================= */
 
 .contact-section {
     width: 100%;
+
     overflow: hidden;
+
+    background: #ffffff;
 }
 
 
-/* =========================================================
-   CONTACT GRID
-========================================================= */
-
-.contact-section .section-container {
-    width: 100%;
-}
-
-.contact-intro {
-    width: 100%;
-    max-width: none;
-    margin-top: 75px;
-}
-
-
-/* =========================================================
-   CONTACT CONTENT — 2 COLUMNS
-========================================================= */
+/* Contact layout */
 
 .contact-section .contact-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
 
     gap: 90px;
 
     width: 100%;
+
     margin-top: 65px;
 }
 
 
-/* =========================================================
-   LEFT COLUMN
-========================================================= */
+/* Left column */
 
 .contact-main {
-    min-width: 0;
+    width: 100%;
+
     max-width: 620px;
+
+    min-width: 0;
 }
 
 .contact-kicker {
@@ -3056,23 +2342,31 @@ header {
     color: #2563eb;
 
     font-size: 9px;
+
     font-weight: 800;
+
     letter-spacing: 0.16em;
 }
 
 .contact-main h3 {
+    width: 100%;
+
     margin: 0;
 
     color: #172238;
 
     font-size: clamp(38px, 5vw, 58px);
+
     line-height: 1.04;
+
     font-weight: 700;
 
     letter-spacing: -0.05em;
 }
 
 .contact-main p {
+    width: 100%;
+
     max-width: 540px;
 
     margin-top: 24px;
@@ -3080,28 +2374,34 @@ header {
     color: #738094;
 
     font-size: 13px;
+
     line-height: 1.85;
 }
 
 
-/* =========================================================
-   STATUS
-========================================================= */
+/* Status */
 
 .contact-status {
     display: inline-flex;
+
     align-items: center;
+
     gap: 10px;
 
+    max-width: 100%;
+
     margin-top: 30px;
+
     padding: 10px 14px;
 
     border: 1px solid #e0e6ee;
+
     background: #f8fafc;
 
     color: #657286;
 
     font-size: 10px;
+
     font-weight: 700;
 }
 
@@ -3120,13 +2420,14 @@ header {
 }
 
 
-/* =========================================================
-   RIGHT COLUMN — CONTACT LINKS
-========================================================= */
+/* Right column */
 
 .contact-links {
     width: 100%;
+
     max-width: none;
+
+    min-width: 0;
 
     margin: 0;
 
@@ -3146,18 +2447,21 @@ header {
     align-items: center;
 
     width: 100%;
+
     min-width: 0;
+
     min-height: 90px;
 
     gap: 20px;
 
     padding: 0 14px;
 
-    box-sizing: border-box;
-
     border-bottom: 1px solid #e2e7ed;
 
+    background: transparent;
+
     color: inherit;
+
     text-decoration: none;
 
     transition:
@@ -3175,12 +2479,11 @@ header {
 }
 
 
-/* =========================================================
-   ICON
-========================================================= */
+/* Icon */
 
 .contact-icon {
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -3190,11 +2493,13 @@ header {
     flex-shrink: 0;
 
     border: 1px solid #dce3eb;
+
     background: #ffffff;
 
     color: #647286;
 
     font-size: 11px;
+
     font-weight: 700;
 
     transition:
@@ -3205,22 +2510,22 @@ header {
 
 .contact-item:hover .contact-icon {
     color: #2563eb;
+
     border-color: #b9cdf1;
 
     transform: translateY(-2px);
 }
 
 
-/* =========================================================
-   CONTENT
-========================================================= */
+/* Content */
 
 .contact-content {
-    width: 100%;
-    min-width: 0;
-
     display: flex;
     flex-direction: column;
+
+    width: 100%;
+
+    min-width: 0;
 
     gap: 6px;
 }
@@ -3229,6 +2534,7 @@ header {
     color: #8b96a7;
 
     font-size: 8px;
+
     font-weight: 800;
 
     letter-spacing: 0.15em;
@@ -3238,19 +2544,23 @@ header {
     display: block;
 
     width: 100%;
+
     max-width: 100%;
 
     color: #29364a;
 
     font-size: 13px;
+
     font-weight: 600;
 
     line-height: 1.45;
 
     overflow-wrap: anywhere;
+
     word-break: break-word;
 
-    transition: color 0.25s ease;
+    transition:
+        color 0.25s ease;
 }
 
 .contact-item:hover .contact-value {
@@ -3258,13 +2568,13 @@ header {
 }
 
 
-/* =========================================================
-   ARROW
-========================================================= */
+/* Arrow */
 
 .contact-arrow {
     display: flex;
+
     align-items: center;
+
     justify-content: flex-end;
 
     width: 100%;
@@ -3272,6 +2582,7 @@ header {
     color: #a1aab8;
 
     font-size: 17px;
+
     line-height: 1;
 
     transition:
@@ -3286,23 +2597,41 @@ header {
 }
 
 
-/* =========================================================
-   CTA
-========================================================= */
+/* Static location */
+
+.contact-item-static {
+    cursor: default;
+}
+
+.contact-item-static:hover .contact-value {
+    color: #29364a;
+}
+
+.contact-item-static:hover .contact-arrow {
+    color: #a1aab8;
+
+    transform: none;
+}
+
+
+/* CTA */
 
 .contact-cta {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     width: 100%;
 
+    min-width: 0;
+
     gap: 35px;
 
     margin-top: 80px;
-    padding: 32px 35px;
 
-    box-sizing: border-box;
+    padding: 32px 35px;
 
     border: 1px solid #dfe5ec;
 
@@ -3321,6 +2650,7 @@ header {
     color: #8a95a6;
 
     font-size: 8px;
+
     font-weight: 800;
 
     letter-spacing: 0.15em;
@@ -3332,12 +2662,17 @@ header {
     color: #253247;
 
     font-size: 15px;
+
     line-height: 1.5;
+
     font-weight: 650;
+
+    letter-spacing: -0.015em;
 }
 
 .contact-cta-button {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -3354,9 +2689,11 @@ header {
     color: #ffffff;
 
     font-size: 10px;
+
     font-weight: 700;
 
     text-decoration: none;
+
     white-space: nowrap;
 
     transition:
@@ -3366,20 +2703,140 @@ header {
 
 .contact-cta-button:hover {
     background: #2563eb;
+
     transform: translateY(-2px);
+}
+
+.contact-cta-button span:last-child {
+    font-size: 14px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.contact-cta-button:hover span:last-child {
+    transform: translate(3px, -3px);
 }
 
 
 /* =========================================================
-   TABLET
+   FOOTER
+========================================================= */
+
+footer {
+    background: #0b1220;
+
+    color: #ffffff;
+}
+
+.footer-content {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: min(1180px, calc(100% - 48px));
+
+    min-height: 90px;
+
+    margin: 0 auto;
+
+    color: #69778b;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   TABLET — 900px
 ========================================================= */
 
 @media (max-width: 900px) {
+
+    /* Navigation */
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+
+    /* About */
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+
+    /* Experience */
+
+    .experience-intro,
+    .experience-navigation,
+    .experience-showcase {
+        max-width: 100%;
+    }
+
+    .showcase-body {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-sidebar {
+        border-left: 0;
+
+        border-top: 1px solid #e7ebf0;
+    }
+
+
+    /* Skills */
+
+    .skills-intro,
+    .skills-explorer {
+        max-width: 100%;
+    }
+
+
+    /* Education */
+
+    .education-intro,
+    .education-timeline {
+        max-width: 100%;
+    }
+
+    .education-item {
+        grid-template-columns:
+            90px
+            50px
+            minmax(0, 1fr);
+    }
+
+    .education-timeline::before {
+        left: 115px;
+    }
+
+    .education-year {
+        padding-right: 18px;
+    }
+
+
+    /* Contact */
 
     .contact-section .contact-layout {
         grid-template-columns: 1fr;
 
         gap: 55px;
+
+        margin-top: 55px;
     }
 
     .contact-main {
@@ -3392,6 +2849,7 @@ header {
 
     .contact-cta {
         align-items: flex-start;
+
         flex-direction: column;
 
         gap: 24px;
@@ -3403,247 +2861,19 @@ header {
 
 
 /* =========================================================
-   MOBILE
+   MOBILE — 768px
 ========================================================= */
 
 @media (max-width: 768px) {
 
-    .contact-intro {
-        margin-top: 45px;
-    }
-
-    .contact-section .contact-layout {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-
-        margin-top: 45px;
-    }
-
-    .contact-main {
-        width: 100%;
-        max-width: none;
-    }
-
-    .contact-main h3 {
-        font-size: 40px;
-        line-height: 1.06;
-    }
-
-    .contact-main p {
-        max-width: none;
-
-        margin-top: 20px;
-
-        font-size: 12px;
-        line-height: 1.8;
-    }
-
-    .contact-status {
-        margin-top: 25px;
-    }
-
-
-    /* CONTACT ITEMS */
-
-    .contact-item {
-        grid-template-columns:
-            40px
-            minmax(0, 1fr)
-            20px;
-
-        gap: 12px;
-
-        min-height: 82px;
-
-        padding: 0;
-    }
-
-    .contact-item:hover {
-        padding-left: 8px;
-    }
-
-    .contact-icon {
-        width: 32px;
-        height: 32px;
-
-        font-size: 10px;
-    }
-
-    .contact-value {
-        font-size: 12px;
-    }
-
-    .contact-arrow {
-        width: 20px;
-        font-size: 14px;
-    }
-
-
-    /* CTA */
-
-    .contact-cta {
-        flex-direction: column;
-        align-items: stretch;
-
-        gap: 22px;
-
-        margin-top: 55px;
-
-        padding: 25px 20px;
-    }
-
-    .contact-cta-button {
-        width: 100%;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-
-    .contact-intro {
-        margin-top: 40px;
-    }
-
-    .contact-main h3 {
-        font-size: 34px;
-    }
-
-    .contact-main p {
-        font-size: 12px;
-    }
-
-    .contact-section .contact-layout {
-        gap: 38px;
-    }
-
-    .contact-item {
-        grid-template-columns:
-            34px
-            minmax(0, 1fr)
-            16px;
-
-        gap: 10px;
-
-        min-height: 76px;
-    }
-
-    .contact-icon {
-        width: 30px;
-        height: 30px;
-    }
-
-    .contact-value {
-        font-size: 11px;
-    }
-
-    .contact-arrow {
-        width: 16px;
-        font-size: 13px;
-    }
-
-}
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer {
-    background: #0b1220;
-    color: #ffffff;
-}
-
-.footer-content {
-    width: min(1180px, calc(100% - 48px));
-
-    min-height: 90px;
-
-    margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    color: #69778b;
-
-    font-size: 10px;
-    font-weight: 600;
-
-    letter-spacing: 0.04em;
-}
-
-
-/* =========================================================
-   RESPONSIVE — TABLET
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .nav-links {
-        gap: 18px;
-    }
-
-    .nav-link {
-        font-size: 12px;
-    }
-
-
-    .about-content {
-        grid-template-columns: 1fr;
-
-        gap: 50px;
-    }
-
-
-    .showcase-body {
-        grid-template-columns: 1fr;
-    }
-
-    .showcase-sidebar {
-        border-left: 0;
-        border-top: 1px solid #e7ebf0;
-    }
-
-
-    .education-card {
-        grid-template-columns: 1fr;
-
-        gap: 40px;
-    }
-
-    .education-coursework {
-        padding-left: 0;
-
-        padding-top: 30px;
-
-        border-left: 0;
-        border-top: 1px solid #e1e6ed;
-    }
-
-
-    .contact-content {
-        grid-template-columns: 1fr;
-
-        gap: 50px;
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE — MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
+    /* Header */
 
     header {
         min-height: 720px;
     }
 
+
+    /* Navigation */
 
     .main-nav {
         width: min(100% - 32px, 1180px);
@@ -3651,20 +2881,20 @@ footer {
         height: 72px;
     }
 
-
     .logo-name {
         display: none;
     }
-
 
     .nav-links {
         position: absolute;
 
         top: 72px;
+
         left: 0;
         right: 0;
 
         display: none;
+
         flex-direction: column;
         align-items: stretch;
 
@@ -3692,16 +2922,16 @@ footer {
         display: none;
     }
 
-
     .nav-linkedin {
         display: none;
     }
-
 
     .mobile-menu-button {
         display: flex;
     }
 
+
+    /* Hero */
 
     .hero {
         min-height: 648px;
@@ -3709,8 +2939,6 @@ footer {
 
     .hero-content {
         width: min(100% - 32px, 1180px);
-
-        padding-top: 0;
     }
 
     .hero-content h1 {
@@ -3725,12 +2953,15 @@ footer {
 
     .hero-description {
         font-size: 14px;
+
         line-height: 1.75;
     }
 
     .hero-buttons {
         flex-direction: column;
         align-items: stretch;
+
+        width: 100%;
 
         max-width: 300px;
     }
@@ -3741,6 +2972,8 @@ footer {
     }
 
 
+    /* Sections */
+
     .section {
         padding: 85px 0;
     }
@@ -3749,63 +2982,81 @@ footer {
         width: min(100% - 32px, 1180px);
     }
 
-.section-heading {
-    display: flex;
-    align-items: flex-start;
-    gap: 22px;
+    .section-heading {
+        gap: 22px;
 
-    max-width: 1080px;
-    margin: 0 auto 55px;
-}
+        margin-bottom: 55px;
+    }
 
     .section-heading h2 {
         font-size: 42px;
     }
 
 
-    .experience-intro {
-        margin-top: -15px;
-        margin-bottom: 40px;
+    /* About */
+
+    .about-content {
+        gap: 40px;
     }
 
 
-    /* Timeline becomes vertical */
+    /* Experience */
+
+    .experience-intro {
+        margin-top: -15px;
+
+        margin-bottom: 38px;
+    }
+
+    .experience-intro p {
+        font-size: 13px;
+    }
+
+
+    /* Vertical timeline */
 
     .experience-navigation {
         display: flex;
+
         flex-direction: column;
 
         gap: 0;
 
         margin-left: 6px;
 
-        margin-bottom: 30px;
+        margin-bottom: 28px;
     }
 
     .experience-navigation::before {
         top: 0;
         bottom: 0;
+
         left: 4px;
+
+        right: auto;
 
         width: 1px;
         height: auto;
-
-        right: auto;
     }
 
     .experience-nav-item,
     .experience-nav-item:last-child {
-        min-height: 100px;
+        min-height: 95px;
 
         padding:
             20px
             10px
-            20px
+            18px
             35px;
+    }
+
+    .experience-nav-item:hover {
+        transform: none;
     }
 
     .nav-dot {
         top: 27px;
+
         left: -1px;
     }
 
@@ -3813,9 +3064,15 @@ footer {
         font-size: 14px;
     }
 
+    .nav-role {
+        font-size: 11px;
+    }
+
+
+    /* Experience showcase */
 
     .showcase-top {
-        min-height: 65px;
+        min-height: 64px;
 
         padding: 0 20px;
     }
@@ -3832,7 +3089,6 @@ footer {
         margin-left: 12px;
     }
 
-
     .showcase-main {
         padding: 28px 20px 30px;
     }
@@ -3842,142 +3098,537 @@ footer {
     }
 
     .showcase-company h3 {
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .showcase-description {
-        font-size: 13px;
+        font-size: 12px;
     }
-
 
     .responsibility-grid {
         grid-template-columns: 1fr;
     }
 
 
-    .skills-grid {
-        grid-template-columns: 1fr;
+    /* Skills */
+
+    .skills-intro {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+
+        margin-top: -15px;
+
+        margin-bottom: 35px;
     }
 
+    .skills-intro p {
+        font-size: 12px;
+    }
+
+    .skills-explorer {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .skill-category,
     .skill-category-wide {
         grid-column: auto;
     }
 
+    .skill-card-trigger,
+    .skill-category-wide .skill-card-trigger {
+        min-height: 225px;
+
+        padding: 23px;
+    }
+
+    .skill-card-top {
+        margin-bottom: 32px;
+    }
+
+    .skill-category-header h3 {
+        font-size: 18px;
+    }
+
+    .skill-category-header p {
+        font-size: 10px;
+    }
+
+    .skill-expanded-content,
+    .skill-category.active .skill-expanded-content {
+        padding-left: 23px;
+
+        padding-right: 23px;
+    }
+
+    .skill-category.active .skill-expanded-content {
+        padding-bottom: 23px;
+    }
+
+
+    /* Education */
+
+    .education-intro {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+
+        margin-top: -15px;
+
+        margin-bottom: 35px;
+    }
+
+    .education-intro p {
+        font-size: 12px;
+    }
+
+    .education-timeline::before {
+        left: 9px;
+    }
+
+    .education-item {
+        display: grid;
+
+        grid-template-columns:
+            20px
+            minmax(0, 1fr);
+
+        gap: 12px;
+
+        margin-bottom: 18px;
+    }
+
+    .education-year {
+        display: none;
+    }
+
+    .education-marker {
+        grid-column: 1;
+        grid-row: 1;
+
+        padding-top: 27px;
+
+        justify-content: flex-start;
+    }
 
     .education-card {
-        padding: 28px 22px;
+        grid-column: 2;
+        grid-row: 1;
     }
 
-    .education-status {
-        position: static;
-        display: inline-block;
-        margin-bottom: 25px;
+    .education-card-trigger {
+        padding: 24px 22px;
     }
 
-    .education-main h3 {
-        font-size: 27px;
+    .education-card-top {
+        margin-bottom: 22px;
+    }
+
+    .education-card h3 {
+        font-size: 21px;
+    }
+
+    .education-institution {
+        font-size: 12px;
+    }
+
+    .education-summary {
+        font-size: 11px;
+    }
+
+    .education-expanded {
+        padding-left: 22px;
+
+        padding-right: 22px;
+    }
+
+    .education-item.active .education-expanded {
+        padding-bottom: 24px;
     }
 
 
-    .contact-intro h3 {
-        font-size: 36px;
+    /* Contact */
+
+    .contact-section .contact-layout {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+        margin-top: 45px;
+    }
+
+    .contact-main {
+        width: 100%;
+
+        max-width: none;
+    }
+
+    .contact-main h3 {
+        font-size: 40px;
+
+        line-height: 1.06;
+    }
+
+    .contact-main p {
+        width: 100%;
+
+        max-width: none;
+
+        margin-top: 20px;
+
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+    .contact-status {
+        margin-top: 25px;
+
+        padding: 9px 12px;
+
+        font-size: 9px;
     }
 
     .contact-item {
-        grid-template-columns: 75px 1fr 20px;
+        grid-template-columns:
+            40px
+            minmax(0, 1fr)
+            20px;
+
+        gap: 12px;
+
+        min-height: 82px;
+
+        padding: 0;
+    }
+
+    .contact-item:hover {
+        padding-left: 8px;
+    }
+
+    .contact-icon {
+        width: 32px;
+        height: 32px;
+
+        font-size: 10px;
+    }
+
+    .contact-label {
+        font-size: 7px;
+    }
+
+    .contact-value {
+        width: 100%;
+
+        max-width: 100%;
+
+        font-size: 12px;
+
+        line-height: 1.4;
+
+        white-space: normal;
+
+        overflow: visible;
+
+        text-overflow: clip;
+
+        overflow-wrap: anywhere;
+
+        word-break: break-word;
+    }
+
+    .contact-arrow {
+        width: 20px;
+
+        font-size: 14px;
+    }
+
+    .contact-cta {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+
+        gap: 22px;
+
+        margin-top: 55px;
+
+        padding: 25px 20px;
+    }
+
+    .contact-cta-content {
+        width: 100%;
+    }
+
+    .contact-cta h4 {
+        font-size: 14px;
+
+        line-height: 1.55;
+    }
+
+    .contact-cta-button {
+        width: 100%;
+
+        min-height: 46px;
+
+        justify-content: space-between;
+    }
+
+
+    /* Footer */
+
+    .footer-content {
+        width: min(100% - 32px, 1180px);
+
+        min-height: 100px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 7px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE — 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+    /* Hero */
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+    .hero-content h2 {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+
+    /* Sections */
+
+    .section-heading {
+        gap: 14px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+
+    /* Experience */
+
+    .experience-intro p {
+        font-size: 12px;
+    }
+
+    .experience-nav-item,
+    .experience-nav-item:last-child {
+        padding-left: 32px;
+    }
+
+    .showcase-top {
+        flex-wrap: wrap;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .showcase-date {
+        margin-left: auto;
+    }
+
+    .showcase-arrow {
+        display: none;
+    }
+
+    .showcase-company h3 {
+        font-size: 22px;
+    }
+
+    .showcase-description {
+        font-size: 12px;
+    }
+
+    .showcase-metrics {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    /* Skills */
+
+    .skill-card-trigger,
+    .skill-category-wide .skill-card-trigger {
+        min-height: 230px;
+
+        padding: 21px;
+    }
+
+    .skill-category-header h3 {
+        font-size: 17px;
+    }
+
+    .skill-category-header p {
+        font-size: 9px;
+
+        line-height: 1.65;
+    }
+
+    .skill-preview span {
+        font-size: 8px;
+
+        padding: 7px 8px;
+    }
+
+    .expanded-skills span {
+        font-size: 9px;
+
+        padding: 8px 9px;
+    }
+
+
+    /* Education */
+
+    .education-card-trigger {
+        padding: 21px 19px;
+    }
+
+    .education-status {
+        display: block;
+
+        width: fit-content;
+
+        margin-right: 0;
+
+        margin-bottom: 8px;
+    }
+
+    .education-type {
+        display: block;
+    }
+
+    .education-card h3 {
+        font-size: 19px;
+    }
+
+    .education-summary {
+        font-size: 10px;
+
+        line-height: 1.7;
+    }
+
+    .education-expanded {
+        padding-left: 19px;
+
+        padding-right: 19px;
+    }
+
+    .education-item.active .education-expanded {
+        padding-bottom: 21px;
+    }
+
+
+    /* Contact */
+
+    .contact-main h3 {
+        font-size: 34px;
+
+        line-height: 1.08;
+    }
+
+    .contact-main p {
+        font-size: 12px;
+    }
+
+    .contact-section .contact-layout {
+        gap: 38px;
+
+        margin-top: 38px;
+    }
+
+    .contact-item {
+        grid-template-columns:
+            34px
+            minmax(0, 1fr)
+            16px;
+
+        gap: 10px;
+
+        min-height: 76px;
+
+        padding: 0;
+    }
+
+    .contact-item:hover {
+        padding-left: 6px;
+    }
+
+    .contact-icon {
+        width: 30px;
+        height: 30px;
+
+        font-size: 9px;
+    }
+
+    .contact-label {
+        font-size: 7px;
     }
 
     .contact-value {
         font-size: 11px;
-        overflow-wrap: anywhere;
+
+        line-height: 1.45;
+
+        white-space: normal;
     }
 
+    .contact-arrow {
+        width: 16px;
 
-    .footer-content {
-        width: min(100% - 32px, 1180px);
-        min-height: 100px;
-        flex-direction: column;
-        justify-content: center;
-        gap: 7px;
+        font-size: 13px;
     }
 
+    .contact-cta {
+        margin-top: 48px;
 
-    /* =========================================================
-       RESPONSIVE — SMALL MOBILE
-    ========================================================= */
+        padding: 23px 17px;
+    }
 
-    @media (max-width: 480px) {
+    .contact-cta-label {
+        font-size: 7px;
+    }
 
-        .hero-content h1 {
-            font-size: 45px;
-        }
+    .contact-cta h4 {
+        font-size: 13px;
 
-        .hero-content h2 {
-            font-size: 18px;
-        }
+        line-height: 1.55;
+    }
 
-        .hero-description {
-            font-size: 13px;
-        }
+    .contact-cta-button {
+        width: 100%;
 
+        min-height: 44px;
 
-        .section-heading {
-            gap: 14px;
-        }
+        padding: 0 14px;
 
-        .section-heading h2 {
-            font-size: 36px;
-        }
-
-
-        .showcase-top {
-            flex-wrap: wrap;
-
-            padding-top: 16px;
-            padding-bottom: 16px;
-        }
-
-        .showcase-date {
-            margin-left: auto;
-        }
-
-        .showcase-arrow {
-            display: none;
-        }
-
-
-        .showcase-metrics {
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-
-        .education-main h3 {
-            font-size: 24px;
-        }
-
-
-        .contact-item {
-            grid-template-columns: 1fr 20px;
-
-            padding: 16px 0;
-        }
-
-        .contact-label {
-            grid-column: 1 / -1;
-
-            margin-bottom: 5px;
-        }
-
-        .contact-value {
-            grid-column: 1;
-        }
-
-        .contact-arrow {
-            grid-column: 2;
-            grid-row: 2;
-        }
-
+        font-size: 9px;
     }
 
 }
