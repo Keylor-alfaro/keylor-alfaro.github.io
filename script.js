@@ -537,306 +537,76 @@ window.addEventListener("resize", () => {
 
 
 /* =========================================================
-   TECHNICAL SKILLS DATA
-========================================================= */
-
-const skillData = {
-
-    microsoft: {
-
-        number: "01",
-
-        title: "Microsoft & IT",
-
-        description:
-            "Core technologies used to support users, manage Microsoft environments, troubleshoot technical issues, and restore services.",
-
-        skills: [
-            "Microsoft 365",
-            "Active Directory",
-            "Windows 10/11",
-            "Windows Server",
-            "ServiceNow"
-        ]
-
-    },
-
-
-    infrastructure: {
-
-        number: "02",
-
-        title: "Infrastructure",
-
-        description:
-            "Infrastructure technologies used for hardware support, maintenance, device management, backups, and day-to-day IT operations.",
-
-        skills: [
-            "Hardware",
-            "Printers",
-            "Telephony",
-            "Backup & Recovery",
-            "IT Asset Management"
-        ]
-
-    },
-
-
-    networking: {
-
-        number: "03",
-
-        title: "Networking",
-
-        description:
-            "Networking technologies and concepts used to troubleshoot connectivity, identify network issues, and support reliable IT services.",
-
-        skills: [
-            "TCP/IP",
-            "LAN / WAN",
-            "DNS / DHCP",
-            "Wi-Fi",
-            "VPN",
-            "Network Security"
-        ]
-
-    },
-
-
-    systems: {
-
-        number: "04",
-
-        title: "Systems & Applications",
-
-        description:
-            "Business systems and data technologies used to support enterprise applications, troubleshoot issues, and work with structured information.",
-
-        skills: [
-            "Softland ERP",
-            "SAP ERP",
-            "Oracle Database",
-            "SQL",
-            "Business Applications",
-            "Software Center",
-            "SharePoint"
-        ]
-
-    },
-
-
-    operations: {
-
-        number: "05",
-
-        title: "Problem Solving & Operations",
-
-        description:
-            "Operational capabilities that support structured troubleshooting, incident resolution, service restoration, documentation, and escalation.",
-
-        skills: [
-            "1st / 2nd-Level Support",
-            "Troubleshooting",
-            "Root Cause Analysis",
-            "Issue Resolution",
-            "Incident Management",
-            "ITIL",
-            "SLA / KPI",
-            "Service Requests",
-            "Technical Documentation"
-        ]
-
-    }
-
-};
-
-
-
-/* =========================================================
-   TECHNICAL SKILLS ELEMENTS
+   TECHNICAL SKILLS INTERACTION
 ========================================================= */
 
 const skillCategories =
     document.querySelectorAll(".skill-category");
 
-const skillsDetail =
-    document.querySelector("#skillsDetail");
 
-const detailTitle =
-    document.querySelector("#detailTitle");
+skillCategories.forEach(category => {
 
-const detailNumber =
-    document.querySelector("#detailNumber");
-
-const detailDescription =
-    document.querySelector("#detailDescription");
-
-const detailSkills =
-    document.querySelector("#detailSkills");
+    const trigger =
+        category.querySelector(".skill-card-trigger");
 
 
-
-/* =========================================================
-   UPDATE SKILL DETAIL
-========================================================= */
-
-function updateSkillDetail(skillKey) {
-
-    const data =
-        skillData[skillKey];
-
-    if (!data) {
+    if (!trigger) {
         return;
     }
 
 
-    /*
-       Start transition
-    */
+    trigger.addEventListener("click", () => {
 
-    if (skillsDetail) {
-
-        skillsDetail.classList.add(
-            "is-changing"
-        );
-
-    }
-
-
-    setTimeout(() => {
-
-        if (!detailTitle ||
-            !detailNumber ||
-            !detailDescription ||
-            !detailSkills) {
-
-            return;
-
-        }
+        const isActive =
+            category.classList.contains("active");
 
 
         /*
-           Update title
+           Close all other cards
         */
 
-        detailTitle.textContent =
-            data.title;
+        skillCategories.forEach(item => {
 
+            item.classList.remove("active");
 
-        /*
-           Update number
-        */
+            const itemTrigger =
+                item.querySelector(
+                    ".skill-card-trigger"
+                );
 
-        detailNumber.textContent =
-            data.number;
+            if (itemTrigger) {
 
+                itemTrigger.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-        /*
-           Update description
-        */
-
-        detailDescription.textContent =
-            data.description;
-
-
-        /*
-           Clear previous skills
-        */
-
-        detailSkills.innerHTML = "";
-
-
-        /*
-           Create skill buttons
-        */
-
-        data.skills.forEach(skill => {
-
-            const button =
-                document.createElement("button");
-
-            button.type = "button";
-
-            button.textContent =
-                skill;
-
-            detailSkills.appendChild(
-                button
-            );
+            }
 
         });
 
 
         /*
-           Finish transition
+           If the clicked card
+           was closed, open it.
         */
 
-        if (skillsDetail) {
-
-            skillsDetail.classList.remove(
-                "is-changing"
-            );
-
-        }
-
-    }, 180);
-
-}
-
-
-
-/* =========================================================
-   TECHNICAL SKILLS EVENTS
-========================================================= */
-
-skillCategories.forEach(category => {
-
-    category.addEventListener(
-        "click",
-        () => {
-
-            const skillKey =
-                category.dataset.skill;
-
-
-            /*
-               Remove active state
-               from all categories
-            */
-
-            skillCategories.forEach(item => {
-
-                item.classList.remove(
-                    "active"
-                );
-
-            });
-
-
-            /*
-               Activate selected category
-            */
+        if (!isActive) {
 
             category.classList.add(
                 "active"
             );
 
-
-            /*
-               Update detail panel
-            */
-
-            updateSkillDetail(
-                skillKey
+            trigger.setAttribute(
+                "aria-expanded",
+                "true"
             );
 
         }
-    );
+
+    });
 
 });
-
-
-
 /* =========================================================
    INITIAL TECHNICAL SKILLS
 ========================================================= */
