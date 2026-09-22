@@ -3005,6 +3005,7 @@ header {
 
 .contact-section {
     position: relative;
+    width: 100%;
     overflow: hidden;
     background: #ffffff;
 }
@@ -3015,6 +3016,7 @@ header {
 ========================================================= */
 
 .contact-intro {
+    width: 100%;
     max-width: 620px;
     margin-top: 75px;
 }
@@ -3029,6 +3031,7 @@ header {
 }
 
 .contact-intro h3 {
+    width: 100%;
     max-width: 600px;
     color: #172238;
     font-size: clamp(38px, 5vw, 58px);
@@ -3038,6 +3041,7 @@ header {
 }
 
 .contact-intro p {
+    width: 100%;
     max-width: 540px;
     margin-top: 24px;
     color: #738094;
@@ -3047,13 +3051,14 @@ header {
 
 
 /* =========================================================
-   AVAILABILITY STATUS
+   STATUS
 ========================================================= */
 
 .contact-status {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    max-width: 100%;
     margin-top: 30px;
     padding: 10px 14px;
     border: 1px solid #e0e6ee;
@@ -3069,8 +3074,7 @@ header {
     flex-shrink: 0;
     border-radius: 50%;
     background: #2563eb;
-    box-shadow:
-        0 0 0 4px rgba(37, 99, 235, 0.08);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
 }
 
 
@@ -3079,24 +3083,43 @@ header {
 ========================================================= */
 
 .contact-links {
-    width: min(100%, 900px);
+    width: 100%;
+    max-width: 900px;
     margin-top: 65px;
     margin-left: auto;
+    margin-right: 0;
     border-top: 1px solid #e2e7ed;
 }
 
 .contact-item {
     position: relative;
+
     display: grid;
-    grid-template-columns: 52px minmax(0, 1fr) 30px;
+
+    grid-template-columns:
+        52px
+        minmax(0, 1fr)
+        30px;
+
     align-items: center;
-    gap: 20px;
+
+    width: 100%;
+    min-width: 0;
     min-height: 90px;
+
+    gap: 20px;
+
     padding: 0 14px;
+
+    box-sizing: border-box;
+
     border-bottom: 1px solid #e2e7ed;
+
     background: transparent;
+
     color: inherit;
     text-decoration: none;
+
     transition:
         background 0.25s ease,
         padding-left 0.25s ease,
@@ -3111,20 +3134,27 @@ header {
 
 
 /* =========================================================
-   CONTACT ICON
+   ICON
 ========================================================= */
 
 .contact-icon {
     display: flex;
     align-items: center;
     justify-content: center;
+
     width: 36px;
     height: 36px;
+
+    flex-shrink: 0;
+
     border: 1px solid #dce3eb;
     background: #ffffff;
+
     color: #647286;
+
     font-size: 11px;
     font-weight: 700;
+
     transition:
         color 0.25s ease,
         border-color 0.25s ease,
@@ -3139,13 +3169,16 @@ header {
 
 
 /* =========================================================
-   CONTACT CONTENT
+   CONTENT
 ========================================================= */
 
 .contact-content {
     min-width: 0;
+    width: 100%;
+
     display: flex;
     flex-direction: column;
+
     gap: 6px;
 }
 
@@ -3157,13 +3190,20 @@ header {
 }
 
 .contact-value {
-    overflow: hidden;
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
     color: #29364a;
+
     font-size: 13px;
     font-weight: 600;
-    line-height: 1.4;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    line-height: 1.45;
+
     transition: color 0.25s ease;
 }
 
@@ -3173,14 +3213,21 @@ header {
 
 
 /* =========================================================
-   CONTACT ARROW
+   ARROW
 ========================================================= */
 
 .contact-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    width: 100%;
+
     color: #a1aab8;
+
     font-size: 17px;
     line-height: 1;
-    text-align: right;
+
     transition:
         color 0.25s ease,
         transform 0.25s ease;
@@ -3220,16 +3267,22 @@ header {
 
 
 /* =========================================================
-   CONTACT CTA
+   CTA
 ========================================================= */
 
 .contact-cta {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    width: 100%;
+    box-sizing: border-box;
+
     gap: 35px;
+
     margin-top: 80px;
     padding: 32px 35px;
+
     border: 1px solid #dfe5ec;
     background: #f7f9fc;
 }
@@ -3240,40 +3293,58 @@ header {
 
 .contact-cta-label {
     display: block;
+
     margin-bottom: 8px;
+
     color: #8a95a6;
+
     font-size: 8px;
     font-weight: 800;
+
     letter-spacing: 0.15em;
 }
 
 .contact-cta h4 {
+    margin: 0;
+
     color: #253247;
+
     font-size: 15px;
     line-height: 1.5;
     font-weight: 650;
+
     letter-spacing: -0.015em;
 }
 
 
 /* =========================================================
-   CONTACT CTA BUTTON
+   CTA BUTTON
 ========================================================= */
 
 .contact-cta-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
     gap: 16px;
+
     flex-shrink: 0;
+
     min-height: 46px;
+
     padding: 0 18px;
+
     background: #172238;
+
     color: #ffffff;
+
     font-size: 10px;
     font-weight: 700;
+
     text-decoration: none;
+
     white-space: nowrap;
+
     transition:
         background 0.25s ease,
         transform 0.25s ease;
@@ -3287,6 +3358,7 @@ header {
 .contact-cta-button span:last-child {
     font-size: 14px;
     line-height: 1;
+
     transition: transform 0.25s ease;
 }
 
@@ -3316,31 +3388,40 @@ header {
 
     .contact-links {
         width: 100%;
+        max-width: none;
+
         margin-top: 55px;
+        margin-left: 0;
     }
 
     .contact-cta {
         align-items: flex-start;
         flex-direction: column;
-        gap: 24px;
-        margin-top: 65px;
-    }
 
-    .contact-cta-button {
-        width: auto;
+        gap: 24px;
+
+        margin-top: 65px;
     }
 
 }
 
 
 /* =========================================================
-   MOBILE
+   MOBILE — IPHONE / ANDROID
 ========================================================= */
 
 @media (max-width: 768px) {
 
+    .contact-section {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
     .contact-intro {
-        margin-top: 50px;
+        width: 100%;
+        max-width: none;
+
+        margin-top: 45px;
     }
 
     .contact-kicker {
@@ -3348,14 +3429,21 @@ header {
     }
 
     .contact-intro h3 {
-        max-width: 100%;
+        width: 100%;
+        max-width: none;
+
         font-size: 40px;
         line-height: 1.06;
+
+        letter-spacing: -0.045em;
     }
 
     .contact-intro p {
-        max-width: 100%;
+        width: 100%;
+        max-width: none;
+
         margin-top: 20px;
+
         font-size: 12px;
         line-height: 1.8;
     }
@@ -3364,48 +3452,130 @@ header {
         margin-top: 25px;
     }
 
+
+    /* CONTACT LIST */
+
     .contact-links {
+        width: 100%;
+        max-width: none;
+
         margin-top: 45px;
+
+        border-top: 1px solid #e2e7ed;
     }
 
     .contact-item {
-        grid-template-columns:
-            44px
-            minmax(0, 1fr)
-            24px;
 
-        gap: 14px;
+        grid-template-columns:
+            40px
+            minmax(0, 1fr)
+            20px;
+
+        gap: 12px;
+
+        width: 100%;
+        min-width: 0;
+
         min-height: 82px;
-        padding: 0 8px;
+
+        padding: 0;
+
+        box-sizing: border-box;
     }
 
     .contact-item:hover {
-        padding-left: 14px;
+        padding-left: 8px;
     }
 
+
+    /* ICON */
+
     .contact-icon {
-        width: 34px;
-        height: 34px;
+        width: 32px;
+        height: 32px;
+
+        font-size: 10px;
+    }
+
+
+    /* TEXT */
+
+    .contact-content {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .contact-label {
+        font-size: 7px;
     }
 
     .contact-value {
+        width: 100%;
+        max-width: 100%;
+
         font-size: 12px;
+        line-height: 1.4;
+
+        white-space: normal;
+
+        overflow: visible;
+        text-overflow: clip;
+
+        overflow-wrap: anywhere;
+        word-break: break-word;
     }
 
+
+    /* ARROW */
+
+    .contact-arrow {
+        width: 20px;
+        font-size: 14px;
+    }
+
+
+    /* CTA */
+
     .contact-cta {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+
+        gap: 22px;
+
         margin-top: 55px;
-        padding: 26px 22px;
+
+        padding: 25px 20px;
+
+        box-sizing: border-box;
+    }
+
+    .contact-cta-content {
+        width: 100%;
     }
 
     .contact-cta h4 {
         font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .contact-cta-button {
+        width: 100%;
+
+        min-height: 46px;
+
+        box-sizing: border-box;
+
+        justify-content: space-between;
     }
 
 }
 
 
 /* =========================================================
-   SMALL MOBILE
+   SMALL IPHONE
 ========================================================= */
 
 @media (max-width: 480px) {
@@ -3427,36 +3597,54 @@ header {
         font-size: 12px;
     }
 
+
+    /* STATUS */
+
     .contact-status {
         max-width: 100%;
+
         padding: 9px 12px;
+
         font-size: 9px;
     }
+
+
+    /* CONTACT LIST */
 
     .contact-links {
         margin-top: 38px;
     }
 
     .contact-item {
-        grid-template-columns:
-            38px
-            minmax(0, 1fr)
-            18px;
 
-        gap: 12px;
+        grid-template-columns:
+            34px
+            minmax(0, 1fr)
+            16px;
+
+        gap: 10px;
+
         min-height: 76px;
-        padding: 0 4px;
+
+        padding: 0;
     }
 
     .contact-item:hover {
-        padding-left: 8px;
+        padding-left: 6px;
     }
 
+
+    /* ICON */
+
     .contact-icon {
-        width: 32px;
-        height: 32px;
-        font-size: 10px;
+        width: 30px;
+        height: 30px;
+
+        font-size: 9px;
     }
+
+
+    /* TEXT */
 
     .contact-label {
         font-size: 7px;
@@ -3464,15 +3652,26 @@ header {
 
     .contact-value {
         font-size: 11px;
+        line-height: 1.45;
+
+        white-space: normal;
     }
 
+
+    /* ARROW */
+
     .contact-arrow {
-        font-size: 14px;
+        width: 16px;
+        font-size: 13px;
     }
+
+
+    /* CTA */
 
     .contact-cta {
         margin-top: 48px;
-        padding: 24px 18px;
+
+        padding: 23px 17px;
     }
 
     .contact-cta-label {
@@ -3486,9 +3685,11 @@ header {
 
     .contact-cta-button {
         width: 100%;
+
         min-height: 44px;
-        justify-content: space-between;
-        padding: 0 15px;
+
+        padding: 0 14px;
+
         font-size: 9px;
     }
 
