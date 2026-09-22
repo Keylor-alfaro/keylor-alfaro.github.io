@@ -14,12 +14,13 @@ const experiences = {
         date: "04/2025 – 12/2025",
 
         description:
-            "Provided 1st and 2nd-level IT support, independently managing incidents and service requests across hardware, software, Microsoft 365, business applications, authentication, and network issues.",
+            "My work typically started with understanding the user's issue and determining its impact and urgency. I then investigated the symptoms, performed the appropriate troubleshooting steps, and either restored the service or escalated the case with the relevant technical information. Throughout the process, I maintained accurate documentation and followed up until the issue reached the appropriate resolution.",
 
         scope: [
             "IT Support",
-            "Incident Management",
+            "Incident Management"
             "Troubleshooting"
+            "test"
         ],
 
         environment: [
