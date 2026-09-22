@@ -1,3 +1,4 @@
+```css
 /* =========================================================
    GENERAL
    ========================================================= */
@@ -50,8 +51,9 @@ nav a {
     border-radius: 6px;
     font-size: 15px;
     font-weight: 500;
-    transition: background-color 0.3s ease,
-                transform 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
 }
 
 nav a:hover {
@@ -188,7 +190,9 @@ section > h2 {
 
 .about-content {
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.85fr);
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(300px, 0.85fr);
     gap: 55px;
     align-items: start;
 }
@@ -242,56 +246,63 @@ section > h2 {
 
 #experience {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 110px;
 }
 
-.experience-intro {
-    max-width: 700px;
-    margin-bottom: 55px;
+.experience-heading {
+    max-width: 720px;
+    margin-bottom: 65px;
 }
 
-.experience-intro h2 {
+.experience-heading h2 {
     color: #0f172a;
-    font-size: 34px;
-    line-height: 1.25;
-    margin-bottom: 18px;
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
-.experience-intro-text {
+.experience-subtitle {
     color: #64748b;
     font-size: 16px;
-    line-height: 1.7;
-    max-width: 650px;
+    line-height: 1.8;
+    max-width: 680px;
 }
 
 
-/* ---------------------------------------------------------
-   TIMELINE
-   --------------------------------------------------------- */
+/* =========================================================
+   EXPERIENCE NAVIGATION / TIMELINE
+   ========================================================= */
 
-.experience-timeline {
+.experience-navigation {
     position: relative;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 35px;
+
+    margin-bottom: 45px;
+
     padding: 0 20px;
 }
 
-.experience-timeline::before {
+.experience-navigation::before {
     content: "";
+
     position: absolute;
-    top: 18px;
-    left: 9%;
-    right: 9%;
+
+    left: 10%;
+    right: 10%;
+
+    top: 11px;
+
     height: 2px;
+
     background-color: #cbd5e1;
-    z-index: 0;
 }
 
 
-.timeline-item {
+.experience-nav-item {
     position: relative;
-    z-index: 1;
+    z-index: 2;
 
     display: flex;
     flex-direction: column;
@@ -303,9 +314,8 @@ section > h2 {
     cursor: pointer;
 
     font-family: inherit;
-    text-align: center;
 
-    padding: 0 15px;
+    text-align: center;
 
     color: #64748b;
 
@@ -315,13 +325,31 @@ section > h2 {
 }
 
 
-.timeline-item::before {
-    content: "";
+.experience-nav-item:hover {
+    color: #2563eb;
+    transform: translateY(-3px);
+}
 
-    width: 36px;
-    height: 36px;
 
-    margin-bottom: 14px;
+.nav-year {
+    order: 2;
+
+    margin-top: 12px;
+
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+}
+
+
+.nav-dot {
+    order: 1;
+
+    width: 24px;
+    height: 24px;
 
     border-radius: 50%;
 
@@ -332,78 +360,79 @@ section > h2 {
     transition:
         background-color 0.3s ease,
         border-color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
 }
 
 
-.timeline-item:hover {
-    color: #2563eb;
-    transform: translateY(-3px);
-}
-
-
-.timeline-item:hover::before {
+.experience-nav-item:hover .nav-dot {
     border-color: #2563eb;
 }
 
 
-.timeline-item.active {
+.experience-nav-item.active {
     color: #0f172a;
 }
 
 
-.timeline-item.active::before {
+.experience-nav-item.active .nav-dot {
     background-color: #2563eb;
+
     border-color: #2563eb;
 
     box-shadow:
-        0 0 0 6px rgba(37, 99, 235, 0.12);
+        0 0 0 7px rgba(37, 99, 235, 0.12);
 }
 
 
-.timeline-year {
-    font-size: 13px;
-    font-weight: 700;
-    color: #2563eb;
-    margin-bottom: 5px;
-}
+.nav-company {
+    order: 3;
 
+    margin-top: 8px;
 
-.timeline-company {
     color: #0f172a;
-    font-size: 17px;
+
+    font-size: 16px;
     font-weight: 700;
-    margin-bottom: 3px;
 }
 
 
-.timeline-role {
+.nav-role {
+    order: 4;
+
+    margin-top: 3px;
+
     color: #64748b;
-    font-size: 13px;
+
+    font-size: 12px;
 }
 
 
-/* ---------------------------------------------------------
-   EXPERIENCE PANEL
-   --------------------------------------------------------- */
+/* =========================================================
+   EXPERIENCE SHOWCASE
+   ========================================================= */
 
-.experience-panel {
+.experience-showcase {
+    position: relative;
+
     background-color: #ffffff;
 
     border: 1px solid #e2e8f0;
-    border-radius: 14px;
 
-    padding: 38px;
+    border-radius: 16px;
+
+    padding: 40px;
 
     box-shadow:
-        0 15px 35px rgba(15, 23, 42, 0.07);
+        0 18px 40px rgba(15, 23, 42, 0.07);
 
-    animation: experienceFadeIn 0.4s ease;
+    overflow: hidden;
+
+    animation: showcaseEnter 0.4s ease;
 }
 
 
-@keyframes experienceFadeIn {
+@keyframes showcaseEnter {
 
     from {
         opacity: 0;
@@ -418,210 +447,131 @@ section > h2 {
 }
 
 
-.experience-panel-header {
+/* =========================================================
+   SHOWCASE TOP
+   ========================================================= */
+
+.showcase-top {
     display: flex;
+
     justify-content: space-between;
     align-items: flex-start;
 
     gap: 30px;
 
-    padding-bottom: 28px;
+    padding-bottom: 30px;
 
     border-bottom: 1px solid #e2e8f0;
 }
 
 
-.experience-panel-header h3 {
-    color: #0f172a;
-    font-size: 25px;
-    line-height: 1.35;
-}
-
-
-.experience-date {
-    color: #64748b;
-    font-size: 14px;
-    font-weight: 600;
-
-    white-space: nowrap;
-
-    padding-top: 5px;
-}
-
-
-/* ---------------------------------------------------------
-   PANEL CONTENT
-   --------------------------------------------------------- */
-
-.experience-panel-content {
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 1.55fr)
-        minmax(260px, 0.75fr);
-
-    gap: 55px;
-
-    padding-top: 30px;
-}
-
-
-.experience-main {
-    min-width: 0;
-}
-
-
-.experience-description {
-    color: #475569;
-
-    font-size: 16px;
-    line-height: 1.8;
-
-    margin-bottom: 32px;
-}
-
-
-/* ---------------------------------------------------------
-   BLOCKS
-   --------------------------------------------------------- */
-
-.experience-block {
-    margin-bottom: 28px;
-}
-
-
-.experience-block:last-child {
-    margin-bottom: 0;
-}
-
-
-.experience-block-label {
+.experience-company {
     color: #2563eb;
 
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 800;
 
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
 
-    margin-bottom: 14px;
+    margin-bottom: 8px;
 }
 
 
-/* ---------------------------------------------------------
-   RESPONSIBILITIES
-   --------------------------------------------------------- */
+.showcase-company h3 {
+    color: #0f172a;
 
-.experience-details {
-    margin: 0;
-    padding: 0;
+    font-size: 27px;
 
-    list-style: none;
+    line-height: 1.3;
+
+    margin-bottom: 8px;
 }
 
 
-.experience-details li {
-    position: relative;
+.showcase-date {
+    color: #64748b;
 
-    color: #475569;
+    font-size: 14px;
 
-    font-size: 15px;
-    line-height: 1.75;
-
-    padding-left: 22px;
-
-    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 
-.experience-details li::before {
-    content: "";
+.showcase-arrow {
+    display: flex;
 
-    position: absolute;
+    justify-content: center;
+    align-items: center;
 
-    left: 0;
-    top: 10px;
-
-    width: 7px;
-    height: 7px;
+    width: 48px;
+    height: 48px;
 
     border-radius: 50%;
 
-    background-color: #2563eb;
-}
-
-
-.experience-details li:last-child {
-    margin-bottom: 0;
-}
-
-
-/* ---------------------------------------------------------
-   SIDEBAR
-   --------------------------------------------------------- */
-
-.experience-sidebar {
-    display: flex;
-    flex-direction: column;
-
-    gap: 28px;
-}
-
-
-/* ---------------------------------------------------------
-   METRICS
-   --------------------------------------------------------- */
-
-.experience-metrics {
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 12px;
-}
-
-
-.metric {
-    background-color: #f8fafc;
-
-    border: 1px solid #e2e8f0;
-
-    border-radius: 10px;
-
-    padding: 18px 14px;
-
-    text-align: center;
-}
-
-
-.metric strong {
-    display: block;
+    background-color: #eff6ff;
 
     color: #2563eb;
 
-    font-size: 27px;
-    line-height: 1.1;
+    font-size: 23px;
 
-    margin-bottom: 7px;
+    flex-shrink: 0;
 }
 
 
-.metric span {
-    display: block;
+/* =========================================================
+   SHOWCASE BODY
+   ========================================================= */
 
-    color: #64748b;
+.showcase-body {
+    display: grid;
 
-    font-size: 11px;
-    font-weight: 700;
+    grid-template-columns:
+        minmax(0, 1fr)
+        250px;
 
-    line-height: 1.4;
+    gap: 55px;
+
+    padding-top: 32px;
 }
 
 
-/* ---------------------------------------------------------
-   TECHNICAL TAGS
-   --------------------------------------------------------- */
+.showcase-description {
+    max-width: 680px;
 
-.experience-tags {
+    color: #475569;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   SCOPE
+   ========================================================= */
+
+.scope-section {
+    margin-bottom: 25px;
+}
+
+
+.mini-label {
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.6px;
+
+    margin-bottom: 11px;
+}
+
+
+.scope-tags,
+.environment-tags {
     display: flex;
 
     flex-wrap: wrap;
@@ -630,189 +580,249 @@ section > h2 {
 }
 
 
-.experience-tags span {
-    display: inline-block;
+.scope-tags span {
+    background-color: #0f172a;
 
-    background-color: #eff6ff;
-
-    color: #1d4ed8;
-
-    border: 1px solid #dbeafe;
+    color: #ffffff;
 
     border-radius: 999px;
 
-    padding: 7px 11px;
+    padding: 7px 12px;
 
     font-size: 12px;
+
     font-weight: 600;
 }
 
 
-/* ---------------------------------------------------------
-   FOCUS
-   --------------------------------------------------------- */
+.environment-tags span {
+    background-color: #f8fafc;
 
-.experience-focus {
-    padding-top: 22px;
+    color: #475569;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 999px;
+
+    padding: 7px 12px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   METRICS
+   ========================================================= */
+
+.showcase-metrics {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.showcase-metric {
+    background-color: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    padding: 23px 18px;
+
+    text-align: center;
+}
+
+
+.showcase-metric strong {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 34px;
+
+    line-height: 1.1;
+
+    margin-bottom: 8px;
+}
+
+
+.showcase-metric span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   EXPLORE BUTTON
+   ========================================================= */
+
+.explore-button {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 35px;
+
+    padding: 16px 0;
+
+    border: none;
 
     border-top: 1px solid #e2e8f0;
-}
 
+    background-color: transparent;
 
-.experience-focus p:last-child {
     color: #0f172a;
 
-    font-size: 15px;
-    font-weight: 600;
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease;
 }
 
 
-/* ---------------------------------------------------------
-   RESPONSIVE EXPERIENCE
-   --------------------------------------------------------- */
-
-@media (max-width: 900px) {
-
-    .experience-panel-content {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
-    .experience-sidebar {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: start;
-    }
-
-    .experience-focus {
-        grid-column: 1 / -1;
-    }
-
+.explore-button:hover {
+    color: #2563eb;
 }
 
 
-@media (max-width: 768px) {
+.explore-icon {
+    font-size: 20px;
 
-    #experience {
-        padding-top: 70px;
-        padding-bottom: 70px;
-    }
-
-    .experience-intro h2 {
-        font-size: 29px;
-    }
-
-    .experience-timeline {
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
-        padding-left: 5px;
-        padding-right: 5px;
-
-        margin-bottom: 30px;
-    }
-
-    .experience-timeline::before {
-        top: 18px;
-        bottom: 18px;
-
-        left: 17px;
-
-        width: 2px;
-        height: auto;
-
-        right: auto;
-    }
-
-    .timeline-item {
-        display: grid;
-
-        grid-template-columns: 36px 1fr;
-
-        grid-template-rows: auto auto;
-
-        column-gap: 15px;
-
-        align-items: center;
-
-        text-align: left;
-
-        padding: 0;
-    }
-
-    .timeline-item::before {
-        grid-row: 1 / 3;
-
-        grid-column: 1;
-
-        margin: 0;
-    }
-
-    .timeline-year {
-        grid-column: 2;
-        margin: 0;
-    }
-
-    .timeline-company {
-        grid-column: 2;
-    }
-
-    .timeline-role {
-        display: none;
-    }
-
-    .experience-panel {
-        padding: 26px;
-    }
-
-    .experience-panel-header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .experience-panel-header h3 {
-        font-size: 22px;
-    }
-
-    .experience-sidebar {
-        display: flex;
-    }
-
+    transition:
+        transform 0.3s ease;
 }
 
 
-@media (max-width: 500px) {
-
-    .experience-intro h2 {
-        font-size: 26px;
-    }
-
-    .experience-panel {
-        padding: 22px;
-    }
-
-    .experience-panel-content {
-        gap: 25px;
-    }
-
-    .experience-description {
-        font-size: 15px;
-    }
-
-    .experience-details li {
-        font-size: 14px;
-    }
-
-    .experience-metrics {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .metric strong {
-        font-size: 23px;
-    }
-
+.explore-button.open .explore-icon {
+    transform: rotate(180deg);
 }
+
+
+/* =========================================================
+   DETAILS PANEL
+   ========================================================= */
+
+.experience-details-panel {
+    max-height: 0;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+    transition:
+        max-height 0.5s ease,
+        opacity 0.35s ease;
+}
+
+
+.experience-details-panel.open {
+    max-height: 1000px;
+
+    opacity: 1;
+}
+
+
+.details-header {
+    padding-top: 32px;
+
+    margin-bottom: 25px;
+}
+
+
+.details-header h4 {
+    color: #0f172a;
+
+    font-size: 21px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   RESPONSIBILITY GRID
+   ========================================================= */
+
+.responsibility-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+
+    padding-bottom: 10px;
+}
+
+
+.responsibility-card {
+    position: relative;
+
+    background-color: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    padding: 23px;
+}
+
+
+.responsibility-number {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+
+.responsibility-card h5 {
+    color: #0f172a;
+
+    font-size: 16px;
+
+    margin-bottom: 8px;
+}
+
+
+.responsibility-card p {
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
 
 /* =========================================================
    TECHNICAL SKILLS
@@ -883,6 +893,7 @@ section > h2 {
 
 #contact {
     text-align: center;
+
     padding-top: 80px;
     padding-bottom: 80px;
 }
@@ -893,12 +904,15 @@ section > h2 {
 
 #contact p {
     color: #475569;
+
     font-size: 15px;
+
     margin-bottom: 10px;
 }
 
 #contact a {
     color: #2563eb;
+
     text-decoration: none;
 }
 
@@ -913,8 +927,11 @@ section > h2 {
 
 footer {
     background-color: #0f172a;
+
     color: #cbd5e1;
+
     text-align: center;
+
     padding: 20px;
 }
 
@@ -924,7 +941,7 @@ footer p {
 
 
 /* =========================================================
-   RESPONSIVE DESIGN
+   RESPONSIVE
    ========================================================= */
 
 @media (max-width: 900px) {
@@ -947,12 +964,15 @@ footer p {
         gap: 35px;
     }
 
-    .section-heading {
-        max-width: 100%;
+    .showcase-body {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
-    .section-heading h2 {
-        max-width: 700px;
+    .showcase-metrics {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
     }
 
 }
@@ -962,16 +982,19 @@ footer p {
 
     header {
         min-height: auto;
+
         padding: 30px 20px 60px;
     }
 
     nav {
         gap: 10px;
+
         margin-bottom: 50px;
     }
 
     nav a {
         padding: 10px 15px;
+
         font-size: 14px;
     }
 
@@ -995,30 +1018,130 @@ footer p {
         font-size: 28px;
     }
 
-    .section-heading h2 {
-        font-size: 27px;
+
+    /* Experience */
+
+    #experience {
+        padding-top: 70px;
+        padding-bottom: 75px;
     }
+
+    .experience-heading {
+        margin-bottom: 45px;
+    }
+
+    .experience-heading h2 {
+        font-size: 30px;
+    }
+
+
+    /* Vertical timeline */
+
+    .experience-navigation {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 0;
+
+        margin-bottom: 35px;
+    }
+
+    .experience-navigation::before {
+        left: 11px;
+
+        top: 12px;
+        bottom: 12px;
+
+        width: 2px;
+        height: auto;
+
+        right: auto;
+    }
+
+    .experience-nav-item {
+        display: grid;
+
+        grid-template-columns: 24px 1fr;
+
+        grid-template-rows: auto auto;
+
+        column-gap: 15px;
+
+        align-items: center;
+
+        text-align: left;
+    }
+
+    .nav-dot {
+        grid-column: 1;
+
+        grid-row: 1 / 3;
+    }
+
+    .nav-year {
+        grid-column: 2;
+
+        grid-row: 1;
+
+        order: initial;
+
+        margin: 0;
+    }
+
+    .nav-company {
+        grid-column: 2;
+
+        grid-row: 2;
+
+        order: initial;
+
+        margin: 0;
+    }
+
+    .nav-role {
+        display: none;
+    }
+
+
+    /* Showcase */
+
+    .experience-showcase {
+        padding: 27px;
+    }
+
+    .showcase-company h3 {
+        font-size: 23px;
+    }
+
+    .showcase-top {
+        gap: 15px;
+    }
+
+    .showcase-arrow {
+        width: 40px;
+        height: 40px;
+
+        font-size: 18px;
+    }
+
+    .responsibility-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* About */
 
     .about-content {
         grid-template-columns: 1fr;
+
         gap: 30px;
     }
 
     .about-card {
         padding: 22px;
-    }
-
-    .experience-card {
-        padding: 24px;
-    }
-
-    .experience-header {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .experience-date {
-        padding-top: 0;
     }
 
 }
@@ -1028,6 +1151,7 @@ footer p {
 
     nav {
         flex-direction: column;
+
         align-items: stretch;
     }
 
@@ -1050,25 +1174,72 @@ footer p {
     .primary-button,
     .secondary-button {
         width: 100%;
+
         max-width: 230px;
+
         text-align: center;
     }
 
-    .section-heading h2 {
-        font-size: 25px;
+
+    .experience-heading h2 {
+        font-size: 26px;
     }
 
-    .about-text p {
+    .experience-subtitle {
         font-size: 15px;
     }
 
-    .experience-header h3 {
-        font-size: 19px;
+
+    .experience-showcase {
+        padding: 22px;
     }
 
-    .experience-description,
-    .experience-details li {
-        font-size: 14px;
+
+    .showcase-top {
+        align-items: flex-start;
+    }
+
+    .showcase-company h3 {
+        font-size: 21px;
+    }
+
+    .showcase-arrow {
+        display: none;
+    }
+
+
+    .showcase-body {
+        gap: 25px;
+    }
+
+
+    .showcase-description {
+        font-size: 15px;
+    }
+
+
+    .showcase-metrics {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .showcase-metric {
+        padding: 18px 10px;
+    }
+
+
+    .showcase-metric strong {
+        font-size: 25px;
+    }
+
+
+    .showcase-metric span {
+        font-size: 10px;
+    }
+
+
+    .responsibility-card {
+        padding: 20px;
     }
 
 }
