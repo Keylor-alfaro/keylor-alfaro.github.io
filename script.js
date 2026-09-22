@@ -1,7 +1,7 @@
 
 /* =========================================================
    EXPERIENCE DATA
-   ========================================================= */
+========================================================= */
 
 const experiences = {
 
@@ -39,6 +39,8 @@ const experiences = {
                 label: "Customer Satisfaction"
             }
         ],
+
+        focus: "Enterprise IT Support",
 
         responsibilities: [
 
@@ -104,15 +106,17 @@ const experiences = {
 
         metrics: [
             {
-                value: "3+",
-                label: "Years of Experience"
+                value: "On-site",
+                label: "IT Support"
             },
 
             {
-                value: "IT",
-                label: "Systems & Infrastructure"
+                value: "Remote",
+                label: "IT Support"
             }
         ],
+
+        focus: "Systems & Infrastructure",
 
         responsibilities: [
 
@@ -186,6 +190,8 @@ const experiences = {
             }
         ],
 
+        focus: "Service Desk & Incident Management",
+
         responsibilities: [
 
             {
@@ -221,70 +227,64 @@ const experiences = {
     }
 
 };
+
+
+
 /* =========================================================
-   EXPERIENCE INTERACTIVE SYSTEM
-   ========================================================= */
+   EXPERIENCE ELEMENTS
+========================================================= */
 
-const experienceButtons = document.querySelectorAll(
-    ".experience-nav-item"
-);
+const experienceButtons =
+    document.querySelectorAll(".experience-nav-item");
 
-const experiencePanel = document.querySelector(
-    ".experience-showcase"
-);
+const experiencePanel =
+    document.querySelector(".experience-showcase");
 
+const companyElement =
+    document.querySelector(".experience-company");
 
-/* ---------------------------------------------------------
-   HTML ELEMENTS
-   --------------------------------------------------------- */
+const roleElement =
+    document.querySelector(".showcase-company h3");
 
-const companyElement = document.querySelector(
-    ".experience-company"
-);
+const dateElement =
+    document.querySelector(".showcase-date");
 
-const roleElement = document.querySelector(
-    ".showcase-company h3"
-);
+const descriptionElement =
+    document.querySelector(".showcase-description");
 
-const dateElement = document.querySelector(
-    ".showcase-date"
-);
+const scopeElement =
+    document.querySelector(".experience-scope");
 
-const descriptionElement = document.querySelector(
-    ".showcase-description"
-);
+const environmentElement =
+    document.querySelector(".environment-tags");
 
-const scopeElement = document.querySelector(
-    ".scope-tags"
-);
+const metricsElement =
+    document.querySelector(".showcase-metrics");
 
-const environmentElement = document.querySelector(
-    ".environment-tags"
-);
+const responsibilitiesElement =
+    document.querySelector(".responsibility-grid");
 
-const metricsElement = document.querySelector(
-    ".showcase-metrics"
-);
-
-const responsibilitiesElement = document.querySelector(
-    ".responsibility-grid"
-);
+const focusElement =
+    document.querySelector(".role-focus");
 
 
-/* ---------------------------------------------------------
+
+/* =========================================================
    LOAD EXPERIENCE
-   --------------------------------------------------------- */
+========================================================= */
 
 function loadExperience(experienceKey) {
 
     const experience = experiences[experienceKey];
 
-    if (!experience) return;
+    if (!experience) {
+        return;
+    }
 
 
-    /* ---------------------------------------------
-       PANEL TRANSITION
-       --------------------------------------------- */
+    /*
+       Start transition
+    */
 
     experiencePanel.classList.add("is-changing");
 
@@ -292,9 +292,9 @@ function loadExperience(experienceKey) {
     setTimeout(() => {
 
 
-        /* -----------------------------------------
-           BASIC INFORMATION
-           ----------------------------------------- */
+        /*
+           Basic information
+        */
 
         companyElement.textContent =
             experience.company;
@@ -309,33 +309,32 @@ function loadExperience(experienceKey) {
             experience.description;
 
 
-        /* -----------------------------------------
-           SCOPE
-           ----------------------------------------- */
+
+        /*
+           Focus areas
+        */
 
         scopeElement.innerHTML =
             experience.scope
-                .map(item => `
-                    <span>${item}</span>
-                `)
+                .map(item => `<span>${item}</span>`)
                 .join("");
 
 
-        /* -----------------------------------------
-           TECHNICAL ENVIRONMENT
-           ----------------------------------------- */
+
+        /*
+           Technical environment
+        */
 
         environmentElement.innerHTML =
             experience.environment
-                .map(item => `
-                    <span>${item}</span>
-                `)
+                .map(item => `<span>${item}</span>`)
                 .join("");
 
 
-        /* -----------------------------------------
-           METRICS
-           ----------------------------------------- */
+
+        /*
+           Performance metrics
+        */
 
         metricsElement.innerHTML =
             experience.metrics
@@ -355,14 +354,14 @@ function loadExperience(experienceKey) {
                 .join("");
 
 
-        /* -----------------------------------------
-           RESPONSIBILITIES
-           ----------------------------------------- */
+
+        /*
+           Responsibilities
+        */
 
         responsibilitiesElement.innerHTML =
             experience.responsibilities
                 .map((item, index) => `
-                    
                     <div class="responsibility-card">
 
                         <span class="responsibility-number">
@@ -378,25 +377,36 @@ function loadExperience(experienceKey) {
                         </p>
 
                     </div>
-
                 `)
                 .join("");
 
 
-        /* -----------------------------------------
-           REMOVE TRANSITION
-           ----------------------------------------- */
 
-        experiencePanel.classList.remove(
-            "is-changing"
-        );
+        /*
+           Role focus
+        */
+
+        focusElement.innerHTML = `
+            <span>
+                ${experience.focus}
+            </span>
+        `;
+
+
+
+        /*
+           Finish transition
+        */
+
+        experiencePanel.classList.remove("is-changing");
 
     }, 180);
 
 
-    /* -----------------------------------------------------
-       UPDATE ACTIVE TIMELINE ITEM
-       ----------------------------------------------------- */
+
+    /*
+       Update active timeline item
+    */
 
     experienceButtons.forEach(button => {
 
@@ -418,9 +428,10 @@ function loadExperience(experienceKey) {
 }
 
 
-/* ---------------------------------------------------------
-   CLICK EVENTS
-   --------------------------------------------------------- */
+
+/* =========================================================
+   EXPERIENCE EVENTS
+========================================================= */
 
 experienceButtons.forEach(button => {
 
@@ -436,301 +447,89 @@ experienceButtons.forEach(button => {
 });
 
 
-/* ---------------------------------------------------------
-   INITIAL EXPERIENCE
-   --------------------------------------------------------- */
+
+/*
+   Initial experience
+*/
 
 loadExperience("concentrix");
 
-/* =========================================================
-   DOM ELEMENTS
-   ========================================================= */
-
-const navigationItems =
-    document.querySelectorAll(".experience-nav-item");
-
-const companyElement =
-    document.getElementById("experience-company");
-
-const roleElement =
-    document.getElementById("experience-role");
-
-const dateElement =
-    document.getElementById("experience-date");
-
-const descriptionElement =
-    document.getElementById("experience-description");
-
-const scopeElement =
-    document.getElementById("scope-tags");
-
-const environmentElement =
-    document.getElementById("environment-tags");
-
-const metricsElement =
-    document.getElementById("showcase-metrics");
-
-const responsibilityElement =
-    document.getElementById("responsibility-grid");
-
-const showcaseElement =
-    document.getElementById("experience-showcase");
-
-const detailsPanel =
-    document.getElementById("experience-details-panel");
-
-const exploreButton =
-    document.getElementById("explore-button");
 
 
 /* =========================================================
-   UPDATE EXPERIENCE
-   ========================================================= */
+   MOBILE NAVIGATION
+========================================================= */
 
-function updateExperience(experienceId) {
+const mobileMenuButton =
+    document.querySelector(".mobile-menu-button");
 
-    const experience =
-        experiences[experienceId];
-
-    if (!experience) {
-        return;
-    }
+const navLinks =
+    document.querySelector(".nav-links");
 
 
-    /* -----------------------------------------
-       Active navigation
-       ----------------------------------------- */
+if (mobileMenuButton && navLinks) {
 
-    navigationItems.forEach(item => {
+    mobileMenuButton.addEventListener(
+        "click",
+        () => {
 
-        item.classList.toggle(
-            "active",
-            item.dataset.experience === experienceId
-        );
+            navLinks.classList.toggle("open");
 
-    });
+            const isOpen =
+                navLinks.classList.contains("open");
 
-
-    /* -----------------------------------------
-       Main information
-       ----------------------------------------- */
-
-    companyElement.textContent =
-        experience.company;
-
-    roleElement.textContent =
-        experience.role;
-
-    dateElement.textContent =
-        experience.date;
-
-    descriptionElement.textContent =
-        experience.description;
-
-
-    /* -----------------------------------------
-       Scope
-       ----------------------------------------- */
-
-    scopeElement.innerHTML = "";
-
-    experience.scope.forEach(scope => {
-
-        const element =
-            document.createElement("span");
-
-        element.textContent =
-            scope;
-
-        scopeElement.appendChild(
-            element
-        );
-
-    });
-
-
-    /* -----------------------------------------
-       Technical environment
-       ----------------------------------------- */
-
-    environmentElement.innerHTML = "";
-
-    experience.environment.forEach(item => {
-
-        const element =
-            document.createElement("span");
-
-        element.textContent =
-            item;
-
-        environmentElement.appendChild(
-            element
-        );
-
-    });
-
-
-    /* -----------------------------------------
-       Metrics
-       ----------------------------------------- */
-
-    metricsElement.innerHTML = "";
-
-    experience.metrics.forEach(metric => {
-
-        const metricElement =
-            document.createElement("div");
-
-        metricElement.className =
-            "showcase-metric";
-
-
-        metricElement.innerHTML = `
-            <strong>${metric.value}</strong>
-            <span>${metric.label}</span>
-        `;
-
-
-        metricsElement.appendChild(
-            metricElement
-        );
-
-    });
-
-
-    /* -----------------------------------------
-       Responsibilities
-       ----------------------------------------- */
-
-    responsibilityElement.innerHTML = "";
-
-    experience.responsibilities.forEach(
-        (responsibility, index) => {
-
-            const card =
-                document.createElement("article");
-
-            card.className =
-                "responsibility-card";
-
-
-            const number =
-                String(index + 1)
-                    .padStart(2, "0");
-
-
-            card.innerHTML = `
-
-                <span class="responsibility-number">
-                    ${number}
-                </span>
-
-                <h5>
-                    ${responsibility.title}
-                </h5>
-
-                <p>
-                    ${responsibility.description}
-                </p>
-
-            `;
-
-
-            responsibilityElement.appendChild(
-                card
+            mobileMenuButton.setAttribute(
+                "aria-expanded",
+                isOpen
             );
 
         }
     );
 
 
-    /* -----------------------------------------
-       Reset details when switching experience
-       ----------------------------------------- */
+    /*
+       Close menu after clicking a link
+    */
 
-    detailsPanel.classList.remove("open");
+    navLinks
+        .querySelectorAll("a")
+        .forEach(link => {
 
-    exploreButton.classList.remove("open");
+            link.addEventListener(
+                "click",
+                () => {
 
+                    navLinks.classList.remove("open");
 
-    /* -----------------------------------------
-       Replay showcase animation
-       ----------------------------------------- */
+                    mobileMenuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
 
-    showcaseElement.style.animation = "none";
+                }
+            );
 
-    showcaseElement.offsetHeight;
-
-    showcaseElement.style.animation =
-        "showcaseEnter 0.4s ease";
+        });
 
 }
 
 
-/* =========================================================
-   EXPERIENCE NAVIGATION
-   ========================================================= */
-
-navigationItems.forEach(item => {
-
-    item.addEventListener(
-        "click",
-        () => {
-
-            const experienceId =
-                item.dataset.experience;
-
-            updateExperience(
-                experienceId
-            );
-
-        }
-    );
-
-});
-
 
 /* =========================================================
-   EXPLORE EXPERIENCE
-   ========================================================= */
+   CLOSE MOBILE MENU WHEN RESIZING
+========================================================= */
 
-exploreButton.addEventListener(
-    "click",
-    () => {
+window.addEventListener("resize", () => {
 
-        const isOpen =
-            detailsPanel.classList.contains("open");
+    if (window.innerWidth > 768) {
 
+        navLinks.classList.remove("open");
 
-        if (isOpen) {
-
-            detailsPanel.classList.remove(
-                "open"
-            );
-
-            exploreButton.classList.remove(
-                "open"
-            );
-
-        } else {
-
-            detailsPanel.classList.add(
-                "open"
-            );
-
-            exploreButton.classList.add(
-                "open"
-            );
-
-        }
+        mobileMenuButton.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
     }
-);
 
-
-/* =========================================================
-   INITIALIZE
-   ========================================================= */
-
-updateExperience("concentrix");
-```
+});
