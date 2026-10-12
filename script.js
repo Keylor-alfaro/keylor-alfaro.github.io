@@ -746,77 +746,59 @@ renderExperience("concentrix");
    TECHNICAL SKILLS INTERACTION
 ========================================================= */
 
-const skillCategories =
-    document.querySelectorAll(
-        ".skill-category"
-    );
+document.addEventListener("DOMContentLoaded", () => {
+  const skillsSection = document.querySelector(".skills-section");
 
+  // Avoid errors if this section is not present on the page.
+  if (!skillsSection) return;
 
-skillCategories.forEach(category => {
+  const cards = skillsSection.querySelectorAll(".skill-card");
 
-    const trigger =
-        category.querySelector(
-            ".skill-card-trigger"
-        );
+  cards.forEach((card) => {
+    const toggle = card.querySelector(".skill-toggle");
+    const details = card.querySelector(".skill-details");
 
-    if (!trigger) {
-        return;
-    }
+    if (!toggle || !details) return;
 
+    toggle.addEventListener("click", () => {
+      const isCurrentlyOpen =
+        toggle.getAttribute("aria-expanded") === "true";
 
-    trigger.addEventListener(
-        "click",
-        () => {
+      // Close the other cards for a cleaner browsing experience.
+      cards.forEach((otherCard) => {
+        const otherToggle =
+          otherCard.querySelector(".skill-toggle");
+        const otherDetails =
+          otherCard.querySelector(".skill-details");
 
-            const isActive =
-                category.classList.contains(
-                    "active"
-                );
+        if (!otherToggle || !otherDetails) return;
 
+        otherToggle.setAttribute("aria-expanded", "false");
+        otherDetails.hidden = true;
+        otherCard.classList.remove("is-open");
 
-            skillCategories.forEach(
-                item => {
+        const otherLabel = otherToggle.childNodes[0];
 
-                    item.classList.remove(
-                        "active"
-                    );
-
-                    const itemTrigger =
-                        item.querySelector(
-                            ".skill-card-trigger"
-                        );
-
-                    if (itemTrigger) {
-
-                        itemTrigger.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                    }
-
-                }
-            );
-
-
-            if (!isActive) {
-
-                category.classList.add(
-                    "active"
-                );
-
-                trigger.setAttribute(
-                    "aria-expanded",
-                    "true"
-                );
-
-            }
-
+        if (otherLabel && otherLabel.nodeType === Node.TEXT_NODE) {
+          otherLabel.textContent = "Explore skills ";
         }
-    );
+      });
 
+      // Open the selected card if it was previously closed.
+      if (!isCurrentlyOpen) {
+        toggle.setAttribute("aria-expanded", "true");
+        details.hidden = false;
+        card.classList.add("is-open");
+
+        const label = toggle.childNodes[0];
+
+        if (label && label.nodeType === Node.TEXT_NODE) {
+          label.textContent = "Hide skills ";
+        }
+      }
+    });
+  });
 });
-
 
 /* =========================================================
    EDUCATION INTERACTION
