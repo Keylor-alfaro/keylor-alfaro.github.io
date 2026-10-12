@@ -1,64 +1,52 @@
+
 /* =========================================================
    MOBILE NAVIGATION
 ========================================================= */
 
-const mobileMenuButton =
-    document.querySelector(".mobile-menu-button");
-
-const navLinks =
-    document.querySelector(".nav-links");
+const mobileMenuButton = document.querySelector(".mobile-menu-button");
+const navLinks = document.querySelector(".nav-links");
 
 if (mobileMenuButton && navLinks) {
-
     mobileMenuButton.addEventListener("click", () => {
-
-        const isOpen =
-            navLinks.classList.contains("active");
+        const isOpen = navLinks.classList.contains("active");
 
         navLinks.classList.toggle("active");
         mobileMenuButton.classList.toggle("active");
-
+        mobileMenuButton.setAttribute("aria-expanded", String(!isOpen));
         mobileMenuButton.setAttribute(
-            "aria-expanded",
-            String(!isOpen)
+            "aria-label",
+            !isOpen ? "Close navigation menu" : "Open navigation menu"
         );
-
     });
-
 
     navLinks.querySelectorAll("a").forEach(link => {
-
         link.addEventListener("click", () => {
-
             navLinks.classList.remove("active");
             mobileMenuButton.classList.remove("active");
-
-            mobileMenuButton.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
+            mobileMenuButton.setAttribute("aria-expanded", "false");
+            mobileMenuButton.setAttribute("aria-label", "Open navigation menu");
         });
-
     });
 
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") {
+            navLinks.classList.remove("active");
+            mobileMenuButton.classList.remove("active");
+            mobileMenuButton.setAttribute("aria-expanded", "false");
+            mobileMenuButton.setAttribute("aria-label", "Open navigation menu");
+        }
+    });
 }
-
 
 /* =========================================================
    EXPERIENCE DATA
 ========================================================= */
 
 const experienceData = {
-
     concentrix: {
-
         company: "Concentrix Costa Rica",
-
         date: "04/2025 – 12/2025",
-
-        role:
-            "IT Support Specialist / Avalon Advisor I",
+        role: "IT Support Specialist / Avalon Advisor I",
 
         howWorked:
             "My work typically started with understanding the user's issue and determining its impact and urgency. I then investigated the symptoms, performed the appropriate troubleshooting steps, and either restored the service or escalated the case with the relevant technical information. Throughout the process, I maintained accurate documentation and followed up until the issue reached the appropriate resolution.",
@@ -71,42 +59,36 @@ const experienceData = {
         ],
 
         workflow: [
-
             {
                 number: "01",
                 title: "Initial Assessment",
                 description:
                     "Reviewed the reported issue, gathered relevant information, and determined its impact and urgency."
             },
-
             {
                 number: "02",
                 title: "Troubleshooting",
                 description:
                     "Investigated symptoms and applied structured troubleshooting steps to identify the likely cause."
             },
-
             {
                 number: "03",
                 title: "Resolution / Escalation",
                 description:
-                    "Applied corrective actions when the issue could be resolved at my level, or escalated it with the relevant technical context."
+                    "Applied corrective actions when the issue could be resolved at my level, or escalated the case with the relevant technical context."
             },
-
             {
                 number: "04",
                 title: "Documentation",
                 description:
                     "Recorded the investigation, troubleshooting performed, resolution, and relevant case information in ServiceNow."
             },
-
             {
                 number: "05",
                 title: "Follow-up",
                 description:
                     "Maintained case follow-up until the appropriate resolution was reached and the issue was properly closed."
             }
-
         ],
 
         problemApproach:
@@ -138,18 +120,12 @@ const experienceData = {
             "Incident Resolution",
             "Technical Troubleshooting"
         ]
-
     },
 
-
     global: {
-
         company: "Global Packing Group",
-
         date: "06/2021 – 08/2024",
-
-        role:
-            "Technical Support Specialist",
+        role: "Technical Support Specialist",
 
         howWorked:
             "My work combined on-site and remote technical support across hardware, software, business applications, systems, and infrastructure. I focused on identifying the source of technical problems, applying the appropriate troubleshooting or configuration steps, validating the result, and maintaining the necessary follow-up.",
@@ -162,42 +138,36 @@ const experienceData = {
         ],
 
         workflow: [
-
             {
                 number: "01",
                 title: "Issue Identification",
                 description:
                     "Reviewed the reported problem and gathered the information needed to understand the affected equipment, application, system, or service."
             },
-
             {
                 number: "02",
                 title: "Diagnosis",
                 description:
                     "Analyzed symptoms and investigated the technical environment to determine the likely source of the issue."
             },
-
             {
                 number: "03",
                 title: "Troubleshooting",
                 description:
                     "Applied appropriate troubleshooting procedures across hardware, software, applications, systems, or network connectivity."
             },
-
             {
                 number: "04",
                 title: "Repair / Configuration",
                 description:
                     "Performed the required repair, configuration, replacement, or system adjustment based on the identified issue."
             },
-
             {
                 number: "05",
                 title: "Validation & Follow-up",
                 description:
                     "Validated that the service or equipment was operating correctly and maintained the required documentation or follow-up."
             }
-
         ],
 
         problemApproach:
@@ -224,18 +194,12 @@ const experienceData = {
             "Infrastructure Support",
             "Technical Troubleshooting"
         ]
-
     },
 
-
     sonda: {
-
         company: "SONDA Costa Rica",
-
         date: "02/2021 – 06/2021",
-
-        role:
-            "Helpdesk Agent / Incident Manager",
+        role: "Helpdesk Agent / Incident Manager",
 
         howWorked:
             "My work focused on receiving, analyzing, classifying, and following up on incidents and service requests. I evaluated the reported issue, determined its impact and priority, performed the appropriate troubleshooting, and either restored the service or escalated the case with the relevant information.",
@@ -248,42 +212,36 @@ const experienceData = {
         ],
 
         workflow: [
-
             {
                 number: "01",
                 title: "Incoming Request",
                 description:
                     "Received the incident or service request and gathered the relevant information from the user."
             },
-
             {
                 number: "02",
                 title: "Classification",
                 description:
                     "Analyzed the reported issue and classified the case according to its nature, impact, and priority."
             },
-
             {
                 number: "03",
                 title: "Troubleshooting",
                 description:
                     "Performed the appropriate first and second-level troubleshooting based on the reported symptoms."
             },
-
             {
                 number: "04",
                 title: "Resolution / Escalation",
                 description:
                     "Resolved the issue when possible or escalated it to the appropriate corporate technical team."
             },
-
             {
                 number: "05",
                 title: "Documentation & Closure",
                 description:
                     "Maintained accurate ticket information, followed up on the case, and supported the appropriate closure."
             }
-
         ],
 
         problemApproach:
@@ -311,670 +269,429 @@ const experienceData = {
             "Incident Management",
             "Technical Troubleshooting"
         ]
-
     }
-
 };
-
 
 /* =========================================================
    EXPERIENCE ELEMENTS
 ========================================================= */
 
-const experienceShowcase =
-    document.querySelector(".experience-showcase");
+const experienceShowcase = document.querySelector(".experience-showcase");
+const experienceButtons = document.querySelectorAll(".experience-nav-item");
+const companyElement = document.querySelector(".experience-company");
+const dateElement = document.querySelector(".showcase-date");
+const roleElement = document.querySelector(".showcase-company h3");
+const howWorkedElement = document.querySelector('[data-field="howWorked"]');
+const focusElement = document.querySelector('[data-field="focus"]');
+const workflowContainer = document.querySelector(".support-workflow");
+const problemApproachElement = document.querySelector('[data-field="problemApproach"]');
+const usersTeamsElement = document.querySelector('[data-field="usersTeams"]');
+const environmentElement = document.querySelector('[data-field="environment"]');
+const performanceContainer = document.querySelector(".showcase-metrics");
+const roleFocusContainer = document.querySelector(".role-focus");
 
-const experienceButtons =
-    document.querySelectorAll(".experience-nav-item");
-
-const companyElement =
-    document.querySelector(".experience-company");
-
-const dateElement =
-    document.querySelector(".showcase-date");
-
-const roleElement =
-    document.querySelector(".showcase-company h3");
-
-const howWorkedElement =
-    document.querySelector('[data-field="howWorked"]');
-
-const focusElement =
-    document.querySelector('[data-field="focus"]');
-
-const workflowContainer =
-    document.querySelector(".support-workflow");
-
-const problemApproachElement =
-    document.querySelector(
-        '[data-field="problemApproach"]'
-    );
-
-const usersTeamsElement =
-    document.querySelector(
-        '[data-field="usersTeams"]'
-    );
-
-const environmentElement =
-    document.querySelector(
-        '[data-field="environment"]'
-    );
-
-const performanceContainer =
-    document.querySelector(".showcase-metrics");
-
-const roleFocusContainer =
-    document.querySelector(".role-focus");
-
+let experienceRenderTimeout;
 
 /* =========================================================
    WORKFLOW CONTROLS
 ========================================================= */
 
-const workflowPrevious =
-    document.querySelector(".workflow-prev");
-
-const workflowNext =
-    document.querySelector(".workflow-next");
-
+const workflowPrevious = document.querySelector(".workflow-prev");
+const workflowNext = document.querySelector(".workflow-next");
 
 function getWorkflowStepSize() {
+    const step = workflowContainer?.querySelector(".workflow-step");
 
-    const step =
-        workflowContainer?.querySelector(
-            ".workflow-step"
-        );
-
-    if (!step) {
+    if (!step || !workflowContainer) {
         return 300;
     }
 
-    const styles =
-        window.getComputedStyle(
-            workflowContainer
-        );
-
-    const gap =
-        parseFloat(styles.gap) || 0;
+    const styles = window.getComputedStyle(workflowContainer);
+    const gap = parseFloat(styles.gap) || 0;
 
     return step.getBoundingClientRect().width + gap;
 }
 
-
 function updateWorkflowControls() {
-
-    if (
-        !workflowContainer ||
-        !workflowPrevious ||
-        !workflowNext
-    ) {
+    if (!workflowContainer || !workflowPrevious || !workflowNext) {
         return;
     }
 
-    const maxScroll =
-        workflowContainer.scrollWidth -
-        workflowContainer.clientWidth;
+    const maxScroll = Math.max(
+        0,
+        workflowContainer.scrollWidth - workflowContainer.clientWidth
+    );
 
-    workflowPrevious.disabled =
-        workflowContainer.scrollLeft <= 5;
-
-    workflowNext.disabled =
-        workflowContainer.scrollLeft >=
-        maxScroll - 5;
-
+    workflowPrevious.disabled = workflowContainer.scrollLeft <= 5;
+    workflowNext.disabled = workflowContainer.scrollLeft >= maxScroll - 5;
 }
 
-
 function resetWorkflowCarousel() {
-
     if (!workflowContainer) {
         return;
     }
 
     workflowContainer.scrollLeft = 0;
-
-    updateWorkflowControls();
-
+    requestAnimationFrame(updateWorkflowControls);
 }
 
+if (workflowPrevious && workflowNext && workflowContainer) {
+    workflowPrevious.addEventListener("click", () => {
+        workflowContainer.scrollBy({
+            left: -getWorkflowStepSize(),
+            behavior: "smooth"
+        });
+    });
 
-if (
-    workflowPrevious &&
-    workflowNext &&
-    workflowContainer
-) {
+    workflowNext.addEventListener("click", () => {
+        workflowContainer.scrollBy({
+            left: getWorkflowStepSize(),
+            behavior: "smooth"
+        });
+    });
 
-    workflowPrevious.addEventListener(
-        "click",
-        () => {
+    workflowContainer.addEventListener("scroll", updateWorkflowControls, {
+        passive: true
+    });
 
-            workflowContainer.scrollBy({
-                left: -getWorkflowStepSize(),
-                behavior: "smooth"
-            });
-
-        }
-    );
-
-
-    workflowNext.addEventListener(
-        "click",
-        () => {
-
-            workflowContainer.scrollBy({
-                left: getWorkflowStepSize(),
-                behavior: "smooth"
-            });
-
-        }
-    );
-
-
-    workflowContainer.addEventListener(
-        "scroll",
-        updateWorkflowControls
-    );
-
-
-    window.addEventListener(
-        "resize",
-        updateWorkflowControls
-    );
-
+    window.addEventListener("resize", updateWorkflowControls);
 }
-
 
 /* =========================================================
    EXPERIENCE RENDERING
 ========================================================= */
 
 function renderExperience(key) {
-
-    const data =
-        experienceData[key];
+    const data = experienceData[key];
 
     if (!data) {
         return;
     }
 
-
-    if (experienceShowcase) {
-
-        experienceShowcase.classList.add(
-            "is-changing"
-        );
-
+    if (experienceRenderTimeout) {
+        clearTimeout(experienceRenderTimeout);
     }
 
+    if (experienceShowcase) {
+        experienceShowcase.classList.add("is-changing");
+    }
 
-    setTimeout(() => {
-
+    experienceRenderTimeout = setTimeout(() => {
         if (companyElement) {
-            companyElement.textContent =
-                data.company;
+            companyElement.textContent = data.company;
         }
 
         if (dateElement) {
-            dateElement.textContent =
-                data.date;
+            dateElement.textContent = data.date;
         }
 
         if (roleElement) {
-            roleElement.textContent =
-                data.role;
+            roleElement.textContent = data.role;
         }
 
         if (howWorkedElement) {
-            howWorkedElement.textContent =
-                data.howWorked;
+            howWorkedElement.textContent = data.howWorked;
         }
-
-
-        /* FOCUS */
 
         if (focusElement) {
+            focusElement.replaceChildren();
 
-            focusElement.innerHTML =
-                data.focus
-                    .map(
-                        item =>
-                            `<span>${item}</span>`
-                    )
-                    .join("");
-
+            data.focus.forEach(item => {
+                const tag = document.createElement("span");
+                tag.textContent = item;
+                focusElement.appendChild(tag);
+            });
         }
-
-
-        /* WORKFLOW */
 
         if (workflowContainer) {
+            workflowContainer.replaceChildren();
 
-            workflowContainer.innerHTML =
-                data.workflow
-                    .map(step => {
+            data.workflow.forEach(step => {
+                const stepElement = document.createElement("div");
+                stepElement.className = "workflow-step";
 
-                        return `
-                            <div class="workflow-step">
+                const number = document.createElement("span");
+                number.className = "workflow-number";
+                number.textContent = step.number;
 
-                                <span class="workflow-number">
-                                    ${step.number}
-                                </span>
+                const content = document.createElement("div");
+                const title = document.createElement("strong");
+                title.textContent = step.title;
 
-                                <div>
+                const description = document.createElement("p");
+                description.textContent = step.description;
 
-                                    <strong>
-                                        ${step.title}
-                                    </strong>
-
-                                    <p>
-                                        ${step.description}
-                                    </p>
-
-                                </div>
-
-                            </div>
-                        `;
-
-                    })
-                    .join("");
-
+                content.append(title, description);
+                stepElement.append(number, content);
+                workflowContainer.appendChild(stepElement);
+            });
         }
-
-
-        /* PROBLEM APPROACH */
 
         if (problemApproachElement) {
-
-            problemApproachElement.textContent =
-                data.problemApproach;
-
+            problemApproachElement.textContent = data.problemApproach;
         }
-
-
-        /* USERS & TEAMS */
 
         if (usersTeamsElement) {
-
-            usersTeamsElement.textContent =
-                data.usersTeams;
-
+            usersTeamsElement.textContent = data.usersTeams;
         }
-
-
-        /* ENVIRONMENT */
 
         if (environmentElement) {
+            environmentElement.replaceChildren();
 
-            environmentElement.innerHTML =
-                data.environment
-                    .map(
-                        item =>
-                            `<span>${item}</span>`
-                    )
-                    .join("");
-
+            data.environment.forEach(item => {
+                const tag = document.createElement("span");
+                tag.textContent = item;
+                environmentElement.appendChild(tag);
+            });
         }
-
-
-        /* PERFORMANCE */
 
         if (performanceContainer) {
+            performanceContainer.replaceChildren();
 
-            performanceContainer.innerHTML =
-                data.performance.length
+            if (data.performance.length) {
+                data.performance.forEach(metric => {
+                    const metricElement = document.createElement("div");
+                    metricElement.className = "metric";
 
-                    ? data.performance
-                        .map(metric => {
+                    const value = document.createElement("strong");
+                    value.textContent = metric.value;
 
-                            return `
-                                <div class="metric">
+                    const label = document.createElement("span");
+                    label.textContent = metric.label;
 
-                                    <strong>
-                                        ${metric.value}
-                                    </strong>
+                    metricElement.append(value, label);
+                    performanceContainer.appendChild(metricElement);
+                });
+            } else {
+                const metricElement = document.createElement("div");
+                metricElement.className = "metric";
 
-                                    <span>
-                                        ${metric.label}
-                                    </span>
+                const value = document.createElement("strong");
+                value.textContent = "—";
 
-                                </div>
-                            `;
+                const label = document.createElement("span");
+                label.textContent = "Performance metrics";
 
-                        })
-                        .join("")
-
-                    : `
-                        <div class="metric">
-
-                            <strong>
-                                —
-                            </strong>
-
-                            <span>
-                                Performance metrics
-                            </span>
-
-                        </div>
-                    `;
-
+                metricElement.append(value, label);
+                performanceContainer.appendChild(metricElement);
+            }
         }
-
-
-        /* ROLE FOCUS */
 
         if (roleFocusContainer) {
+            roleFocusContainer.replaceChildren();
 
-            roleFocusContainer.innerHTML = `
+            const label = document.createElement("span");
+            label.className = "mini-label";
+            label.textContent = "ROLE FOCUS";
+            roleFocusContainer.appendChild(label);
 
-                <span class="mini-label">
-                    ROLE FOCUS
-                </span>
-
-                ${data.roleFocus
-                    .map(
-                        item =>
-                            `<strong>${item}</strong>`
-                    )
-                    .join("")}
-
-            `;
-
+            data.roleFocus.forEach(item => {
+                const role = document.createElement("strong");
+                role.textContent = item;
+                roleFocusContainer.appendChild(role);
+            });
         }
-
 
         resetWorkflowCarousel();
 
-
         if (experienceShowcase) {
-
-            experienceShowcase.classList.remove(
-                "is-changing"
-            );
-
+            experienceShowcase.classList.remove("is-changing");
         }
-
     }, 180);
-
 }
-
 
 /* =========================================================
    EXPERIENCE NAVIGATION
 ========================================================= */
 
 experienceButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const experience = button.dataset.experience;
 
-    button.addEventListener(
-        "click",
-        () => {
+        experienceButtons.forEach(item => {
+            item.classList.remove("active");
+        });
 
-            const experience =
-                button.dataset.experience;
-
-            experienceButtons.forEach(
-                item => {
-
-                    item.classList.remove(
-                        "active"
-                    );
-
-                }
-            );
-
-            button.classList.add(
-                "active"
-            );
-
-            renderExperience(
-                experience
-            );
-
-        }
-    );
-
+        button.classList.add("active");
+        renderExperience(experience);
+    });
 });
 
-
-/* =========================================================
-   INITIAL EXPERIENCE
-========================================================= */
-
+/* INITIAL EXPERIENCE */
 renderExperience("concentrix");
-
 
 /* =========================================================
    TECHNICAL SKILLS INTERACTION
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
-  const skillsSection = document.querySelector(".skills-section");
+const skillsSection = document.querySelector(".skills-section");
 
-  // Avoid errors if this section is not present on the page.
-  if (!skillsSection) return;
+if (skillsSection) {
+    const skillCards = Array.from(
+        skillsSection.querySelectorAll(".skill-card")
+    );
 
-  const cards = skillsSection.querySelectorAll(".skill-card");
+    function closeSkillCard(card) {
+        const toggle = card.querySelector(".skill-toggle");
+        const details = card.querySelector(".skill-details");
+        const label = card.querySelector(".skill-toggle-label");
+        const icon = card.querySelector(".skill-toggle-icon");
 
-  cards.forEach((card) => {
-    const toggle = card.querySelector(".skill-toggle");
-    const details = card.querySelector(".skill-details");
-
-    if (!toggle || !details) return;
-
-    toggle.addEventListener("click", () => {
-      const isCurrentlyOpen =
-        toggle.getAttribute("aria-expanded") === "true";
-
-      // Close the other cards for a cleaner browsing experience.
-      cards.forEach((otherCard) => {
-        const otherToggle =
-          otherCard.querySelector(".skill-toggle");
-        const otherDetails =
-          otherCard.querySelector(".skill-details");
-
-        if (!otherToggle || !otherDetails) return;
-
-        otherToggle.setAttribute("aria-expanded", "false");
-        otherDetails.hidden = true;
-        otherCard.classList.remove("is-open");
-
-        const otherLabel = otherToggle.childNodes[0];
-
-        if (otherLabel && otherLabel.nodeType === Node.TEXT_NODE) {
-          otherLabel.textContent = "Explore skills ";
+        if (!toggle || !details) {
+            return;
         }
-      });
 
-      // Open the selected card if it was previously closed.
-      if (!isCurrentlyOpen) {
+        toggle.setAttribute("aria-expanded", "false");
+        details.hidden = true;
+        card.classList.remove("is-open");
+
+        if (label) {
+            label.textContent = "Explore skills";
+        }
+
+        if (icon) {
+            icon.textContent = "+";
+        }
+    }
+
+    function openSkillCard(card) {
+        const toggle = card.querySelector(".skill-toggle");
+        const details = card.querySelector(".skill-details");
+        const label = card.querySelector(".skill-toggle-label");
+        const icon = card.querySelector(".skill-toggle-icon");
+
+        if (!toggle || !details) {
+            return;
+        }
+
         toggle.setAttribute("aria-expanded", "true");
         details.hidden = false;
         card.classList.add("is-open");
 
-        const label = toggle.childNodes[0];
-
-        if (label && label.nodeType === Node.TEXT_NODE) {
-          label.textContent = "Hide skills ";
+        if (label) {
+            label.textContent = "Hide skills";
         }
-      }
+
+        if (icon) {
+            icon.textContent = "−";
+        }
+    }
+
+    skillCards.forEach(card => {
+        const toggle = card.querySelector(".skill-toggle");
+
+        if (!toggle) {
+            return;
+        }
+
+        toggle.addEventListener("click", () => {
+            const isCurrentlyOpen =
+                toggle.getAttribute("aria-expanded") === "true";
+
+            skillCards.forEach(otherCard => {
+                closeSkillCard(otherCard);
+            });
+
+            if (!isCurrentlyOpen) {
+                openSkillCard(card);
+            }
+        });
     });
-  });
-});
+}
 
 /* =========================================================
    EDUCATION INTERACTION
 ========================================================= */
 
-const educationItems =
-    document.querySelectorAll(
-        ".education-item"
-    );
-
+const educationItems = document.querySelectorAll(".education-item");
 
 educationItems.forEach(item => {
-
-    const trigger =
-        item.querySelector(
-            ".education-card-trigger"
-        );
+    const trigger = item.querySelector(".education-card-trigger");
 
     if (!trigger) {
         return;
     }
 
+    trigger.addEventListener("click", () => {
+        const isActive = item.classList.contains("active");
 
-    trigger.addEventListener(
-        "click",
-        () => {
+        educationItems.forEach(otherItem => {
+            otherItem.classList.remove("active");
 
-            const isActive =
-                item.classList.contains(
-                    "active"
-                );
-
-
-            educationItems.forEach(
-                otherItem => {
-
-                    otherItem.classList.remove(
-                        "active"
-                    );
-
-                    const otherTrigger =
-                        otherItem.querySelector(
-                            ".education-card-trigger"
-                        );
-
-                    if (otherTrigger) {
-
-                        otherTrigger.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                    }
-
-                }
+            const otherTrigger = otherItem.querySelector(
+                ".education-card-trigger"
             );
 
-
-            if (!isActive) {
-
-                item.classList.add(
-                    "active"
-                );
-
-                trigger.setAttribute(
-                    "aria-expanded",
-                    "true"
-                );
-
+            if (otherTrigger) {
+                otherTrigger.setAttribute("aria-expanded", "false");
             }
+        });
 
+        if (!isActive) {
+            item.classList.add("active");
+            trigger.setAttribute("aria-expanded", "true");
         }
-    );
-
+    });
 });
-
 
 /* =========================================================
    SMOOTH ANCHOR SCROLLING
 ========================================================= */
 
-document.querySelectorAll(
-    'a[href^="#"]'
-).forEach(link => {
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", event => {
+        const targetId = link.getAttribute("href");
 
-    link.addEventListener(
-        "click",
-        event => {
-
-            const targetId =
-                link.getAttribute("href");
-
-            if (
-                !targetId ||
-                targetId === "#"
-            ) {
-                return;
-            }
-
-            const target =
-                document.querySelector(
-                    targetId
-                );
-
-            if (!target) {
-                return;
-            }
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-
+        if (!targetId || targetId === "#") {
+            return;
         }
-    );
 
+        const target = document.querySelector(targetId);
+
+        if (!target) {
+            return;
+        }
+
+        event.preventDefault();
+
+        target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
 });
-
 
 /* =========================================================
    BACK TO TOP
 ========================================================= */
 
-const backToTop =
-    document.querySelector(
-        ".back-to-top"
-    );
-
+const backToTop = document.querySelector(".back-to-top");
 
 function updateBackToTop() {
-
     if (!backToTop) {
         return;
     }
 
-    if (window.scrollY > 500) {
-
-        backToTop.classList.add(
-            "visible"
-        );
-
-    } else {
-
-        backToTop.classList.remove(
-            "visible"
-        );
-
-    }
-
+    backToTop.classList.toggle("visible", window.scrollY > 500);
 }
 
-
-window.addEventListener(
-    "scroll",
-    updateBackToTop,
-    { passive: true }
-);
-
+window.addEventListener("scroll", updateBackToTop, {
+    passive: true
+});
 
 if (backToTop) {
-
-    backToTop.addEventListener(
-        "click",
-        () => {
-
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-
-        }
-    );
-
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
 }
 
-
 updateBackToTop();
+
+/* =========================================================
+   INITIAL WORKFLOW CONTROL STATE
+========================================================= */
+
+window.addEventListener("load", updateWorkflowControls);
